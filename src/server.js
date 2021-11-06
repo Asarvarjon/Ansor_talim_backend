@@ -5,6 +5,7 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 const path = require("path");
+const CustomErrorMiddleware = require("./middlewares/CustomErrorMiddleware");
 const postgres = require("./modules/pg/postgres");
 const routes = require("./routes");
 
@@ -18,7 +19,14 @@ async function server(mode){
         })
 
 
-        const db = await postgres()
+        const db = await postgres();
+
+
+        // database middleware
+        app.use(async (req, res, next) => {
+            req.db = await db;
+            next()
+        })
 
         /// middlewares 
 
@@ -26,6 +34,8 @@ async function server(mode){
         app.use(express.urlencoded({extended: true}))
         app.use(express.static(path.join(__dirname, "public"))); 
         app.use(cookieParser());
+
+        app.use(CustomErrorMiddleware)
 
 
         // settings 

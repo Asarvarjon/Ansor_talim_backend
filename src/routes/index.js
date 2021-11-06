@@ -1,11 +1,10 @@
-
+const errorHandler = require("../helpers/errorHandler")
 
 module.exports = async function(app){
     try {
-        app.use("/users", require("./users/UserRoute"));
-        app.use("/", require("./home/HomeRoute"))
+        app.use("/users", require("./users/UserRoute")); 
     } finally{
-
+        app.use(errorHandler)
     }
     
 }

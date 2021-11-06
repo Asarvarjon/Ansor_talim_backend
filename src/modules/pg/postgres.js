@@ -1,5 +1,6 @@
 const {Sequelize} = require("sequelize");
 const UserModel = require("../../models/UserModel");
+const init = require("./init");
 
 
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
@@ -22,7 +23,7 @@ module.exports = async function(){
 
 
 
-
+        await init(db);
         await sequelize.sync({force: false})
 
         return db;
