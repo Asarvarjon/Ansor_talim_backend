@@ -5,6 +5,7 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 const path = require("path");
+const postgres = require("./modules/pg/postgres");
 const routes = require("./routes");
 
 
@@ -16,6 +17,8 @@ async function server(mode){
             console.log(`Server is ready at ${PORT}`);
         })
 
+
+        const db = await postgres()
 
         /// middlewares 
 
