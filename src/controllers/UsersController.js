@@ -21,13 +21,20 @@ module.exports = class  UsersController{
                 throw new Error("Parolingiz xato")
             }
 
-            
-            const session = await req.db.sessions.create({
-                user_id: admin.user_id,
-                user_agent: req.headers["user-agent"],
-           })
 
- 
+             await req.db.sessions.destroy({
+                where: {
+                    session_user_agent: req.headers["user-agent"],
+                     user_id: admin.user_id
+                }
+             })
+
+            
+            const session = await req.db.sessions.create({ 
+                session_user_agent: req.headers["user-agent"],
+                user_id: admin.user_id
+           } 
+           ) 
             
         } catch (error) {
             console.log(error);
