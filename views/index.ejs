@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex</title>
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="./style/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+
+    <!-- Owl-carousel CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
+        
+    <!-- Style css -->
+    <link rel="stylesheet" href="style/css/style.css">
+    <!-- Style css -->
+
+</head>
+<body id="body">
+    <div class="toTop">
+        <a href="#body">
+            <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg>
+        </a>
+    </div>
+    <!-- Header start -->
+    <header>
+        <img src="assets/images/header_img-2.png" class="header-img-1">
+        <div class="filter-header"></div>
+        <nav>
+            <div class="left-header-nav">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M46.6089 0.0130768C45.062 0.14724 43.5309 0.320862 42.426 0.486588C20.6829 3.81695 3.64351 20.9501 0.44715 42.7001C0.107783 45.0045 0.0288608 46.0462 0.00518406 48.7373C-0.00270819 50.1894 -0.00270819 51.2232 0.0130763 51.0259C0.0288608 50.8286 0.0841066 50.2052 0.13146 49.6449C0.431366 46.0541 1.15745 42.5422 2.3334 39.0303C4.20386 33.4114 6.95826 28.4947 10.8255 23.8385C11.9225 22.5206 15.0084 19.427 16.3816 18.2748C21.5826 13.9027 27.6675 10.6986 34.0602 8.96243C45.3225 5.90828 57.3187 7.16309 67.5944 12.4822C73.6399 15.6152 78.975 20.0899 83.15 25.5274C91.4921 36.3945 94.5622 50.4498 91.5395 63.9291C89.9374 71.1028 86.5674 77.8661 81.7294 83.6192C80.5772 84.9924 77.4834 88.0781 76.1654 89.1751C71.509 93.0421 66.5921 95.7964 60.9728 97.6667C57.4608 98.8426 53.9487 99.5687 50.3577 99.8685C49.7974 99.9159 49.1739 99.9711 48.9766 99.9869C48.7793 100.003 49.8132 100.003 51.2653 99.9948C53.9566 99.9711 54.9984 99.8922 57.3029 99.5529C69.4886 97.7614 80.5377 91.5663 88.4694 82.0724C94.3334 75.0566 98.1295 66.636 99.5186 57.5762C99.9447 54.7667 100 53.938 100 50C100 46.062 99.9447 45.2333 99.5186 42.4238C96.188 20.6818 79.054 3.64333 57.3029 0.447128C54.7774 0.07621 54.0355 0.028862 50.4367 0.00518799C48.5267 -0.00270844 46.8062 -0.00270844 46.6089 0.0130768Z" fill="black"/>
+                    <path d="M42.8995 7.54979C27.9358 8.54417 14.5585 17.4067 7.77902 30.8307C4.01442 38.2885 2.53068 46.5671 3.48564 54.8535C5.06409 68.68 13.3588 80.8966 25.655 87.502C37.8327 94.0365 52.5754 94.218 64.9189 87.9834C74.3344 83.2247 81.69 75.0882 85.4703 65.247C87.3171 60.4251 88.3037 55.1376 88.2721 50.1736L88.2642 48.6979L88.1537 49.9605C87.4434 58.3022 84.397 65.7521 79.0618 72.1761C78.0674 73.3756 75.9444 75.5222 74.6659 76.635C68.3205 82.1277 60.6019 85.3791 52.1729 86.1131C50.3262 86.2709 46.309 86.2315 44.6358 86.0342C39.7979 85.4659 35.7413 84.2822 31.4952 82.1987C19.7358 76.4456 11.5594 65.0655 9.8389 52.0913C9.57056 50.0474 9.49164 48.4848 9.539 46.062C9.59424 43.1104 9.8389 41.027 10.4308 38.2806C11.4726 33.514 13.7377 28.3606 16.5789 24.32C17.3444 23.2388 17.6128 22.8836 17.5023 23.1283C17.3444 23.4519 16.9972 24.5725 16.8078 25.338C16.0343 28.5026 15.8054 32.6301 16.2632 35.0844C16.4684 36.1498 17.155 38.8804 17.5733 40.2773C19.57 46.9143 22.9716 52.3755 27.6675 56.5029C28.8987 57.5841 29.3407 57.9313 33.4131 61.0012C37.1619 63.8186 38.6062 64.9472 39.7821 65.9731C44.7384 70.282 47.0824 73.9833 48.1005 79.0814L48.3215 80.1863L48.5267 79.5155C49.3396 76.8875 49.7816 72.7601 49.608 69.4771C49.5606 68.6169 49.4738 67.4804 49.4107 66.9517C48.5583 60.0148 45.6224 53.504 40.7292 47.7508C40.2872 47.23 39.0402 45.8805 37.9669 44.7519C32.8764 39.417 29.5064 35.629 27.7464 33.2693C27.3676 32.7563 27.0361 32.2907 27.0124 32.2276C26.9256 32.0303 26.4837 32.6537 26.3021 33.2298C25.726 35.0529 26.5389 38.4464 28.291 41.5242C28.733 42.3055 29.2538 43.071 30.6508 45.0045C31.0454 45.549 31.1401 45.7384 31.1243 45.9278C31.1006 46.1646 31.0848 46.1725 30.6902 46.1961C29.0723 46.2908 25.6076 43.2604 23.2084 39.6617C22.0009 37.8387 20.7618 35.4475 20.1778 33.7902C19.5779 32.0934 19.3806 30.081 19.5306 27.311C19.7042 24.241 19.7279 23.0888 19.6253 22.5916C19.5148 22.0787 19.2386 21.6999 18.9071 21.6131L18.6782 21.5499L19.57 20.5634C24.8105 14.7629 31.4716 10.6986 38.914 8.76514C41.2264 8.16535 43.2784 7.81812 45.8591 7.58925L47.043 7.48666H45.4645C44.5964 7.48666 43.4441 7.51823 42.8995 7.54979Z" fill="black"/>
+                    <path d="M46.7036 20.011C44.4149 20.6108 42.7496 22.7968 42.7417 25.2038C42.7417 25.4327 42.7969 25.8904 42.868 26.2219C43.381 28.7236 45.5671 30.5072 48.1084 30.5072C50.5235 30.5072 52.6623 28.842 53.2779 26.4823C53.4594 25.7957 53.4673 24.5488 53.2857 23.878C52.7885 21.9603 51.2338 20.4135 49.3712 19.9794C48.653 19.8058 47.4218 19.8216 46.7036 20.011Z" fill="black"/>
+                    <path d="M77.3098 21.8025C76.8126 22.2602 76.7494 23.0494 76.9625 26.2929C77.223 30.2704 76.9862 32.4091 76.0312 34.6504C74.8001 37.5388 73.2374 40.08 71.3433 42.266C69.1019 44.8466 66.5448 46.5592 65.5188 46.1646C65.4477 46.133 65.3925 46.0225 65.3925 45.8962C65.3925 45.6753 65.5898 45.3754 66.8131 43.7339C68.3679 41.6347 69.4965 39.3302 70.1121 36.9785C70.3646 36.0078 70.3883 35.8105 70.3962 34.7688C70.4041 33.5061 70.2778 32.9931 69.8358 32.417L69.6227 32.1329L69.4649 32.3617C67.5155 35.0844 64.3586 38.6831 58.7235 44.5941C56.0323 47.4115 55.03 48.5953 53.6015 50.5761C52.2519 52.4623 50.8865 54.8377 49.971 56.8817C49.0713 58.8862 49.1108 58.5153 49.6711 60.1963C50.7997 63.574 51.4232 67.1963 51.4232 70.3767C51.4232 71.0633 51.4469 71.6237 51.4863 71.6158C51.5179 71.6158 51.8336 71.2133 52.1888 70.7319C53.3805 69.1219 55.0221 67.441 57.2635 65.5548C58.5262 64.4815 60.1599 63.2188 64.0114 60.3225C67.8786 57.4104 68.5099 56.8975 70.041 55.4059C74.074 51.4679 76.8678 46.8354 78.762 40.9244C79.2907 39.2987 80.1747 35.7947 80.3562 34.6109C80.5219 33.585 80.5456 30.6729 80.3957 29.2839C80.0168 25.701 79.1408 22.6785 78.2411 21.8656C77.878 21.5341 77.6255 21.5183 77.3098 21.8025Z" fill="black"/>
+                    <path d="M67.1287 26.7822C66.3553 27.9897 64.2007 29.4418 61.691 30.4677C59.7968 31.2332 57.9658 31.7383 55.172 32.2513C52.1334 32.8037 50.0893 33.3798 48.7319 34.0664L48.1084 34.3742L47.3744 34.0269C45.9222 33.3245 43.9886 32.78 41.2027 32.2828C37.6354 31.6436 35.2677 30.9175 32.8921 29.7259C31.1874 28.8735 29.7037 27.7292 29.0328 26.7585L28.7566 26.3639L28.7961 26.9164C28.9618 29.0156 30.5245 31.8803 32.8211 34.2637C34.3522 35.8578 35.7176 36.9627 38.2036 38.6121C39.9715 39.788 40.595 40.2851 41.6367 41.3663C44.2333 44.0574 46.2142 47.8692 47.3586 52.3676C47.6585 53.5513 48.0295 55.4769 48.0295 55.8557C48.0295 56.3135 48.1084 56.0294 48.3057 54.8298C49.1738 49.6843 51.3363 44.8861 54.1933 41.7451C55.3456 40.4746 56.1348 39.8353 58.3289 38.3832C62.1566 35.842 64.7374 33.2298 66.2527 30.3493C66.9393 29.0314 67.5154 27.1847 67.4286 26.5455C67.4049 26.3718 67.3734 26.3955 67.1287 26.7822Z" fill="black"/>
+                </svg>
+                <h3 class="font-head-h my-0">APEX TA'LIM</h3>
+            </div>
+            <div class="right-header-nav">
+                <div class="menu-inc">
+                    <ul>
+                        <li><a href="#news-div">Yangiliklar</a></li>
+                        <li><a href="#courses-div">Kurslar</a></li>
+                        <li><a href="#teachers-div">Ustozlar</a></li>
+                        <li><a href="#photos-div">Fotolavhalar</a></li>
+                        <li><a href="#videos-div">Videolavhalar</a></li>
+                        <li><a href="#result-div">Natijalar</a></li>
+                        <li><a href="#commits-div">Izohlar</a></li>
+                        <li><a href="#footer">Aloqa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <svg id="toggle-menu"  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+                <path fill="#231F20" d="M8.667,15h30c0.552,0,1-0.447,1-1s-0.448-1-1-1h-30c-0.552,0-1,0.447-1,1S8.114,15,8.667,15z"/>
+                <path fill="#231F20" d="M8.667,37h30c0.552,0,1-0.447,1-1s-0.448-1-1-1h-30c-0.552,0-1,0.447-1,1S8.114,37,8.667,37z"/>
+                <path fill="#231F20" d="M8.667,26h30c0.552,0,1-0.447,1-1s-0.448-1-1-1h-30c-0.552,0-1,0.447-1,1S8.114,26,8.667,26z"/>
+            </svg>
+            <svg id="toggle-menu-x" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 60.963 60.842" style="enable-background:new 0 0 60.963 60.842;" xml:space="preserve">
+                <path style="fill:#231F20;" d="M59.595,52.861L37.094,30.359L59.473,7.98c1.825-1.826,1.825-4.786,0-6.611
+                    c-1.826-1.825-4.785-1.825-6.611,0L30.483,23.748L8.105,1.369c-1.826-1.825-4.785-1.825-6.611,0c-1.826,1.826-1.826,4.786,0,6.611
+                    l22.378,22.379L1.369,52.861c-1.826,1.826-1.826,4.785,0,6.611c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369
+                    l22.502-22.502l22.501,22.502c0.913,0.913,2.109,1.369,3.306,1.369s2.393-0.456,3.306-1.369
+                    C61.42,57.647,61.42,54.687,59.595,52.861z"/>
+            </svg>
+        </nav>
+        <div class="header-content">
+            <div class="row">
+                <div class="header-content-in">
+                    <h1 class="font-h2">Talaba bo‘lishingizga albatta ishonamiz</h1>
+                    <p class="font-head-h-normal">Shaxmatda yo’lga chiqqan piyoda, bir kun kelib albatta vazir bo’ladi.</p>
+                    <a class="font-header-btn">KURSGA YOZILISH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal-course">
+        <div class="modal-in">
+            <div class="modal-c">
+                <div class="modal-c-top">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M46.6089 0.0130768C45.062 0.14724 43.5309 0.320862 42.426 0.486588C20.6829 3.81695 3.64351 20.9501 0.44715 42.7001C0.107783 45.0045 0.0288608 46.0462 0.00518406 48.7373C-0.00270819 50.1894 -0.00270819 51.2232 0.0130763 51.0259C0.0288608 50.8286 0.0841066 50.2052 0.13146 49.6449C0.431366 46.0541 1.15745 42.5422 2.3334 39.0303C4.20386 33.4114 6.95826 28.4947 10.8255 23.8385C11.9225 22.5206 15.0084 19.427 16.3816 18.2748C21.5826 13.9027 27.6675 10.6986 34.0602 8.96243C45.3225 5.90828 57.3187 7.16309 67.5944 12.4822C73.6399 15.6152 78.975 20.0899 83.15 25.5274C91.4921 36.3945 94.5622 50.4498 91.5395 63.9291C89.9374 71.1028 86.5674 77.8661 81.7294 83.6192C80.5772 84.9924 77.4834 88.0781 76.1654 89.1751C71.509 93.0421 66.5921 95.7964 60.9728 97.6667C57.4608 98.8426 53.9487 99.5687 50.3577 99.8685C49.7974 99.9159 49.1739 99.9711 48.9766 99.9869C48.7793 100.003 49.8132 100.003 51.2653 99.9948C53.9566 99.9711 54.9984 99.8922 57.3029 99.5529C69.4886 97.7614 80.5377 91.5663 88.4694 82.0724C94.3334 75.0566 98.1295 66.636 99.5186 57.5762C99.9447 54.7667 100 53.938 100 50C100 46.062 99.9447 45.2333 99.5186 42.4238C96.188 20.6818 79.054 3.64333 57.3029 0.447128C54.7774 0.07621 54.0355 0.028862 50.4367 0.00518799C48.5267 -0.00270844 46.8062 -0.00270844 46.6089 0.0130768Z" fill="white"/>
+                        <path d="M42.8995 7.54979C27.9358 8.54416 14.5585 17.4067 7.77902 30.8307C4.01442 38.2885 2.53068 46.5671 3.48564 54.8535C5.06409 68.68 13.3588 80.8966 25.655 87.502C37.8327 94.0365 52.5754 94.218 64.9189 87.9834C74.3344 83.2247 81.69 75.0882 85.4703 65.247C87.3171 60.4251 88.3037 55.1376 88.2721 50.1736L88.2642 48.6979L88.1537 49.9605C87.4434 58.3022 84.397 65.7521 79.0618 72.1761C78.0674 73.3756 75.9444 75.5222 74.6659 76.635C68.3205 82.1277 60.6019 85.3791 52.1729 86.1131C50.3262 86.2709 46.309 86.2314 44.6358 86.0342C39.7979 85.4659 35.7413 84.2822 31.4952 82.1987C19.7358 76.4456 11.5594 65.0655 9.8389 52.0913C9.57056 50.0474 9.49164 48.4848 9.539 46.062C9.59424 43.1104 9.8389 41.027 10.4308 38.2806C11.4726 33.514 13.7377 28.3606 16.5789 24.32C17.3444 23.2388 17.6128 22.8836 17.5023 23.1283C17.3444 23.4518 16.9972 24.5725 16.8078 25.338C16.0343 28.5026 15.8054 32.6301 16.2632 35.0844C16.4684 36.1498 17.155 38.8804 17.5733 40.2773C19.57 46.9143 22.9716 52.3755 27.6675 56.5029C28.8987 57.5841 29.3407 57.9313 33.4131 61.0012C37.1619 63.8186 38.6062 64.9472 39.7821 65.9731C44.7384 70.282 47.0824 73.9833 48.1005 79.0814L48.3215 80.1863L48.5267 79.5155C49.3396 76.8875 49.7816 72.7601 49.608 69.4771C49.5606 68.6169 49.4738 67.4804 49.4107 66.9517C48.5583 60.0148 45.6224 53.504 40.7292 47.7508C40.2872 47.23 39.0402 45.8805 37.9669 44.7519C32.8764 39.417 29.5064 35.629 27.7464 33.2693C27.3676 32.7563 27.0361 32.2907 27.0124 32.2276C26.9256 32.0303 26.4837 32.6537 26.3021 33.2298C25.726 35.0529 26.5389 38.4464 28.291 41.5242C28.733 42.3055 29.2538 43.071 30.6508 45.0045C31.0454 45.549 31.1401 45.7384 31.1243 45.9278C31.1006 46.1646 31.0848 46.1725 30.6902 46.1961C29.0723 46.2908 25.6076 43.2604 23.2084 39.6617C22.0009 37.8387 20.7618 35.4474 20.1778 33.7902C19.5779 32.0934 19.3806 30.081 19.5306 27.311C19.7042 24.241 19.7279 23.0888 19.6253 22.5916C19.5148 22.0787 19.2386 21.6999 18.9071 21.613L18.6782 21.5499L19.57 20.5634C24.8105 14.7629 31.4716 10.6986 38.914 8.76513C41.2264 8.16535 43.2784 7.81811 45.8591 7.58924L47.043 7.48665H45.4645C44.5964 7.48665 43.4441 7.51822 42.8995 7.54979Z" fill="white"/>
+                        <path d="M46.7036 20.011C44.4149 20.6108 42.7496 22.7968 42.7417 25.2038C42.7417 25.4327 42.7969 25.8904 42.868 26.2219C43.381 28.7236 45.5671 30.5072 48.1084 30.5072C50.5235 30.5072 52.6623 28.842 53.2779 26.4823C53.4594 25.7957 53.4673 24.5488 53.2857 23.878C52.7885 21.9603 51.2338 20.4135 49.3712 19.9794C48.653 19.8058 47.4218 19.8216 46.7036 20.011Z" fill="white"/>
+                        <path d="M77.3098 21.8025C76.8126 22.2602 76.7494 23.0494 76.9625 26.2929C77.223 30.2704 76.9862 32.4091 76.0312 34.6504C74.8001 37.5388 73.2374 40.08 71.3433 42.266C69.1019 44.8466 66.5448 46.5592 65.5188 46.1646C65.4477 46.133 65.3925 46.0225 65.3925 45.8962C65.3925 45.6753 65.5898 45.3754 66.8131 43.7339C68.3679 41.6347 69.4965 39.3302 70.1121 36.9785C70.3646 36.0078 70.3883 35.8105 70.3962 34.7688C70.4041 33.5061 70.2778 32.9931 69.8358 32.417L69.6227 32.1329L69.4649 32.3617C67.5155 35.0844 64.3586 38.6831 58.7235 44.5941C56.0323 47.4115 55.03 48.5953 53.6015 50.5761C52.2519 52.4623 50.8865 54.8377 49.971 56.8817C49.0713 58.8862 49.1108 58.5153 49.6711 60.1963C50.7997 63.574 51.4232 67.1963 51.4232 70.3767C51.4232 71.0633 51.4469 71.6237 51.4863 71.6158C51.5179 71.6158 51.8336 71.2133 52.1888 70.7319C53.3805 69.1219 55.0221 67.441 57.2635 65.5548C58.5262 64.4815 60.1599 63.2188 64.0114 60.3225C67.8786 57.4104 68.5099 56.8975 70.041 55.4059C74.074 51.4679 76.8678 46.8354 78.762 40.9244C79.2907 39.2987 80.1747 35.7947 80.3562 34.6109C80.5219 33.585 80.5456 30.6729 80.3957 29.2839C80.0168 25.701 79.1408 22.6785 78.2411 21.8656C77.878 21.5341 77.6255 21.5183 77.3098 21.8025Z" fill="white"/>
+                        <path d="M67.1287 26.7822C66.3553 27.9897 64.2007 29.4418 61.691 30.4677C59.7968 31.2332 57.9658 31.7383 55.172 32.2513C52.1334 32.8037 50.0893 33.3798 48.7319 34.0664L48.1084 34.3742L47.3744 34.0269C45.9222 33.3245 43.9886 32.78 41.2027 32.2828C37.6354 31.6436 35.2677 30.9175 32.8921 29.7259C31.1874 28.8735 29.7037 27.7292 29.0328 26.7585L28.7566 26.3639L28.7961 26.9164C28.9618 29.0156 30.5245 31.8803 32.8211 34.2637C34.3522 35.8578 35.7176 36.9627 38.2036 38.6121C39.9715 39.788 40.595 40.2851 41.6367 41.3663C44.2333 44.0574 46.2142 47.8692 47.3586 52.3676C47.6585 53.5513 48.0295 55.4769 48.0295 55.8557C48.0295 56.3135 48.1084 56.0294 48.3057 54.8298C49.1738 49.6843 51.3363 44.8861 54.1933 41.7451C55.3456 40.4746 56.1348 39.8353 58.3289 38.3832C62.1566 35.842 64.7374 33.2298 66.2527 30.3493C66.9393 29.0314 67.5154 27.1847 67.4286 26.5455C67.4049 26.3718 67.3734 26.3955 67.1287 26.7822Z" fill="white"/>
+                    </svg>
+                    <h1>APEX TA'LIM</h1>
+                    <i class="fas fa-times" id="close-modal-course"></i>
+                </div>
+                <div class="modal-c-body">
+                    <h1>Kursga yozilish</h1>
+                    <form class="course-form" action="#" method="POST">
+                        <div>
+                            <input class="header-name" type="text" required name="name" placeholder="Ism va familiyangizni yozing">
+                            <i class="fas fa-exclamation-circle name-error"></i>
+                            <i class="fas fa-check name-success"></i>
+                            <p class="header-name-error">3 tadan kam bo'lmagan va 30 tadan ko'p bo'lmagan, lotin harflaridan iborat bo'lishi kerak</p>
+                        </div>
+                        <div>
+                            <input class="header-tel" id="header-phone" type="tel" required name="phone-number" placeholder="Telefon raqamingizni yozing">
+                            <i class="fas fa-exclamation-circle tel-error"></i>
+                            <i class="fas fa-check tel-success"></i>
+                            <p class="header-tel-error">Telefon raqamni to'g'ri formatda kiritish kerak</p>
+                        </div>
+                        <div class="course-inc-btn">
+                            <button id="modal-course-btn" class="font-header-btn">KURSGA YOZILISH</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-course-submit">
+        <div class="modal-in-submit">
+            <div class="modal-submit">
+                <div class="modal-s-top"></div>
+                <div class="modal-s-body">
+                    <p>Ma’lumotlaringiz qabul qilindi. Tez orada menedjerlarimiz siz bilan aloqaga chiqishadi.</p>
+                    <div>
+                        <a href="#" id="close-submit-btn" class="font-header-btn">YOPISH</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !Header start -->
+
+    <div class="main">
+
+        <!-- News -->
+        <section id="news-div">
+            <h1>Yangiliklar</h1>
+
+            <!-- Owl-carousel -->
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-1.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-2.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-3.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-1.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-2.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-3.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-1.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-2.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                <div class="item">
+                    <div class="item-img-box">
+                        <img class="new-image" src="assets/images/news/img-3.png"> 
+                        <div class="more-news-box">
+                            <p>Batafsil</p>
+                            <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                <title>plus [#1513]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Mental arifmetikani oson o‘rganamiz</h3>
+                        <span>22.09.2021</span>
+                        <div class="hidden">
+                            <h3 class="desc_title">Description</h3>
+                            <p class="some-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptates, libero inventore quod adipisci iusto modi repellendus voluptatibus illum impedit.</p>
+                            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit nemo maxime amet est odio, ea tempore nobis voluptatem necessitatibus sapiente consectetur molestiae totam quam quas ad voluptatibus quaerat sit? Deleniti accusamus officiis nam. Totam, nam a repellat ipsa odit ullam alias culpa mollitia facere aperiam possimus tempore incidunt sint consequatur impedit porro cupiditate. Neque esse magnam quisquam rem recusandae! Iste!</p>
+                        </div>
+                    </div>        
+                </div>
+                
+            </div>
+        <!-- !Owl-carousel -->
+
+        </section>
+        <!-- news modal -->
+        <div class="new-modal">
+            <div class="modal-new-main">
+                <div class="modal-new-item">
+                    <div class="new-item-top">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="new-item-content">
+                        <div class="item-left">
+                            <img id="new-modal-img" src="" alt="">
+                            <h2 id="title-img-modal"></h2>
+                            <span id="img-modal-date"></span>
+                            <p id="some-info"></p>
+                        </div>
+                        <div class="item-right">
+                            <h3 id="desc_title"></h3>
+                            <p id="description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- news modal -->
+        <!-- !News -->
+
+        <!-- Courses -->
+        <section id="courses-div">
+            <h1>Kurslar</h1>
+
+            <!-- Owl-carousel -->
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-1.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Matematika</h3> 
+                                <p>Matematika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-2.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Fizika</h3> 
+                                <p>Fizika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-3.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Ingliz tili</h3> 
+                                <p>Ingliz tili fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-1.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Matematika</h3> 
+                                <p>Matematika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-2.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Fizika</h3> 
+                                <p>Fizika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-3.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Ingliz tili</h3> 
+                                <p>Ingliz tili fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-1.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Matematika</h3> 
+                                <p>Matematika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-2.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Fizika</h3> 
+                                <p>Fizika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="course-item">
+                        <div class="course-main">
+                            <div class="course-img-container">
+                                <img src="assets/images/courses/img-3.png">
+                                <div class="more-course-box">
+                                    <p>Batafsil</p>
+                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
+                                        <title>plus [#1513]</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
+                                                <g id="icons" transform="translate(56.000000, 160.000000)">
+                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div> 
+                            <div class="course-content">
+                                <h3>Ingliz tili</h3> 
+                                <p>Ingliz tili fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <button class="course-btn">KURSGA YOZILISH</button>
+                            </div>
+                            <div class="hidden">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
+                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <!-- !Owl-carousel -->
+
+        </section>
+        <!-- course modal -->
+        <div class="course-modal-intro">
+            <div class="course-intro-in">
+                <div class="course-intro-item">
+                    <div class="course-item-top">
+                        <i class="fas fa-times" id="course-intro-close"></i>
+                    </div>
+                    <div class="course-item-content">
+                        <div class="item-top">
+                            <div class="item-top-left">
+                                <img src="" alt="">
+                            </div>
+                            <div class="item-top-right">
+                                <h2>Lorem, ipsum dolor.</h2>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, nesciunt.</span>
+                            </div>
+                        </div>
+                        <div class="item-bottom">
+                            <h3>Lorem, ipsum.</h3>
+                            <p class="introP1">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nihil sunt exercitationem doloremque soluta minima, ea cum! Iste, fugit est vitae fugiat placeat odio, nemo nulla iusto at, debitis beatae? amet consectetur adipisicing elit. Voluptatem fugit nisi ratione alias ipsam officia! Tempora beatae doloribus soluta esse. Corrupti aliquid deleniti blanditiis facilis porro minus at consectetur veniam ut similique aperiam eaque, voluptate commodi repudiandae id tempora quo.</p>
+                            <p class="introP2">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate nihil sunt exercitationem doloremque soluta minima, ea cum! Iste, fugit est vitae fugiat placeat odio, nemo nulla iusto at, debitis beatae? amet consectetur adipisicing elit. Voluptatem fugit nisi ratione alias ipsam officia! Tempora beatae doloribus soluta esse. Corrupti aliquid deluo.</p>
+                            <button class="course-btn-info">KURSGA YOZILISH</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- course modal -->
+        <!-- !Courses -->
+
+        <!-- Teachers -->
+        <section id="teachers-div">
+            <h1>Ustozlar</h1>
+
+            <!-- Owl-carousel -->
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-1.png"> 
+                            <div class="teacher-content">
+                                <h3>Asadov Qodir</h3> 
+                                <p><span>Matematika</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>8 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>500</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-2.png"> 
+                            <div class="teacher-content">
+                                <h3>Ergashev Jasur</h3> 
+                                <p><span>Fizika</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>5 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>400</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-3.png"> 
+                            <div class="teacher-content">
+                                <h3>Murodov Alibek</h3> 
+                                <p><span>Ingliz tili</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>4 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>300</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-1.png"> 
+                            <div class="teacher-content">
+                                <h3>Asadov Qodir</h3> 
+                                <p><span>Matematika</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>8 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>500</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-2.png"> 
+                            <div class="teacher-content">
+                                <h3>Ergashev Jasur</h3> 
+                                <p><span>Fizika</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>5 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>400</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-3.png"> 
+                            <div class="teacher-content">
+                                <h3>Murodov Alibek</h3> 
+                                <p><span>Ingliz tili</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>4 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>300</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-1.png"> 
+                            <div class="teacher-content">
+                                <h3>Asadov Qodir</h3> 
+                                <p><span>Matematika</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>8 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>500</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-2.png"> 
+                            <div class="teacher-content">
+                                <h3>Ergashev Jasur</h3> 
+                                <p><span>Fizika</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>5 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>400</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="teacher-item">
+                        <div class="teacher-main">
+                            <img src="assets/images/teachers/img-3.png"> 
+                            <div class="teacher-content">
+                                <h3>Murodov Alibek</h3> 
+                                <p><span>Ingliz tili</span> fani o'qituvchisi</p>
+                                <p>Ish tajribasi: <span>4 </span>yil </p>
+                                <p>O'qitgan talabalar soni: <span>300</span>+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <!-- !Owl-carousel -->
+
+        </section>
+        <!-- !Teachers -->
+
+        <!-- Teachers -->
+        <section id="photos-div">
+            <h1>Darslardan fotolavhalar</h1>
+
+            <div class="photos">
+                <div class="photo-item">
+                    <div class="item">
+                        <img src="assets/images/lesson_photo/img-1.png">
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <div class="item">
+                        <img src="assets/images/lesson_photo/img-2.png">
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <div class="item">
+                        <img src="assets/images/lesson_photo/img-3.png">
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <div class="item">
+                        <img src="assets/images/lesson_photo/img-4.png">
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <div class="item">
+                        <img src="assets/images/lesson_photo/img-5.png">
+                    </div>
+                </div>
+                <div class="photo-item">
+                    <div class="item">
+                        <img src="assets/images/lesson_photo/img-6.png">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- img modal -->
+        <div class="img-modal">
+            <div class="modal-img-main">
+                <div class="modal-img-item">
+                    <img src="" alt="">
+                    <i class="fas fa-times" id="close-modal-img"></i>
+                </div>
+            </div>
+        </div>
+        <!-- img modal -->
+        <!-- !Teachers -->
+
+        <!-- Videos -->
+        <section id="videos-div">
+            <h1>Darslardan videolavhalar</h1>
+
+            <!-- Owl-carousel -->
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/DMOQPaLbUvs"></p>
+                                <!-- Video Youtube link -->
+                            </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/yPJAaGuYctE"></p>
+                                <!-- Video Youtube link -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/QC8iQqtG0hg"></p>
+                                <!-- Video Youtube link -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/DMOQPaLbUvs"></p>
+                                <!-- Video Youtube link -->
+                            </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/yPJAaGuYctE"></p>
+                                <!-- Video Youtube link -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/QC8iQqtG0hg"></p>
+                                <!-- Video Youtube link -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/DMOQPaLbUvs"></p>
+                                <!-- Video Youtube link -->
+                            </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/yPJAaGuYctE"></p>
+                                <!-- Video Youtube link -->
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="https://www.youtube.com/embed/QC8iQqtG0hg"></p>
+                                <!-- Video Youtube link -->
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- !Owl-carousel -->
+        </section>
+
+        <!-- video modal -->
+        
+        <div class="video-modal">
+            <div class="modal-video-main">
+                <div class="modal-video-item">
+                    <div class="video-top">
+                        <i class="fas fa-times" id="modal-video-close"></i>
+                    </div>
+                    <div class="video-content">
+                        <div class="video-container">
+                            <!-- Here Iframe JS yordamida clone qilinadi bu yerga --> 
+                            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <!-- Here Iframe JS yordamida clone qilinadi bu yerga --> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- video modal -->
+        <!-- !Videos -->
+
+        <!-- Results -->
+        <section id="result-div">
+            <h1>O’quvchilarimiz natijalari</h1>
+
+            <!-- Owl-carousel -->
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-1.png">
+                            <h3>Norboyeva Nodira</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Milliy Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">6</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-2.svg">
+                            <h3>Mavlonov Abdulla</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Yuridik Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">8</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-3.svg">
+                            <h3>Yo‘lchiyeva Madina</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Nizomiy Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">5</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-1.png">
+                            <h3>Norboyeva Nodira</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Milliy Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">6</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-2.svg">
+                            <h3>Mavlonov Abdulla</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Yuridik Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">8</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-3.svg">
+                            <h3>Yo‘lchiyeva Madina</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Nizomiy Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">5</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-1.png">
+                            <h3>Norboyeva Nodira</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Milliy Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">6</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-2.svg">
+                            <h3>Mavlonov Abdulla</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Yuridik Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">8</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="result-item">
+                        <div class="result-main">
+                            <img src="assets/images/pupils_result/img-3.svg">
+                            <h3>Yo‘lchiyeva Madina</h3>
+                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Nizomiy Universiteti</span></p>
+                            <p>Abiturientlik davri: <span class="kurs-muddat">5</span> oylik tayyorlov kursi</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- !Owl-carousel -->
+        </section>
+        <!-- !Results -->
+
+        <!-- Comments -->
+        <section id="commits-div">
+            <h1>Mijozlarimiz izohlari</h1>
+
+            <!-- Owl-carousel -->
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-1.png">
+                            <div class="commit-content">
+                                <h3>Karimova Odina</h3>
+                                <h5>TDMI 1-kurs talabasi</h5>
+                                <p>Men talaba bo’lishimga sababchi bo‘lgan eng zo‘r o‘quv markaz.</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-2.png">
+                            <div class="commit-content">
+                                <h3>Azizova Durdona</h3>
+                                <h5>TATU 1-kurs talasi</h5>
+                                <p>Zamonaviy kasblarni o’rganish uchun qulay o’quv markaz deya tavsiya qilaman</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-3.png">
+                            <div class="commit-content">
+                                <h3>Madrahimov Olimjon</h3>
+                                <h5>TDYU 1-kurs talabasi</h5>
+                                <p>Eng tajribali ustozlar jamosiga ega o‘quv markaz sifatiad tavsiya qilaman.</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-1.png">
+                            <div class="commit-content">
+                                <h3>Karimova Odina</h3>
+                                <h5>TDMI 1-kurs talabasi</h5>
+                                <p>Men talaba bo’lishimga sababchi bo‘lgan eng zo‘r o‘quv markaz.</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-2.png">
+                            <div class="commit-content">
+                                <h3>Azizova Durdona</h3>
+                                <h5>TATU 1-kurs talasi</h5>
+                                <p>Zamonaviy kasblarni o’rganish uchun qulay o’quv markaz deya tavsiya qilaman</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-3.png">
+                            <div class="commit-content">
+                                <h3>Madrahimov Olimjon</h3>
+                                <h5>TDYU 1-kurs talabasi</h5>
+                                <p>Eng tajribali ustozlar jamosiga ega o‘quv markaz sifatiad tavsiya qilaman.</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-1.png">
+                            <div class="commit-content">
+                                <h3>Karimova Odina</h3>
+                                <h5>TDMI 1-kurs talabasi</h5>
+                                <p>Men talaba bo’lishimga sababchi bo‘lgan eng zo‘r o‘quv markaz.</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-2.png">
+                            <div class="commit-content">
+                                <h3>Azizova Durdona</h3>
+                                <h5>TATU 1-kurs talasi</h5>
+                                <p>Zamonaviy kasblarni o’rganish uchun qulay o’quv markaz deya tavsiya qilaman</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="commit-item">
+                        <div class="commit-main">
+                            <img src="assets/images/user_comment/img-3.png">
+                            <div class="commit-content">
+                                <h3>Madrahimov Olimjon</h3>
+                                <h5>TDYU 1-kurs talabasi</h5>
+                                <p>Eng tajribali ustozlar jamosiga ega o‘quv markaz sifatiad tavsiya qilaman.</p>
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- !Owl-carousel -->
+        </section>
+        <!-- !Comments -->
+
+        <!-- Adrress -->
+        <section id="address-div">
+            <h1>Biz bilan bog’lanish</h1>
+            <div class="map-container">
+                <div class="map-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48271.64865105821!2d69.0349640524582!3d40.872356108637575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae0cffaa77dbbb%3A0x74bfadbb12b99dcc!2z0JDQutC60YPRgNCz0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1633431104574!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="map-contact-icons">
+                <div class="box-1">
+                    <a href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.38315 0 0 4.35998 0 9.71917C0 11.9305 0.894753 14.0131 2.58757 15.7419C4.77944 17.9802 11.1535 23.2948 11.4237 23.5199L11.9999 24L12.5762 23.52C12.8466 23.2947 19.2226 17.9789 21.4148 15.7399C23.1061 14.0126 24 11.9307 24 9.71917C24 4.35998 18.6168 0 12 0ZM20.1552 14.9309C18.3904 16.7333 13.6511 20.7429 12 22.1297C10.3491 20.7429 5.61142 16.7346 3.84707 14.9328C2.38196 13.4366 1.60753 11.6337 1.60753 9.71917C1.60753 5.0779 6.26954 1.30199 12 1.30199C17.7304 1.30199 22.3925 5.0779 22.3924 9.71917C22.3924 11.6339 21.6188 13.4361 20.1552 14.9309Z" fill="#00445B"/>
+                            <path d="M11.9997 3.85791C8.08294 3.85791 4.89648 6.43869 4.89648 9.61095C4.89648 12.7832 8.08302 15.364 11.9997 15.364C15.9164 15.364 19.1029 12.7832 19.1029 9.61095C19.1029 6.43875 15.9165 3.85791 11.9997 3.85791ZM11.9997 14.062C8.96933 14.062 6.50402 12.0652 6.50402 9.61095C6.50402 7.1566 8.96941 5.15989 11.9997 5.15989C15.03 5.15989 17.4953 7.15666 17.4954 9.61095C17.4954 12.0653 15.0301 14.062 11.9997 14.062Z" fill="#00445B"/>
+                        </svg>
+                    </a>
+                    <p>Toshkent shahri, Chilonzor tumani, Ustozlar ko’chasi, 13-uy</p>
+                </div>
+                <div class="box-2">
+                    <a href="#">
+                        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5754 16.8165L12.5731 14.9867C12.4467 14.9043 12.2962 14.8575 12.137 14.8512C11.9779 14.8448 11.816 14.8791 11.6679 14.9505L10.4524 15.5754C10.3 15.6516 10.1315 15.6858 9.9675 15.6739C9.80353 15.662 9.65123 15.6044 9.52927 15.5083C7.38988 13.8647 6.0183 11.489 5.66458 8.81443C5.64231 8.66075 5.66862 8.50008 5.74028 8.35212C5.81194 8.20416 5.92585 8.07534 6.06802 7.98146L7.18541 7.18667C7.32351 7.09688 7.43713 6.97584 7.51456 6.83603C7.59199 6.69623 7.63042 6.54273 7.62587 6.39137L7.54239 2.87638L7.52796 1.97572C7.52379 1.8462 7.4886 1.72195 7.42502 1.61224C7.32317 1.43413 7.15101 1.30484 6.9423 1.2497C6.36706 1.09161 5.74749 1.07 5.13506 1.18668C4.52262 1.30337 3.93502 1.55497 3.42105 1.92058L3.16969 2.1069L3.03945 2.20407C2.97894 2.24679 2.92062 2.29237 2.86475 2.34063L2.70295 2.48897C0.565905 4.47799 0.725289 9.23026 3.13929 13.848L3.87953 15.1301C6.668 19.5233 10.7039 22.0375 13.5054 21.2206L13.7148 21.1546C13.7841 21.1305 13.8524 21.103 13.9192 21.0723L14.0691 21.0091L14.3562 20.8845C14.9295 20.622 15.4409 20.2388 15.8478 19.7667C16.2548 19.2946 16.5456 18.7473 16.696 18.1701C16.7526 17.9618 16.7267 17.7481 16.6234 17.5708C16.5602 17.4609 16.4702 17.3683 16.3601 17.2999L15.5754 16.8165Z" stroke="#00445B" stroke-width="1.06794" stroke-miterlimit="10"/>
+                        </svg>
+                    </a>
+                    <p><a href="#">+998 90 350 55 55</a></p>
+                </div>
+                <div class="box-3">
+                    <a href="#">
+                        <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.1519 0.00244141H1.8481C0.83038 0.00244141 0 0.832821 0 1.85054V16.1493C0 17.167 0.83038 17.9974 1.8481 17.9974H22.1519C23.1696 17.9974 24 17.167 24 16.1493V1.85054C24 0.832821 23.1696 0.00244141 22.1519 0.00244141ZM21.8835 1.36953L12.1266 9.71383L2.36962 1.36953H21.8835ZM22.6329 16.1493C22.6329 16.4126 22.4152 16.6303 22.1519 16.6303H1.8481C1.58481 16.6303 1.36709 16.4126 1.36709 16.1493V2.3113L11.681 11.1316C11.6861 11.1366 11.6962 11.1417 11.7013 11.1467C11.7063 11.1518 11.7165 11.1569 11.7215 11.1619C11.7367 11.1721 11.7468 11.1822 11.762 11.1873C11.7671 11.1923 11.7722 11.1923 11.7772 11.1974C11.7975 11.2075 11.8177 11.2176 11.838 11.2278C11.843 11.2278 11.8481 11.2328 11.8532 11.2328C11.8684 11.2379 11.8835 11.248 11.9038 11.2531C11.9089 11.2531 11.919 11.2581 11.9241 11.2581C11.9392 11.2632 11.9544 11.2683 11.9696 11.2683C11.9747 11.2683 11.9848 11.2733 11.9899 11.2733C12.0051 11.2784 12.0253 11.2784 12.0405 11.2835C12.0456 11.2835 12.0506 11.2835 12.0557 11.2835C12.0759 11.2835 12.1013 11.2885 12.1215 11.2885C12.1418 11.2885 12.1671 11.2885 12.1873 11.2835C12.1924 11.2835 12.1975 11.2835 12.2025 11.2835C12.2177 11.2835 12.238 11.2784 12.2532 11.2733C12.2582 11.2733 12.2684 11.2683 12.2734 11.2683C12.2886 11.2632 12.3038 11.2581 12.319 11.2581C12.3241 11.2581 12.3342 11.2531 12.3392 11.2531C12.3544 11.248 12.3696 11.2429 12.3899 11.2328C12.3949 11.2328 12.4 11.2278 12.4051 11.2278C12.4253 11.2176 12.4456 11.2075 12.4658 11.1974C12.4709 11.1923 12.4759 11.1923 12.481 11.1873C12.4962 11.1771 12.5063 11.1721 12.5215 11.1619C12.5266 11.1569 12.5367 11.1518 12.5418 11.1467C12.5468 11.1417 12.557 11.1366 12.562 11.1316L22.6329 2.52902V16.1493Z" fill="#00445B"/>
+                        </svg>
+                    </a>
+                    <p><a href="#">apexedu@gmail.com</a></p>
+                </div>
+                <div class="box-4">
+                    <p>Ijtimoiy tarmoqdagi sahifalarimiz:</p>
+                    <a href="#">
+                        <svg class="first-map-icon" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.84454 5.39409C7.87023 5.39409 6.27686 7.00416 6.27686 8.99918C6.27686 10.9942 7.87023 12.6043 9.84454 12.6043C11.8189 12.6043 13.4122 10.9942 13.4122 8.99918C13.4122 7.00416 11.8189 5.39409 9.84454 5.39409ZM9.84454 11.3422C8.56776 11.3422 7.52581 10.2893 7.52581 8.99918C7.52581 7.70901 8.56776 6.65614 9.84454 6.65614C11.1213 6.65614 12.1633 7.70901 12.1633 8.99918C12.1633 10.2893 11.1213 11.3422 9.84454 11.3422ZM13.5583 4.40625C13.0974 4.40625 12.7251 4.7824 12.7251 5.2482C12.7251 5.714 13.0974 6.09015 13.5583 6.09015C14.0193 6.09015 14.3916 5.71575 14.3916 5.2482C14.3898 4.78065 14.0193 4.40625 13.5583 4.40625Z" fill="#00445B" stroke="#00445B" stroke-width="0.284783"/>
+                            <path d="M16.7995 8.99977C16.7995 8.02951 16.8082 7.06804 16.7543 6.09953C16.7003 4.97459 16.4464 3.9762 15.6323 3.15359C14.8165 2.32922 13.8302 2.07435 12.7169 2.01986C11.7567 1.96537 10.8052 1.97416 9.84678 1.97416C8.88659 1.97416 7.93509 1.96537 6.97664 2.01986C5.86337 2.07435 4.87534 2.33097 4.06126 3.15359C3.24545 3.97796 2.99322 4.97459 2.9393 6.09953C2.88537 7.06979 2.89407 8.03127 2.89407 8.99977C2.89407 9.96828 2.88537 10.9315 2.9393 11.9C2.99322 13.025 3.24719 14.0233 4.06126 14.846C4.87708 15.6703 5.86337 15.9252 6.97664 15.9797C7.93683 16.0342 8.88833 16.0254 9.84678 16.0254C10.807 16.0254 11.7585 16.0342 12.7169 15.9797C13.8302 15.9252 14.8182 15.6686 15.6323 14.846C16.4481 14.0216 16.7003 13.025 16.7543 11.9C16.8099 10.9315 16.7995 9.97004 16.7995 8.99977ZM15.2687 13.1445C15.1418 13.4644 14.9887 13.7034 14.7434 13.9495C14.4982 14.1974 14.2633 14.352 13.9467 14.4804C13.0318 14.8477 10.8592 14.7651 9.84504 14.7651C8.83092 14.7651 6.65657 14.8477 5.7416 14.4821C5.42502 14.3538 5.18845 14.1991 4.94492 13.9513C4.69965 13.7034 4.54658 13.4661 4.4196 13.1462C4.05779 12.2199 4.13954 10.0245 4.13954 8.99977C4.13954 7.97502 4.05779 5.77787 4.4196 4.85331C4.54658 4.5334 4.69965 4.29435 4.94492 4.04827C5.19019 3.80219 5.42502 3.64575 5.7416 3.51744C6.65657 3.15183 8.83092 3.23444 9.84504 3.23444C10.8592 3.23444 13.0335 3.15183 13.9485 3.51744C14.2651 3.64575 14.5016 3.80043 14.7452 4.04827C14.9904 4.29611 15.1435 4.5334 15.2705 4.85331C15.6323 5.77787 15.5505 7.97502 15.5505 8.99977C15.5505 10.0245 15.6323 12.2199 15.2687 13.1445Z" fill="#00445B" stroke="#00445B" stroke-width="0.284783"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.9207 0.929934C13.7337 0.938723 13.5576 0.993652 13.401 1.05517H13.3989C13.2401 1.11889 12.4856 1.43967 11.3397 1.92524C10.1939 2.41301 8.7066 3.04579 7.23021 3.67418C4.28179 4.92875 1.38338 6.16355 1.38338 6.16355L1.41817 6.15037C1.41817 6.15037 1.21813 6.21628 1.00939 6.3613C0.902846 6.43161 0.785431 6.52828 0.683236 6.67988C0.581042 6.83149 0.498416 7.06439 0.528857 7.30388C0.578868 7.71035 0.83979 7.95423 1.02678 8.08826C1.21595 8.22448 1.39642 8.2882 1.39642 8.2882H1.40077L4.11871 9.2132C4.24048 9.60869 4.94714 11.9552 5.11674 12.4957C5.21676 12.8187 5.31461 13.0209 5.43637 13.1747C5.49508 13.2538 5.56466 13.3197 5.64728 13.3724C5.6799 13.3922 5.71469 13.4076 5.74948 13.4207C5.76035 13.4273 5.77122 13.4295 5.78427 13.4317L5.756 13.4251C5.7647 13.4273 5.77122 13.4339 5.77774 13.4361C5.79949 13.4427 5.81471 13.4449 5.84298 13.4493C6.2735 13.5811 6.61922 13.3109 6.61922 13.3109L6.63879 13.2955L8.24346 11.819L10.9331 13.9041L10.994 13.9305C11.555 14.1788 12.1225 14.0403 12.4226 13.7965C12.7248 13.5504 12.8422 13.2362 12.8422 13.2362L12.8618 13.1857L14.9405 2.4262C14.9992 2.16034 15.0144 1.91206 14.9492 1.67037C14.8839 1.42869 14.7165 1.20238 14.5143 1.08154C14.3099 0.958497 14.1077 0.921146 13.9207 0.929934ZM13.8642 2.08344C13.862 2.11859 13.8685 2.1142 13.8533 2.18231V2.1889L11.7942 12.8363C11.7855 12.8517 11.7703 12.8846 11.7289 12.9176C11.6855 12.9528 11.6507 12.9747 11.4702 12.9022L8.1804 10.3535L6.19305 12.1838L6.61052 9.49004C6.61052 9.49004 11.7637 4.63653 11.9855 4.4278C12.2073 4.21907 12.1334 4.17513 12.1334 4.17513C12.1486 3.92026 11.7985 4.10043 11.7985 4.10043L5.02107 8.34313L5.0189 8.33214L1.77041 7.22698V7.22478C1.76824 7.22478 1.76389 7.22258 1.76172 7.22258C1.76389 7.22258 1.77911 7.21599 1.77911 7.21599L1.79651 7.2072L1.8139 7.20061C1.8139 7.20061 4.71449 5.96581 7.66291 4.71123C9.13929 4.08285 10.6266 3.45007 11.7703 2.9623C12.914 2.47673 13.7598 2.12079 13.8076 2.10102C13.8533 2.08344 13.8315 2.08344 13.8642 2.08344Z" fill="#00445B" stroke="#00445B" stroke-width="0.284783"/>
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.83538 16.4994H6.86667C6.66983 16.4994 6.48105 16.4204 6.34187 16.2798C6.20268 16.1391 6.12449 15.9484 6.12449 15.7495V11.0997H4.64013C4.44329 11.0997 4.25451 11.0207 4.11533 10.8801C3.97614 10.7394 3.89795 10.5487 3.89795 10.3498V7.6499C3.89795 7.45099 3.97614 7.26024 4.11533 7.11959C4.25451 6.97895 4.44329 6.89993 4.64013 6.89993H6.12449V5.625C6.17651 4.48232 6.67416 3.40694 7.50863 2.63399C8.3431 1.86104 9.44649 1.4534 10.5776 1.50021H12.8041C13.0009 1.50021 13.1897 1.57922 13.3289 1.71987C13.4681 1.86051 13.5463 2.05127 13.5463 2.25017V4.95003C13.5463 5.14894 13.4681 5.33969 13.3289 5.48034C13.1897 5.62098 13.0009 5.7 12.8041 5.7H10.5776V6.89993H12.8041C12.9187 6.89906 13.0319 6.92501 13.1349 6.97575C13.238 7.0265 13.3279 7.10066 13.3978 7.19242C13.467 7.28556 13.5137 7.39369 13.5343 7.50824C13.5549 7.62279 13.5489 7.74061 13.5166 7.85239L12.7744 10.5522C12.7295 10.7145 12.6319 10.8567 12.4973 10.956C12.3626 11.0553 12.1988 11.1059 12.0322 11.0997H10.5776V15.7495C10.5776 15.9484 10.4994 16.1391 10.3602 16.2798C10.221 16.4204 10.0322 16.4994 9.83538 16.4994ZM7.60884 14.9995H9.0932V10.3498C9.0932 10.2513 9.1124 10.1537 9.1497 10.0628C9.187 9.97177 9.24166 9.8891 9.31058 9.81946C9.3795 9.74981 9.46132 9.69457 9.55136 9.65688C9.64141 9.61919 9.73792 9.5998 9.83538 9.5998H11.4979L11.8244 8.39986H9.83538C9.73792 8.39986 9.64141 8.38046 9.55136 8.34277C9.46132 8.30508 9.3795 8.24984 9.31058 8.1802C9.24166 8.11056 9.187 8.02788 9.1497 7.93689C9.1124 7.8459 9.0932 7.74838 9.0932 7.6499V5.625C9.11226 5.24034 9.27702 4.87782 9.55335 4.61255C9.82969 4.34728 10.1964 4.19959 10.5776 4.20007H12.0619V3.00013H10.5776C9.84044 2.95475 9.11533 3.2049 8.55956 3.6963C8.00379 4.18769 7.66218 4.88071 7.60884 5.625V7.6499C7.60884 7.8488 7.53065 8.03955 7.39147 8.1802C7.25228 8.32084 7.0635 8.39986 6.86667 8.39986H5.38231V9.5998H6.86667C7.0635 9.5998 7.25228 9.67881 7.39147 9.81946C7.53065 9.9601 7.60884 10.1509 7.60884 10.3498V14.9995Z" fill="#00445B"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- !Adrress -->
+
+    </div>
+
+    <!-- *|*|*|*|*|*|*|*|* Footer *|*|*|*|*|*|*|*|* -->
+
+    <footer id="footer">
+        <div class="footer-in">
+            <h1>Aloqa</h1>
+            <form id="footer-form" action="#" method="GET" class="footer-form row">
+                <div>
+                    <input class="footer-name" type="text" required name="name" placeholder="Ism va familiyangizni yozing">
+                    <i class="fas fa-exclamation-circle name-error"></i>
+                    <i class="fas fa-check name-success"></i>
+                    <p class="ftr-name-error">3 tadan kam bo'lmagan va 30 tadan ko'p bo'lmagan, lotin harflaridan iborat bo'lishi kerak</p>
+                </div>
+                <div>
+                    <input class="footer-tel" id="phone" type="tel" required name="phone-number" placeholder="Telefon raqamingizni yozing">
+                    <i class="fas fa-exclamation-circle tel-error"></i>
+                    <i class="fas fa-check tel-success"></i>
+                    <p class="ftr-tel-error">Telefon raqamni to'g'ri formatda kiritish kerak</p>
+                </div>
+                <div>
+                    <input class="footer-email" type="email" required name="email" placeholder="Email manzilingizni yozing">
+                    <i class="fas fa-exclamation-circle email-error"></i>
+                    <i class="fas fa-check email-success"></i>
+                    <p class="ftr-email-error">Elektron pochtangizni to'g'ri kiriting</p>
+                </div>
+                <button type="submit" id="footer-submit">YUBORISH</button>
+            </form>
+            <div class="line-footer"></div>
+            <div class="footer-down">
+                <div class="footer-logo">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M46.6089 0.0130768C45.062 0.14724 43.5309 0.320862 42.426 0.486588C20.6829 3.81695 3.64351 20.9501 0.44715 42.7001C0.107783 45.0045 0.0288608 46.0462 0.00518406 48.7373C-0.00270819 50.1894 -0.00270819 51.2232 0.0130763 51.0259C0.0288608 50.8286 0.0841066 50.2052 0.13146 49.6449C0.431366 46.0541 1.15745 42.5422 2.3334 39.0303C4.20386 33.4114 6.95826 28.4947 10.8255 23.8385C11.9225 22.5206 15.0084 19.427 16.3816 18.2748C21.5826 13.9027 27.6675 10.6986 34.0602 8.96243C45.3225 5.90828 57.3187 7.16309 67.5944 12.4822C73.6399 15.6152 78.975 20.0899 83.15 25.5274C91.4921 36.3945 94.5622 50.4498 91.5395 63.9291C89.9374 71.1028 86.5674 77.8661 81.7294 83.6192C80.5772 84.9924 77.4834 88.0781 76.1654 89.1751C71.509 93.0421 66.5921 95.7964 60.9728 97.6667C57.4608 98.8426 53.9487 99.5687 50.3577 99.8685C49.7974 99.9159 49.1739 99.9711 48.9766 99.9869C48.7793 100.003 49.8132 100.003 51.2653 99.9948C53.9566 99.9711 54.9984 99.8922 57.3029 99.5529C69.4886 97.7614 80.5377 91.5663 88.4694 82.0724C94.3334 75.0566 98.1295 66.636 99.5186 57.5762C99.9447 54.7667 100 53.938 100 50C100 46.062 99.9447 45.2333 99.5186 42.4238C96.188 20.6818 79.054 3.64333 57.3029 0.447128C54.7774 0.07621 54.0355 0.028862 50.4367 0.00518799C48.5267 -0.00270844 46.8062 -0.00270844 46.6089 0.0130768Z" fill="black"/>
+                        <path d="M42.8995 7.54979C27.9358 8.54417 14.5585 17.4067 7.77902 30.8307C4.01442 38.2885 2.53068 46.5671 3.48564 54.8535C5.06409 68.68 13.3588 80.8966 25.655 87.502C37.8327 94.0365 52.5754 94.218 64.9189 87.9834C74.3344 83.2247 81.69 75.0882 85.4703 65.247C87.3171 60.4251 88.3037 55.1376 88.2721 50.1736L88.2642 48.6979L88.1537 49.9605C87.4434 58.3022 84.397 65.7521 79.0618 72.1761C78.0674 73.3756 75.9444 75.5222 74.6659 76.635C68.3205 82.1277 60.6019 85.3791 52.1729 86.1131C50.3262 86.2709 46.309 86.2315 44.6358 86.0342C39.7979 85.4659 35.7413 84.2822 31.4952 82.1987C19.7358 76.4456 11.5594 65.0655 9.8389 52.0913C9.57056 50.0474 9.49164 48.4848 9.539 46.062C9.59424 43.1104 9.8389 41.027 10.4308 38.2806C11.4726 33.514 13.7377 28.3606 16.5789 24.32C17.3444 23.2388 17.6128 22.8836 17.5023 23.1283C17.3444 23.4519 16.9972 24.5725 16.8078 25.338C16.0343 28.5026 15.8054 32.6301 16.2632 35.0844C16.4684 36.1498 17.155 38.8804 17.5733 40.2773C19.57 46.9143 22.9716 52.3755 27.6675 56.5029C28.8987 57.5841 29.3407 57.9313 33.4131 61.0012C37.1619 63.8186 38.6062 64.9472 39.7821 65.9731C44.7384 70.282 47.0824 73.9833 48.1005 79.0814L48.3215 80.1863L48.5267 79.5155C49.3396 76.8875 49.7816 72.7601 49.608 69.4771C49.5606 68.6169 49.4738 67.4804 49.4107 66.9517C48.5583 60.0148 45.6224 53.504 40.7292 47.7508C40.2872 47.23 39.0402 45.8805 37.9669 44.7519C32.8764 39.417 29.5064 35.629 27.7464 33.2693C27.3676 32.7563 27.0361 32.2907 27.0124 32.2276C26.9256 32.0303 26.4837 32.6537 26.3021 33.2298C25.726 35.0529 26.5389 38.4464 28.291 41.5242C28.733 42.3055 29.2538 43.071 30.6508 45.0045C31.0454 45.549 31.1401 45.7384 31.1243 45.9278C31.1006 46.1646 31.0848 46.1725 30.6902 46.1961C29.0723 46.2908 25.6076 43.2604 23.2084 39.6617C22.0009 37.8387 20.7618 35.4475 20.1778 33.7902C19.5779 32.0934 19.3806 30.081 19.5306 27.311C19.7042 24.241 19.7279 23.0888 19.6253 22.5916C19.5148 22.0787 19.2386 21.6999 18.9071 21.6131L18.6782 21.5499L19.57 20.5634C24.8105 14.7629 31.4716 10.6986 38.914 8.76514C41.2264 8.16535 43.2784 7.81812 45.8591 7.58925L47.043 7.48666H45.4645C44.5964 7.48666 43.4441 7.51823 42.8995 7.54979Z" fill="black"/>
+                        <path d="M46.7036 20.011C44.4149 20.6108 42.7496 22.7968 42.7417 25.2038C42.7417 25.4327 42.7969 25.8904 42.868 26.2219C43.381 28.7236 45.5671 30.5072 48.1084 30.5072C50.5235 30.5072 52.6623 28.842 53.2779 26.4823C53.4594 25.7957 53.4673 24.5488 53.2857 23.878C52.7885 21.9603 51.2338 20.4135 49.3712 19.9794C48.653 19.8058 47.4218 19.8216 46.7036 20.011Z" fill="black"/>
+                        <path d="M77.3098 21.8025C76.8126 22.2602 76.7494 23.0494 76.9625 26.2929C77.223 30.2704 76.9862 32.4091 76.0312 34.6504C74.8001 37.5388 73.2374 40.08 71.3433 42.266C69.1019 44.8466 66.5448 46.5592 65.5188 46.1646C65.4477 46.133 65.3925 46.0225 65.3925 45.8962C65.3925 45.6753 65.5898 45.3754 66.8131 43.7339C68.3679 41.6347 69.4965 39.3302 70.1121 36.9785C70.3646 36.0078 70.3883 35.8105 70.3962 34.7688C70.4041 33.5061 70.2778 32.9931 69.8358 32.417L69.6227 32.1329L69.4649 32.3617C67.5155 35.0844 64.3586 38.6831 58.7235 44.5941C56.0323 47.4115 55.03 48.5953 53.6015 50.5761C52.2519 52.4623 50.8865 54.8377 49.971 56.8817C49.0713 58.8862 49.1108 58.5153 49.6711 60.1963C50.7997 63.574 51.4232 67.1963 51.4232 70.3767C51.4232 71.0633 51.4469 71.6237 51.4863 71.6158C51.5179 71.6158 51.8336 71.2133 52.1888 70.7319C53.3805 69.1219 55.0221 67.441 57.2635 65.5548C58.5262 64.4815 60.1599 63.2188 64.0114 60.3225C67.8786 57.4104 68.5099 56.8975 70.041 55.4059C74.074 51.4679 76.8678 46.8354 78.762 40.9244C79.2907 39.2987 80.1747 35.7947 80.3562 34.6109C80.5219 33.585 80.5456 30.6729 80.3957 29.2839C80.0168 25.701 79.1408 22.6785 78.2411 21.8656C77.878 21.5341 77.6255 21.5183 77.3098 21.8025Z" fill="black"/>
+                        <path d="M67.1287 26.7822C66.3553 27.9897 64.2007 29.4418 61.691 30.4677C59.7968 31.2332 57.9658 31.7383 55.172 32.2513C52.1334 32.8037 50.0893 33.3798 48.7319 34.0664L48.1084 34.3742L47.3744 34.0269C45.9222 33.3245 43.9886 32.78 41.2027 32.2828C37.6354 31.6436 35.2677 30.9175 32.8921 29.7259C31.1874 28.8735 29.7037 27.7292 29.0328 26.7585L28.7566 26.3639L28.7961 26.9164C28.9618 29.0156 30.5245 31.8803 32.8211 34.2637C34.3522 35.8578 35.7176 36.9627 38.2036 38.6121C39.9715 39.788 40.595 40.2851 41.6367 41.3663C44.2333 44.0574 46.2142 47.8692 47.3586 52.3676C47.6585 53.5513 48.0295 55.4769 48.0295 55.8557C48.0295 56.3135 48.1084 56.0294 48.3057 54.8298C49.1738 49.6843 51.3363 44.8861 54.1933 41.7451C55.3456 40.4746 56.1348 39.8353 58.3289 38.3832C62.1566 35.842 64.7374 33.2298 66.2527 30.3493C66.9393 29.0314 67.5154 27.1847 67.4286 26.5455C67.4049 26.3718 67.3734 26.3955 67.1287 26.7822Z" fill="black"/>
+                    </svg>
+                    <div>
+                        <h3>APEX TA'LIM</h3>
+                        <p>Talaba bo‘lishingizga <br> albatta ishonamiz</p>
+                    </div>
+                </div>
+                <div class="footer-logo-rizqim">
+                    <div>
+                        <h3>Ishlab chiqaruvchi kompaniya:</h3>
+                    </div>
+                    <a href="https://rizqim.uz/" target="_blank">
+                        <svg width="178" height="58" viewBox="0 0 178 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.6898 20.1707H27.7201C27.8549 20.1707 27.9841 20.2252 28.0794 20.3223C28.1747 20.4194 28.2282 20.5511 28.2282 20.6884V22.7537C28.2282 22.8216 28.215 22.8889 28.1895 22.9517C28.164 23.0144 28.1265 23.0714 28.0793 23.1194C28.0321 23.1674 27.9761 23.2055 27.9145 23.2314C27.8529 23.2573 27.7868 23.2706 27.7201 23.2705H25.5443C23.6617 23.2705 22.3019 24.0364 21.4651 25.5681C21.4227 25.6462 21.4007 25.734 21.4011 25.8232V38.4009C21.4009 38.5381 21.3473 38.6696 21.252 38.7667C21.1568 38.8637 21.0277 38.9183 20.8931 38.9186H18.5559C18.4212 38.9183 18.2921 38.8637 18.1969 38.7667C18.1017 38.6696 18.0481 38.5381 18.0479 38.4009V20.6903C18.0479 20.553 18.1014 20.4213 18.1967 20.3242C18.2919 20.2271 18.4212 20.1726 18.5559 20.1726H20.5816C20.7101 20.1728 20.8338 20.2226 20.9277 20.312C21.0217 20.4014 21.0789 20.5237 21.0878 20.6544L21.0989 20.8103C21.1045 20.8997 21.1327 20.986 21.1807 21.061C21.2287 21.136 21.2948 21.1971 21.3728 21.2383C21.4508 21.2796 21.5379 21.2996 21.6257 21.2964C21.7135 21.2933 21.799 21.2671 21.8739 21.2203C22.9469 20.5212 24.2188 20.1713 25.6898 20.1707Z" fill="#00D2AB"/>
+                            <path d="M34.5801 16.6467C34.1475 17.0876 33.5952 17.308 32.9234 17.308C32.2516 17.308 31.7025 17.0876 31.276 16.6467C31.0653 16.4314 30.8997 16.1748 30.7893 15.8924C30.6789 15.61 30.6259 15.3077 30.6335 15.0037C30.6335 14.3273 30.8477 13.7677 31.276 13.3249C31.7043 12.8821 32.2535 12.6617 32.9234 12.6636C33.5952 12.661 34.1475 12.8724 34.5801 13.2975C35.0128 13.7226 35.2291 14.2914 35.2291 15.0037C35.2367 15.3082 35.1831 15.6111 35.0715 15.8937C34.9598 16.1762 34.7926 16.4325 34.5801 16.6467ZM31.2482 38.4008V20.6903C31.2481 20.6223 31.2611 20.555 31.2865 20.4922C31.312 20.4294 31.3493 20.3723 31.3964 20.3242C31.4435 20.2762 31.4994 20.238 31.561 20.212C31.6226 20.1859 31.6886 20.1726 31.7553 20.1726H34.0897C34.1564 20.1726 34.2225 20.1859 34.2841 20.212C34.3457 20.238 34.4018 20.2761 34.4489 20.3242C34.4961 20.3723 34.5335 20.4293 34.5591 20.4922C34.5846 20.555 34.5977 20.6223 34.5977 20.6903V38.4008C34.5977 38.4688 34.5846 38.5361 34.5591 38.599C34.5335 38.6618 34.4961 38.7188 34.4489 38.7669C34.4018 38.815 34.3457 38.8531 34.2841 38.8791C34.2225 38.9052 34.1564 38.9186 34.0897 38.9186H31.7553C31.6207 38.9183 31.4917 38.8636 31.3967 38.7666C31.3016 38.6695 31.2482 38.538 31.2482 38.4008Z" fill="#00D2AB"/>
+                            <path d="M53.0431 20.8424V23.2043C53.0429 23.3238 53.0023 23.4396 52.9281 23.5322L43.6017 35.1273C43.5409 35.2031 43.5024 35.2949 43.4907 35.392C43.479 35.4892 43.4945 35.5878 43.5356 35.6763C43.5766 35.7649 43.6415 35.8397 43.7226 35.8922C43.8037 35.9447 43.8978 35.9726 43.9939 35.9728H52.5351C52.6698 35.9728 52.799 36.0274 52.8943 36.1245C52.9896 36.2216 53.0431 36.3533 53.0431 36.4906V38.5549C53.0431 38.6229 53.03 38.6902 53.0044 38.753C52.9789 38.8158 52.9415 38.8729 52.8943 38.921C52.8471 38.969 52.7911 39.0072 52.7295 39.0332C52.6678 39.0592 52.6018 39.0726 52.5351 39.0726H39.3909C39.3242 39.0726 39.2582 39.0592 39.1966 39.0332C39.135 39.0071 39.0791 38.969 39.032 38.9209C38.9849 38.8728 38.9476 38.8157 38.9221 38.7529C38.8967 38.6901 38.8837 38.6228 38.8838 38.5549V36.159C38.8836 36.0386 38.9246 35.922 38.9997 35.8292L48.3938 24.2351C48.4564 24.1595 48.4965 24.0672 48.5092 23.9691C48.5219 23.871 48.5067 23.7713 48.4654 23.6817C48.4241 23.5922 48.3584 23.5166 48.2762 23.464C48.194 23.4113 48.0987 23.3839 48.0016 23.3848H39.3909C39.2563 23.3845 39.1273 23.3299 39.0323 23.2328C38.9372 23.1358 38.8838 23.0042 38.8838 22.8671V20.8424C38.8838 20.7053 38.9372 20.5737 39.0323 20.4767C39.1273 20.3796 39.2563 20.325 39.3909 20.3247H52.5351C52.6698 20.3247 52.799 20.3793 52.8943 20.4763C52.9896 20.5734 53.0431 20.7051 53.0431 20.8424Z" fill="#00D2AB"/>
+                            <path d="M69.6231 20.1707H71.6626C71.7974 20.1707 71.9266 20.2253 72.0219 20.3224C72.1172 20.4194 72.1707 20.5511 72.1707 20.6884V44.8224C72.1704 44.9597 72.1168 45.0912 72.0216 45.1883C71.9264 45.2853 71.7973 45.3399 71.6626 45.3402H69.3449C69.2102 45.3402 69.081 45.2856 68.9857 45.1885C68.8904 45.0914 68.8369 44.9597 68.8369 44.8224V38.5577C68.8373 38.4642 68.8128 38.3724 68.766 38.292C68.7192 38.2116 68.6519 38.1456 68.5712 38.1011C68.4905 38.0566 68.3995 38.0352 68.3078 38.0393C68.2162 38.0433 68.1273 38.0726 68.0507 38.1241C66.8764 38.9517 65.4605 39.3702 63.8028 39.3797C61.6545 39.3797 59.9344 38.7032 58.6427 37.3503C57.3509 35.9974 56.7051 34.2023 56.7051 31.9651V27.127C56.7051 24.8892 57.3479 23.0963 58.6334 21.7485C59.919 20.4006 61.6514 19.727 63.8306 19.7276C65.6273 19.7276 67.1187 20.1883 68.3048 21.1098C68.377 21.1644 68.4622 21.1984 68.5516 21.2083C68.641 21.2181 68.7314 21.2036 68.8135 21.166C68.8955 21.1285 68.9663 21.0694 69.0185 20.9947C69.0706 20.9201 69.1024 20.8326 69.1104 20.7413L69.1197 20.6403C69.1316 20.5124 69.1897 20.3935 69.2827 20.3068C69.3757 20.22 69.497 20.1715 69.6231 20.1707ZM64.4555 36.1504C66.4048 36.1504 67.8406 35.3871 68.7627 33.8603C68.8116 33.7777 68.8373 33.6829 68.8369 33.5864V25.5398C68.8378 25.4435 68.8121 25.3489 68.7627 25.2668C68.3344 24.5655 67.7323 23.9917 67.017 23.603C66.2328 23.1629 65.3508 22.9351 64.4555 22.9417C63.1149 22.9417 62.0525 23.3322 61.2682 24.1132C60.4839 24.8942 60.0914 25.9492 60.0908 27.2782V31.813C60.0908 33.1546 60.4833 34.2127 61.2682 34.9874C62.0531 35.7621 63.1156 36.1498 64.4555 36.1504Z" fill="#00D2AB"/>
+                            <path d="M80.5351 16.6468C80.1025 17.0877 79.5503 17.3081 78.8784 17.3081C78.2066 17.3081 77.6575 17.0877 77.231 16.6468C77.0202 16.4316 76.8545 16.175 76.7439 15.8926C76.6333 15.6102 76.5801 15.3078 76.5876 15.0038C76.5876 14.3274 76.8021 13.7678 77.231 13.325C77.6599 12.8822 78.2091 12.6618 78.8784 12.6636C79.5484 12.6636 80.1007 12.8759 80.5351 13.3004C80.9696 13.7249 81.186 14.2937 81.1841 15.0067C81.1914 15.3107 81.1375 15.613 81.0259 15.8951C80.9143 16.1771 80.7473 16.4329 80.5351 16.6468ZM77.2032 38.4009V20.6904C77.2032 20.6224 77.2163 20.555 77.2419 20.4922C77.2674 20.4294 77.3048 20.3723 77.352 20.3243C77.3992 20.2762 77.4552 20.2381 77.5168 20.212C77.5785 20.186 77.6445 20.1726 77.7112 20.1726H80.0456C80.1804 20.1726 80.3096 20.2272 80.4049 20.3243C80.5002 20.4214 80.5537 20.5531 80.5537 20.6904V38.4009C80.5534 38.5381 80.4998 38.6697 80.4046 38.7667C80.3094 38.8638 80.1803 38.9184 80.0456 38.9186H77.7112C77.5766 38.9184 77.4475 38.8638 77.3523 38.7667C77.257 38.6697 77.2034 38.5381 77.2032 38.4009Z" fill="#00D2AB"/>
+                            <path d="M104.76 19.7276C106.909 19.7276 108.596 20.3704 109.821 21.6559C111.046 22.9414 111.659 24.7295 111.66 27.0203V38.4047C111.66 38.4727 111.647 38.54 111.621 38.6028C111.596 38.6657 111.558 38.7227 111.511 38.7708C111.464 38.8189 111.408 38.857 111.346 38.883C111.285 38.9091 111.219 38.9225 111.152 38.9225H108.818C108.683 38.9222 108.554 38.8675 108.459 38.7705C108.364 38.6734 108.311 38.5419 108.311 38.4047V27.2754C108.311 25.9344 107.948 24.8763 107.224 24.1009C106.5 23.3256 105.528 22.9382 104.308 22.9389C102.569 22.9389 101.214 23.6367 100.244 25.0325C100.169 25.1445 100.139 25.2822 100.162 25.4161C100.24 25.9458 100.276 26.4809 100.271 27.0165V38.4009C100.271 38.5382 100.217 38.6699 100.122 38.767C100.027 38.8641 99.8976 38.9187 99.7629 38.9187H97.4452C97.3104 38.9187 97.1812 38.8641 97.0859 38.767C96.9906 38.6699 96.9371 38.5382 96.9371 38.4009V27.2754C96.9371 25.9344 96.5722 24.8763 95.8422 24.1009C95.1123 23.3256 94.1435 22.9382 92.9358 22.9389C91.2442 22.9389 89.9244 23.5939 88.9763 24.904C88.9143 24.9938 88.8819 25.1013 88.8836 25.211V38.4009C88.8836 38.5382 88.8301 38.6699 88.7348 38.767C88.6395 38.8641 88.5103 38.9187 88.3755 38.9187H86.0578C85.9231 38.9187 85.7939 38.8641 85.6986 38.767C85.6033 38.6699 85.5498 38.5382 85.5498 38.4009V20.6903C85.5498 20.553 85.6033 20.4213 85.6986 20.3242C85.7939 20.2271 85.9231 20.1726 86.0578 20.1726H88.0844C88.2126 20.1725 88.336 20.2218 88.4299 20.3107C88.5238 20.3996 88.5813 20.5214 88.5906 20.6516C88.5977 20.7437 88.6288 20.8323 88.6807 20.9081C88.7326 20.9839 88.8034 21.0442 88.8858 21.0827C88.9683 21.1212 89.0593 21.1366 89.1495 21.1273C89.2398 21.1179 89.3259 21.0842 89.399 21.0295C90.5857 20.1641 92.0128 19.7314 93.6803 19.7314C95.7996 19.7314 97.4396 20.4242 98.6003 21.8099C98.6466 21.8663 98.7041 21.9122 98.769 21.9445C98.8339 21.9768 98.9047 21.9948 98.9769 21.9973C99.0491 21.9998 99.121 21.9867 99.1879 21.959C99.2548 21.9313 99.3152 21.8895 99.3651 21.8363C100.698 20.4312 102.497 19.7282 104.76 19.7276Z" fill="#00D2AB"/>
+                            <path d="M119.32 39.3796C118.679 39.3796 118.154 39.1705 117.744 38.7523C117.333 38.3341 117.128 37.7959 117.128 37.1377C117.128 36.4802 117.333 35.9448 117.744 35.5317C118.154 35.1185 118.679 34.9122 119.32 34.9129C119.959 34.9129 120.485 35.1191 120.896 35.5317C121.307 35.9442 121.512 36.4796 121.511 37.1377C121.511 37.7965 121.312 38.3347 120.913 38.7523C120.515 39.1699 119.983 39.379 119.32 39.3796Z" fill="#00D2AB"/>
+                            <path d="M138.551 20.1707H140.884C141.019 20.1707 141.148 20.2252 141.243 20.3223C141.339 20.4194 141.392 20.5511 141.392 20.6884V38.4008C141.392 38.5381 141.339 38.6698 141.243 38.7669C141.148 38.864 141.019 38.9185 140.884 38.9185H138.845C138.718 38.9187 138.597 38.8708 138.503 38.7843C138.41 38.6978 138.351 38.5789 138.339 38.4509L138.32 38.2506C138.311 38.1586 138.279 38.0706 138.226 37.9957C138.172 37.9209 138.1 37.862 138.017 37.8252C137.934 37.7885 137.843 37.7751 137.753 37.7866C137.663 37.7981 137.577 37.8341 137.506 37.8906C136.285 38.8833 134.797 39.3796 133.042 39.3796C130.965 39.3796 129.321 38.7246 128.108 37.4145C126.895 36.1044 126.289 34.3116 126.288 32.0359V20.6903C126.288 20.553 126.342 20.4213 126.437 20.3242C126.532 20.2271 126.661 20.1726 126.796 20.1726H129.148C129.283 20.1726 129.412 20.2271 129.507 20.3242C129.603 20.4213 129.656 20.553 129.656 20.6903V31.7771C129.656 33.1186 130.015 34.1828 130.733 34.9694C131.452 35.7561 132.432 36.1498 133.676 36.1504C135.628 36.1504 137.059 35.3738 137.968 33.8206C138.015 33.7397 138.04 33.6473 138.04 33.5532V20.6903C138.04 20.6219 138.053 20.5541 138.078 20.4909C138.104 20.4277 138.141 20.3703 138.189 20.322C138.236 20.2737 138.293 20.2354 138.355 20.2094C138.417 20.1835 138.484 20.1703 138.551 20.1707Z" fill="#888CB9"/>
+                            <path d="M159.952 20.6903V23.0522C159.952 23.1722 159.911 23.2885 159.836 23.381L150.51 34.977C150.449 35.0528 150.411 35.1447 150.399 35.242C150.387 35.3393 150.403 35.4379 150.444 35.5265C150.485 35.615 150.55 35.6899 150.631 35.7423C150.713 35.7947 150.807 35.8225 150.903 35.8226H159.444C159.579 35.8226 159.708 35.877 159.803 35.9739C159.898 36.0708 159.952 36.2022 159.952 36.3393V38.4046C159.952 38.5418 159.898 38.6734 159.803 38.7704C159.708 38.8674 159.579 38.9221 159.444 38.9223H146.3C146.233 38.9223 146.167 38.9089 146.106 38.8829C146.044 38.8569 145.988 38.8188 145.941 38.7707C145.894 38.7226 145.856 38.6655 145.831 38.6027C145.805 38.5399 145.792 38.4726 145.792 38.4046V36.004C145.792 35.8838 145.833 35.7674 145.909 35.6752L155.3 24.0811C155.362 24.0054 155.402 23.9132 155.415 23.8154C155.427 23.7175 155.412 23.6181 155.371 23.5287C155.33 23.4393 155.264 23.3638 155.183 23.311C155.101 23.2583 155.006 23.2304 154.909 23.2308H146.3C146.165 23.2308 146.036 23.1762 145.941 23.0791C145.846 22.982 145.792 22.8504 145.792 22.713V20.6903C145.792 20.553 145.846 20.4213 145.941 20.3242C146.036 20.2271 146.165 20.1726 146.3 20.1726H159.444C159.579 20.1726 159.708 20.2271 159.803 20.3242C159.899 20.4213 159.952 20.553 159.952 20.6903Z" fill="#888CB9"/>
+                            <path d="M43.8974 37.1056H42.5921C42.5143 37.1056 42.4512 37.1699 42.4512 37.2492V40.8941C42.4512 40.9734 42.5143 41.0377 42.5921 41.0377H43.8974C43.9752 41.0377 44.0383 40.9734 44.0383 40.8941V37.2492C44.0383 37.1699 43.9752 37.1056 43.8974 37.1056Z" fill="#00D2AB"/>
+                            <path d="M49.3359 37.1056H48.0306C47.9527 37.1056 47.8896 37.1699 47.8896 37.2492V40.8941C47.8896 40.9734 47.9527 41.0377 48.0306 41.0377H49.3359C49.4137 41.0377 49.4768 40.9734 49.4768 40.8941V37.2492C49.4768 37.1699 49.4137 37.1056 49.3359 37.1056Z" fill="#00D2AB"/>
+                            <path d="M43.8974 18.3407H42.5921C42.5143 18.3407 42.4512 18.405 42.4512 18.4843V21.8873C42.4512 21.9667 42.5143 22.0309 42.5921 22.0309H43.8974C43.9752 22.0309 44.0383 21.9667 44.0383 21.8873V18.4843C44.0383 18.405 43.9752 18.3407 43.8974 18.3407Z" fill="#00D2AB"/>
+                            <path d="M49.3359 18.3407H48.0306C47.9527 18.3407 47.8896 18.405 47.8896 18.4843V21.8873C47.8896 21.9667 47.9527 22.0309 48.0306 22.0309H49.3359C49.4137 22.0309 49.4768 21.9667 49.4768 21.8873V18.4843C49.4768 18.405 49.4137 18.3407 49.3359 18.3407Z" fill="#00D2AB"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="copyright-footer">
+                    <p>©2021. Apex ta’lim. Xizmatlar litsenziyalangan.</p> 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- *|*|*|*|*|*|*|*|* Footer End *|*|*|*|*|*|*|*|* -->
+
+
+    <!-- ******************* Masks ******************* -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/jquery.maskedinput.js"></script>
+    <script>
+        $(document).ready(function($){
+            $.mask.definitions['9'] = '';
+            $.mask.definitions['x'] = '[0-9]';
+            $("#phone").mask("+998 (xx) xxx-xx-xx");
+            $("#header-phone").mask("+998 (xx) xxx-xx-xx");
+        })
+    </script>
+    <!-- ******************* Masks ******************* -->
+    <!-- Owl Carousel Js file -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
+    
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

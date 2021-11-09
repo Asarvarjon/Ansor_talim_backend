@@ -1,0 +1,129 @@
+/* =================== Font styles ================ */
+.font-h1{
+    font-size: 53px;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    letter-spacing: 2%;
+}
+
+.font-h2{
+    font-size: 43px;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    letter-spacing: 4%;
+}
+
+.font-h3{
+    font-size: 34px;
+    font-family: $font-montserrat;
+    font-weight: $font-medium;
+    letter-spacing: 2%;
+}
+
+.font-h4{
+    font-size: 27px;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    letter-spacing: 5%;
+}
+
+.font-head-h{
+    font-size: 25px;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    letter-spacing: 2%;
+}
+
+.font-head-h-normal{
+    font-size: 25px;
+    font-family: $font-montserrat;
+    font-weight: $font-medium;
+    letter-spacing: 2%;
+}
+
+.font-h5{
+    font-size: 22px;
+    font-family: $font-montserrat;
+    font-weight: $font-medium;
+    letter-spacing: 2%;
+}
+
+.font-subtitle{
+    font-size: 18px;
+    font-family: $font-montserrat;
+    font-weight: $font-medium;
+    letter-spacing: 2%;
+}
+
+.font-body1{
+    font-size: 18px;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    letter-spacing: 2%;
+}
+
+.font-body2{
+    font-size: 14px;
+    font-family: $font-montserrat;
+    font-weight: $font-regular;
+    letter-spacing: 2%;
+}
+
+.font-course-btn{
+    font-size: 14px;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    line-height: 17px;
+    padding: 15px 78px;
+    color: $color-white;
+    background-color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.font-header-btn{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    line-height: 17px;
+    padding: 25px 48px;
+    color: $color-white;
+    background-color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+    transition: 0.3s;
+}
+
+.font-footer-btn{
+    font-size: 14px;
+    text-decoration: none;
+    font-family: $font-montserrat;
+    font-weight: $font-bold;
+    line-height: 17px;
+    padding: 15px 45px;
+    color: $color-white;
+    background-color: $color-primary;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+    transition: 0.3s;
+}
+
+
+.font-overline{
+    font-size: 14px;
+    font-family: $font-montserrat;
+    font-weight: $font-light;
+    letter-spacing: 0%;
+}
+
+.font-body3{
+    font-weight: 700;
+    font-size: 33px;
+    font-style: $font-montserrat;
+    color: $color-primary;
+    letter-spacing: 2%;
+}
+
