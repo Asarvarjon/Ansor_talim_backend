@@ -4,12 +4,12 @@ const { AdminLoginValidation } = require("../modules/Validations");
 module.exports = class  UsersController{
     static async AdminLoginPostController(req, res, next) {
         try {
-            const { email, password } = await AdminLoginValidation(req.body, res.error);
+            const { username, password } = await AdminLoginValidation(req.body, res.error);
 
             const admin = await req.db.users.findOne({
                 raw: true,
                 where: {
-                    user_email: email
+                    user_username: username
                 }
             })
 
