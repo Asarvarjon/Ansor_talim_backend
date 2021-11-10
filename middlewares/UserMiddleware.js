@@ -27,8 +27,7 @@ module.exports = async function UserMiddleware(req, res, next) {
                 model: req.db.users
             }
         })
- 
-        console.log(session);
+  
 
         if(!session){
             next()

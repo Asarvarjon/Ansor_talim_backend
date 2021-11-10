@@ -1,7 +1,7 @@
 module.exports = class ProfileController{
-    static async ProfileGetController(req, res){
+    static async PanelGetController(req, res){
         try { 
-            res.render("profile", { 
+            res.render("adminpanel", { 
             })
         } catch (error) {
             

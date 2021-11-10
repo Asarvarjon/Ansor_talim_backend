@@ -6,8 +6,8 @@ module.exports = class  UsersController{
     static async LoginGetController(req, res, next){
         try {
             res.render("login", {})
-        } catch (error) {
-            next(error)
+        } catch (error) { 
+            console.log(error);
         }
     }
     static async AdminLoginPostController(req, res, next) {
@@ -47,12 +47,25 @@ module.exports = class  UsersController{
                 session_id: session.dataValues.session_id
             });
 
-            res.cookie("token", token).redirect("/profile")
-        } catch (error) { 
-            console.log(error);
+            res.cookie("token", token).redirect("/admin_panel")
+        } catch (error) {  
             res.render("login", {
                 error: error.message
             })
+        }
+    }
+
+    static async UserSessionGetController(req, res, next){
+        try {
+            const sessions = await req.db.sessions.findAll({
+                raw: true
+            }) 
+
+            res.render("sessions", {
+                sessions
+            })
+        } catch (error) {
+            console.log(error);
         }
     }
 }
