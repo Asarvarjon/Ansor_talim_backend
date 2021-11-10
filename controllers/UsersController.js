@@ -12,7 +12,7 @@ module.exports = class  UsersController{
     }
     static async AdminLoginPostController(req, res, next) {
         try {
-            const { username, password } = await AdminLoginValidation(req.body, res.error);
+            const { username, password } = await AdminLoginValidation(req.body);
 
             const admin = await req.db.users.findOne({
                 raw: true,
@@ -41,16 +41,17 @@ module.exports = class  UsersController{
             const session = await req.db.sessions.create({ 
                 session_user_agent: req.headers["user-agent"],
                 user_id: admin.user_id
-            });
+            }); 
 
             const token = await createToken({
-                session_id: session_id
+                session_id: session.dataValues.session_id
             });
 
             res.cookie("token", token).redirect("/profile")
-        } catch (error) {
+        } catch (error) { 
+            console.log(error);
             res.render("login", {
-                error
+                error: error.message
             })
         }
     }

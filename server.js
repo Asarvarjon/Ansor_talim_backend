@@ -5,6 +5,7 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 const path = require("path"); 
+const UserMiddleware = require("./middlewares/UserMiddleware");
 const postgres = require("./modules/pg/postgres");
 const routes = require("./routes");
 
@@ -37,6 +38,8 @@ async function server(mode){
 
         // settings 
         app.set("view engine", "ejs");
+
+        app.use(UserMiddleware)
 
 
         if(mode === "dev"){

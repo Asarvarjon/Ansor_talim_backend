@@ -1,7 +1,6 @@
 module.exports = class ProfileController{
     static async ProfileGetController(req, res){
-        try {
-            console.log(req.user);
+        try { 
             res.render("profile", { 
             })
         } catch (error) {

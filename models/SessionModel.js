@@ -8,7 +8,7 @@ module.exports = async (sequelize, Sequelize) => {
             primaryKey: true, 
         },
         session_user_agent: {
-            type: Sequelize.STRING(64),
+            type: Sequelize.STRING(120),
             allowNull: false, 
         } 
     })
