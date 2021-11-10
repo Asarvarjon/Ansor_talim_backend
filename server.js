@@ -4,8 +4,7 @@ const cookieParser = require("cookie-parser");
 const express = require("express");
 const morgan = require("morgan");
 const app = express();
-const path = require("path");
-const CustomErrorMiddleware = require("./middlewares/CustomErrorMiddleware");
+const path = require("path"); 
 const postgres = require("./modules/pg/postgres");
 const routes = require("./routes");
 
@@ -33,9 +32,7 @@ async function server(mode){
         app.use(express.json())
         app.use(express.urlencoded({extended: true})) 
         app.use(express.static(path.join(__dirname, "public"))); 
-        app.use(cookieParser());
-
-        app.use(CustomErrorMiddleware)
+        app.use(cookieParser()); 
 
 
         // settings 

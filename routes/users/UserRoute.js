@@ -4,8 +4,8 @@ const { LoginGetController, AdminLoginPostController } = require("../../controll
 const UserRouter = require("express").Router();
 
 
-UserRouter.get("/ansor_login", LoginGetController );
-UserRouter.post("/ansor_login", AdminLoginPostController );
+UserRouter.get("/login", LoginGetController );
+UserRouter.post("/login", AdminLoginPostController );
 
 
 
