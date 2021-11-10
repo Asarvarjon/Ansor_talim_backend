@@ -47,7 +47,7 @@ module.exports = class  UsersController{
                 session_id: session.dataValues.session_id
             });
 
-            res.cookie("token", token).redirect("/admin_panel")
+            res.cookie("token", token).redirect("/admin_panel/")
         } catch (error) {  
             res.render("login", {
                 error: error.message
@@ -59,11 +59,27 @@ module.exports = class  UsersController{
         try {
             const sessions = await req.db.sessions.findAll({
                 raw: true
-            }) 
-
+            }); 
             res.render("sessions", {
                 sessions
-            })
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+    static async SessionDeleteController(req, res, next) {
+        try {
+            const session_id = req.params.session_id;
+
+            const session = await req.db.sessions.destroy({
+                where: {
+                    session_id: session_id
+                }
+            });
+
+            res.redirect("/admin_panel/sessions")
         } catch (error) {
             console.log(error);
         }

@@ -1,14 +1,15 @@
+<% var sessions = sessions || [] %> 
 <%- include("./parts//header.ejs") %> 
 <section >
-    <div class="container-fluid">
-         <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh;">
+    <div class="container-fluid d-flex row">
+         <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark col-3" style=" height: 100vh;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-              <span class="fs-4 ms-3">Apex</span>
+               <span class="fs-4 ms-3">Apex</span>
             </a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">
+                <a href="/admin_panel/" class="nav-link text-white" >
                    Asosiy
                 </a>
               </li>
@@ -53,7 +54,8 @@
                 </a>
               </li>
               <li>
-                <a href="/admin_panel/sessions/" class="nav-link text-white">
+                <a href="#" class="nav-link " >
+                    <a href="#"  class="nav-link text-white active">
                    Sessiyalar
                 </a>
               </li>
@@ -65,10 +67,46 @@
                 <strong>Akkaunt</strong>
               </a>
               <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1"> 
+                 
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="/sign_out">Sign out</a></li>
               </ul>
             </div>
+          </div>
+
+          <div class="col-9 mt-3 mb-3">
+              <h3 class="text-center text-primary">
+                  Sessiyalar
+              </h3>
+
+
+              <table class="table table-striped  mt-3">
+                <thead>
+                    <tr> 
+                        <th>
+                            User Agent
+                        </th>
+                        <th>
+                           O'chirish
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <%  for(let session of sessions) { %> 
+                        <tr> 
+                            <td>
+                                <%= session.session_user_agent %> 
+                            </td>
+                            <td>
+                                <a href="<%= session.session_id%>" class="btn btn-danger">
+                                    O'chirish
+                                </a>
+                            </td>
+                        </tr>
+                    <% } %> 
+                </tbody>
+              </table>
           </div>
     </div>
 </section>
