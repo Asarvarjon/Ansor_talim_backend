@@ -21,7 +21,7 @@ module.exports = class CommentsController{
         try { 
             const { comment_owner, comment_owner_description, comment_text, comment_star} = await AddCommentValidation(req.body);
 
-            const photo = req.files.photo;
+            const photo = req.files?.photo;
 
             let photo_name = photo
 				? photo.md5 +
@@ -36,8 +36,8 @@ module.exports = class CommentsController{
                         path.join(__dirname, "..", "public", "uploads", photo_name)
                     );
             }
-
-            const comment = await req.db.courses.comments({
+ 
+            const comment = await req.db.comments.create({
                 comment_owner,
                 comment_owner_description,
                 comment_text,
@@ -47,6 +47,7 @@ module.exports = class CommentsController{
 
             res.redirect("/admin_panel/comments") 
         } catch (error) {
+            console.log(error);
             res.render("comments",{
                 error: error.message
             })
