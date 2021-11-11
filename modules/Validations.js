@@ -22,4 +22,13 @@ module.exports = class Validation {
 			course_desc: joi.string().required().min(30).error(new Error("Ta'rif xato")),
 		}).validateAsync(data)
 	}
+  
+	static async AddCommentValidation(data){
+		return await joi.object({
+			comment_owner: joi.string().required().min(5).error(new Error("Ismingizni to'liqroq yozing")), 
+			comment_owner_description: joi.string().required().min(10).error(new Error("Ta'rif xato")),
+			comment_text: joi.string().required().min(10).error(new Error("Izohda xato bor")),
+			comment_star: joi.number().required().max(5).error(new Error(""))
+		}).validateAsync(data)
+	}
 }

@@ -6,6 +6,7 @@ const relations = require("./relations");
 const ApplicantModel = require("../../models/ApplicantModel");
 const NewsModel = require("../../models/NewsModel");
 const CourseModel = require("../../models/CourseModel");
+const CommentsModel = require("../../models/CommentsModel");
 
 
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
@@ -26,11 +27,9 @@ module.exports = async function(){
         db.applicants = await ApplicantModel(sequelize, Sequelize)
         db.news = await NewsModel(sequelize, Sequelize);
         db.courses = await CourseModel(sequelize, Sequelize);
-
+        db.comments = await CommentsModel(sequelize, Sequelize)
 
  
-
-
         await init(db);
         await relations(db);
         await sequelize.sync({force: false})

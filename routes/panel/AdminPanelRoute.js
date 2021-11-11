@@ -2,6 +2,7 @@ const expressFileUpload = require("express-fileupload")
 
 const { PanelGetController } = require("../../controllers/AdminPanelController");
 const { ApplicantsGetController, ApplicantToCoursePostController } = require("../../controllers/ApplicantsController");
+const { CommentsGetController, AddCommentsPostController, CommentDeleteController } = require("../../controllers/CommentsController");
 const { CourseGetController, AddCoursePostController, CourseDeleteController } = require("../../controllers/CourseController");
 const { NewsGetController, AddNewsPostController, NewsDeleteController } = require("../../controllers/NewsController");
 const { UserSessionGetController, SessionDeleteController } = require("../../controllers/UsersController");
@@ -26,6 +27,11 @@ AdminPanelRoute.get("/courses", CourseGetController);
 AdminPanelRoute.post("/courses", expressFileUpload(), AddCoursePostController);
 AdminPanelRoute.get("/courses/:course_id", CourseDeleteController);
 
+
+// Comments page routers
+AdminPanelRoute.get("/comments", CommentsGetController );
+AdminPanelRoute.post("/comments", expressFileUpload(), AddCommentsPostController);
+AdminPanelRoute.get("/comments/:comment_id", CommentDeleteController)
 
 
 
