@@ -11,7 +11,7 @@ module.exports = async (sequelize, Sequelize) => {
             allowNull: false, 
         }, 
         course_desc: {
-            type: Sequelize.STRING(),
+            type: Sequelize.TEXT(),
             allowNull: false, 
         },
         course_photo: {
