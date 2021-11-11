@@ -15,4 +15,11 @@ module.exports = class Validation {
 			news_full_desc: joi.string().required().min(30).error(new Error("Ta'rif xato")),
 		}).validateAsync(data)
 	}
+
+	static async AddCourseValidation(data){
+		return await joi.object({
+			course_title: joi.string().required().min(5).error(new Error("Sarlavha noto'g'ri")), 
+			course_desc: joi.string().required().min(30).error(new Error("Ta'rif xato")),
+		}).validateAsync(data)
+	}
 }
