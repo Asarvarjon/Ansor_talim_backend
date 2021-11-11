@@ -1,5 +1,5 @@
 <% var error %>
-<% var news = news || [] %>
+<% var courses = courses || [] %>
 <%- include("./parts//header.ejs") %>
 <section>
   <div class="container-fluid d-flex row">
@@ -20,12 +20,12 @@
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-white active">
+          <a href="/admin_panel/news/" class="nav-link text-white ">
             Yangiliklar
           </a>
         </li>
         <li>
-          <a href="#" class="nav-link text-white">
+          <a href="#" class="nav-link text-white active">
             Kurslar
           </a>
         </li>
@@ -79,7 +79,7 @@
 
     <div class="col-9 mt-3 mb-3">
       <div>
-        <h3 class="mt-1 text-center text-info">Yangilik qo'shish</h3>
+        <h3 class="mt-1 text-center text-info">Yangi kurs qo'shish</h3>
 
         <form id="form" method="POST" enctype="multipart/form-data"
           class="w-100 d-flex flex-column align-items-center mt-4 justify-content-center" autocomplete="off">
@@ -90,22 +90,19 @@
             </div>
             <% } %>
             <div class="col-lg-6">
-              <input id="name" type="text" name="news_title" placeholder="Sarlavha" class="form-control">
+              <input id="name" type="text" name="course_title" placeholder="Sarlavha" class="form-control">
               <div class="mb-2">
                 <label for="formFile" class="form-label">Rasm yuklang</label>
-                <input class="form-control" name="news_file" type="file" id="file">
+                <input class="form-control" name="photo" type="file" id="file">
               </div>
-              <div class="mt-3">
-                <textarea id="textarea" name="news_short_desc" class="form-control" style="height: 70px; resize: none;"
-                  placeholder="Qisqacha ta'rif"></textarea>
-
+              <div class="mt-3">  
                 <button type="submit" class="btn w-100 btn-primary mt-3">
-                  Submit
+                  Qo'shish
                 </button>
               </div>
             </div>
             <div class="col-lg-6">
-              <textarea id="textarea" name="news_full_desc" class="form-control" style="height: 250px; resize: none;"
+              <textarea id="textarea" name="course_desc" class="form-control" style="height: 250px; resize: none;"
                 placeholder="Description"></textarea>
 
             </div>
@@ -118,41 +115,35 @@
 
       <div class="w-100">
         <h3 class="text-center text-primary mt-4">
-          Yangiliklar
+          Kurslar
         </h3>
 
         <table class="table w-100 table-striped  mt-3">
           <thead>
-            <tr class="w-100">
-              <th class="w-25">
+            <tr >
+              <th>
                 Sarlavha
+              </th> 
+              <th >
+                Ta'rif
               </th>
-              <th class="w-25">
-                Short Description
-              </th>
-              <th class="w-50">
-                Full Description
-              </th>
-              <th class="w-25">
+              <th >
                 O'chirish
               </th>
             </tr>
           </thead>
 
           <tbody>
-            <% for (let item of news) { %>
+            <% for (let course of courses) { %>
             <tr>
               <td>
-                <%= item.news_title %>
+                <%= item.course_title %>
               </td>
               <td>
-                <%= item.news_short_desc %>
-              </td>
+                <%= item.course_desc %>
+              </td> 
               <td>
-                <%= item.news_full_desc %>
-              </td>
-              <td>
-                <a href="news/<%=item.news_id%>" class="btn btn-danger">
+                <a href="courses/<%=course.course_id%>" class="btn btn-danger">
                   O'chirish
                 </a>
               </td>

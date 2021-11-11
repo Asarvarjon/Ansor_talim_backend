@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const { AddCourseValidation } = require("../modules/Validations");
-news
+ 
 module.exports = class CourseController{
     static async CourseGetController(req, res, next) {
         try {
