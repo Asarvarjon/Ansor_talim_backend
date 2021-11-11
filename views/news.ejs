@@ -1,0 +1,166 @@
+<% var error %> 
+<% var news = news || [] %> 
+<%- include("./parts//header.ejs") %> 
+<section >
+    <div class="container-fluid d-flex row">
+         <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark col-3" style=" height: 100vh;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+               <span class="fs-4 ms-3">Apex</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="/admin_panel/" class="nav-link text-white" >
+                   Asosiy
+                </a>
+              </li>
+              <li>
+                <a href="/admin_panel/applicants/" class="nav-link text-white ">
+                  Arizachilar
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white active">
+                   Yangiliklar
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                   Kurslar
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                   Lavhalar
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                   Natijalari
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                   Izohlar
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                   Bog'lanish
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link text-white">
+                   Aloqa
+                </a>
+              </li>
+              <li>
+                <a href="/admin_panel/sessions/"  class="nav-link text-white">
+                   Sessiyalar
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+               
+                <strong>Akkaunt</strong>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1"> 
+                 
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="/sign_out">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+
+          
+
+          
+
+          <div class="col-9 mt-3 mb-3">
+
+            <div>
+                <h3 class="mt-3 text-center text-info">Yangilik qo'shish</h3>
+
+                <form id="form" method="POST" enctype="multipart/form-data" class="w-100 d-flex flex-column align-items-center mt-3 justify-content-center" autocomplete="off">
+                    <div class="row w-100">
+                        <% if(error) { %> 
+                            <div class="alert alert-danger">
+                                <%= error  %> 
+                            </div>
+                        <% } %> 
+                        <div class="col-lg-6">
+                            <input id="name" type="text" name="news_title" placeholder="Sarlavha" class="form-control">  
+                            <div class="mb-2">
+                                <label for="formFile" class="form-label">Rasm yuklang</label>
+                                <input class="form-control" name="news_file" type="file" id="file">
+                            </div>
+                            <div class="mt-3">
+                                <textarea id="textarea" name="news_short_desc"  class="form-control" style="height: 70px; resize: none;"  placeholder="Qisqacha ta'rif"></textarea>
+
+                                <button type="submit" class="btn w-100 btn-primary mt-3">
+                                    Submit
+                                </button>
+                            </div>
+                        </div> 
+                        <div class="col-lg-6">
+                            <textarea id="textarea" name="news_full_desc"  class="form-control" style="height: 250px; resize: none;"  placeholder="Description"></textarea>
+ 
+                        </div> 
+                       
+                    </div> 
+                   
+                </form>
+
+            </div>
+
+              <h3 class="text-center text-primary mt-4">
+                  Yangiliklar
+              </h3> 
+
+              <table class="table table-striped  mt-3">
+                <thead>
+                    <tr> 
+                        <th>
+                            Sarlavha
+                        </th>
+                        <th>
+                          Short Description
+                        </th>
+                        <th>
+                          Full Description
+                        </th>
+                        <th>
+                          O'chirish
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% for (let item of news) { %> 
+                      <tr> 
+                        <td>
+                            <%= item.news_title %> 
+                        </td>
+                        <td>
+                          <%= item.news_short_desc %> 
+                        </td>
+                        <td>
+                          <%= item.news_full_desc %> 
+                        </td> 
+                        <td>
+                          <a href="news/<%=item.news_id%>" class="btn btn-danger">
+                            O'chirish
+                          </a>
+                        </td>
+                    </tr>
+                    <% } %> 
+                </tbody>
+              </table>
+          </div>
+    </div>
+</section>
+
+
+<%- include("./parts/footer.ejs") %> 
