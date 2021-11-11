@@ -1,4 +1,4 @@
-<% var sessions = sessions || [] %> 
+<% var applicants = applicants || [] %> 
 <%- include("./parts//header.ejs") %> 
 <section >
     <div class="container-fluid d-flex row">
@@ -14,7 +14,7 @@
                 </a>
               </li>
               <li>
-                <a href="/admin_panel/applicants/" class="nav-link text-white">
+                <a href="#" class="nav-link text-white active">
                    Ro'yhatdan o'tganlar
                 </a>
               </li>
@@ -55,7 +55,7 @@
               </li>
               <li>
                 <a href="#" class="nav-link " >
-                    <a href="#"  class="nav-link text-white active">
+                    <a href="/admin_panel/sessions/"  class="nav-link text-white ">
                    Sessiyalar
                 </a>
               </li>
@@ -84,22 +84,29 @@
                 <thead>
                     <tr> 
                         <th>
-                            User Agent
+                            Ismi, familyasi
                         </th>
                         <th>
-                           O'chirish
+                           Raqami
+                        </th>
+                        <th>
+                            O'chirish
                         </th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <%  for(let session of sessions) { %> 
+                    <%  for(let applicant of applicants) { %> 
                         <tr> 
                             <td>
-                                <%= session.session_user_agent %> 
+                                <%= applicant.applicant_name %> 
                             </td>
                             <td>
-                                <a href="<%= session.session_id%>" class="btn btn-danger">
+                                <%= applicant.applicant_phone %> 
+                            </td>
+
+                            <td>
+                                <a href="<%=applicant.applicant_id%>" class="btn btn-danger">
                                     O'chirish
                                 </a>
                             </td>

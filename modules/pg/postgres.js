@@ -2,7 +2,8 @@ const {Sequelize} = require("sequelize");
 const UserModel = require("../../models/UserModel");
 const init = require("./init");
 const SessionModel = require("../../models/SessionModel");
-const relations = require("./relations")
+const relations = require("./relations");
+const ApplicantModel = require("../../models/ApplicantModel");
 
 
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
@@ -19,7 +20,8 @@ module.exports = async function(){
         let db = {};
 
         db.users = await UserModel(sequelize, Sequelize);
-        db.sessions = await SessionModel(sequelize, Sequelize)
+        db.sessions = await SessionModel(sequelize, Sequelize);
+        db.applicants = await ApplicantModel(sequelize, Sequelize)
  
 
 
