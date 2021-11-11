@@ -90,13 +90,13 @@
             </div>
             <% } %>
             <div class="col-lg-6">
-              <input id="name" type="text" name="news_title" placeholder="Sarlavha" class="form-control">
+              <input id="name" required type="text" name="news_title" placeholder="Sarlavha" class="form-control">
               <div class="mb-2">
                 <label for="formFile" class="form-label">Rasm yuklang</label>
-                <input class="form-control" name="news_file" type="file" id="file">
+                <input class="form-control" required name="news_file" type="file" id="file">
               </div>
               <div class="mt-3">
-                <textarea id="textarea" name="news_short_desc" class="form-control" style="height: 70px; resize: none;"
+                <textarea id="textarea" required name="news_short_desc" class="form-control" style="height: 70px; resize: none;"
                   placeholder="Qisqacha ta'rif"></textarea>
 
                 <button type="submit" class="btn w-100 btn-primary mt-3">
@@ -105,7 +105,7 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <textarea id="textarea" name="news_full_desc" class="form-control" style="height: 250px; resize: none;"
+              <textarea id="textarea" required name="news_full_desc" class="form-control" style="height: 250px; resize: none;"
                 placeholder="Description"></textarea>
 
             </div>

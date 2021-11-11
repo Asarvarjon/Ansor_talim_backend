@@ -90,25 +90,25 @@
                         </div>
                         <% } %>
                         <div class="col-lg-6">
-                            <input id="name" type="text" name="comment_owner" placeholder="Izohning egasi"
+                            <input id="name" type="text" name="comment_owner" required placeholder="Izohning egasi"
                                 class="form-control"> 
                              <input id="name" type="number" name="comment_star" placeholder="Izohning reytingi"
-                                class="form-control mt-2"> 
+                                class="form-control mt-2" required> 
                             <div class="mb-2">
                                 <label for="formFile" class="form-label mt-2">Rasm yuklang</label>
-                                <input class="form-control" name="photo" type="file" id="file">
+                                <input class="form-control" name="photo" type="file" id="file" required>
                             </div>
                             <div class="mt-3">
                                 <textarea id="textarea" name="comment_owner_description" class="form-control"
                                     style="height: 70px; resize: none;"
-                                    placeholder="Izohning egasi haqida..."></textarea>
+                                    placeholder="Izohning egasi haqida..." required></textarea>
                                 <button type="submit" class="btn w-100 btn-primary mt-3">
                                     Qo'shish
                                 </button>
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <textarea id="textarea" name="comment_text" class="form-control"
+                            <textarea id="textarea" name="comment_text" required class="form-control"
                                 style="height: 250px; resize: none;" placeholder="Izoh"></textarea>
 
                         </div>

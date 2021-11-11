@@ -90,10 +90,10 @@
             </div>
             <% } %>
             <div class="col-lg-6">
-              <input id="name" type="text" name="course_title" placeholder="Sarlavha" class="form-control">
+              <input id="name" type="text" required name="course_title" placeholder="Sarlavha" class="form-control">
               <div class="mb-2">
                 <label for="formFile" class="form-label">Rasm yuklang</label>
-                <input class="form-control" name="photo" type="file" id="file">
+                <input class="form-control" required name="photo" type="file" id="file">
               </div>
               <div class="mt-3">  
                 <button type="submit" class="btn w-100 btn-primary mt-3">
@@ -102,7 +102,7 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <textarea id="textarea" name="course_desc" class="form-control" style="height: 250px; resize: none;"
+              <textarea id="textarea" required name="course_desc" class="form-control" style="height: 250px; resize: none;"
                 placeholder="Description"></textarea>
 
             </div>

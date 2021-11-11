@@ -6,8 +6,9 @@ module.exports = class CommentsController{
     static async CommentsGetController(req, res, next) {
         try {
 
-            const comments = await req.db.comments.findAll()
-            
+            const comments = await req.db.comments.findAll({
+                raw: true
+            } ) 
 
             res.render("comments",{
                 comments
@@ -78,7 +79,7 @@ module.exports = class CommentsController{
                 () => {}
             );
 
-            await req.db.news.destroy({
+            await req.db.comments.destroy({
                 where: {
                     comment_id: comment_id
                 }
