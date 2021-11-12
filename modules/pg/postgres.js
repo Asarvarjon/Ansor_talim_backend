@@ -8,7 +8,8 @@ const NewsModel = require("../../models/NewsModel");
 const CourseModel = require("../../models/CourseModel");
 const CommentsModel = require("../../models/CommentsModel");
 const ScenesModel = require("../../models/ScenesModel");
-const ResultsModel = require("../../models/ResultsModel")
+const ResultsModel = require("../../models/ResultsModel");
+const AdressModel = require("../../models/AdressModel");
 
 
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
@@ -32,6 +33,7 @@ module.exports = async function(){
         db.comments = await CommentsModel(sequelize, Sequelize);
         db.scenes = await ScenesModel(sequelize, Sequelize);
         db.results = await ResultsModel(sequelize, Sequelize);
+        db.address = await AdressModel(sequelize, Sequelize)
 
 
  
