@@ -4,7 +4,7 @@ module.exports = class ProfileController{
             res.render("adminpanel", { 
             })
         } catch (error) {
-            
+            console.log(error);
         }
     }
 }

@@ -1,5 +1,11 @@
 module.exports = async (sequelize, Sequelize) => {
-    return await sequelize.define("adress", { 
+    return await sequelize.define("address", { 
+        a_id: {
+            type: Sequelize.UUID,
+            defaultValue: Sequelize.UUIDV4(),
+            allowNull: false,
+            primaryKey: true, 
+        },
         a_map: {
             type: Sequelize.TEXT(),
             allowNull: false, 
