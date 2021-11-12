@@ -1,3 +1,5 @@
+const { UpdateAdressPostValidation } = require("../modules/Validations");
+
  
  
 module.exports = class AdressController{
@@ -15,16 +17,24 @@ module.exports = class AdressController{
         }
     }
 
-    static async UpdatePostController(req, res, next){
+    static async UpdateAdressPostController(req, res, next){
         try { 
-            const { course_title, course_desc} = await AddCourseValidation(req.body);
+            const { a_map, a_location, a_email, a_phone, a_facebook_link, a_telegram_link, a_youtube_link} = await UpdateAdressPostValidation(req.body);
 
+            await req.db.adress.destroy();
+
+            const adress = await req.db.adress.create({
+                a_map,
+                a_location,
+                a_email,
+                a_phone,
+                a_facebook_link,
+                a_telegram_link,
+                a_youtube_link
+            });
+
+            console.log(adress);
              
-            const course = await req.db.courses.create({
-                course_title,
-                course_desc,
-                course_photo: photo_name
-            }) 
 
             res.redirect("/admin_panel/courses") 
         } catch (error) {

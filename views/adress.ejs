@@ -46,7 +46,7 @@
                 </li>
                 <li>
                     <a href="#" class="nav-link text-white active">
-                       Manzil
+                        Manzil
                     </a>
                 </li>
                 <li>
@@ -77,9 +77,9 @@
             </div>
         </div>
 
-        <div class="col-9 mt-3 mb-3">
+        <div class="col-9 mt-5 mb-3">
             <div>
-                <h3 class="mt-1 text-center text-info">Izoh qo'shish</h3>
+                <h3 class="mt-1 text-center text-info">Bog'lanish manzilini o'zgartirish</h3>
 
                 <form id="form" method="POST" enctype="multipart/form-data"
                     class="w-100 d-flex flex-column align-items-center mt-4 justify-content-center" autocomplete="off">
@@ -90,80 +90,32 @@
                         </div>
                         <% } %>
                         <div class="col-lg-6">
-                            <input id="name" type="text" name="comment_owner" required placeholder="Izohning egasi"
-                                class="form-control"> 
-                             <input id="name" type="number" name="comment_star" placeholder="Izohning reytingi"
+                            <input id="name" type="text" name="a_map" required
+                                placeholder="Xaritaning iframeni joylashtiring..." class="form-control">
+                            <input id="name" type="text" name="a_location" placeholder="Manzilni yozing..."
+                                class="form-control mt-2" required>
+                            <input id="name" type="text" name="a_phone" placeholder="Telefon raqam kiriting..."
+                                class="form-control mt-2" required>
+                            <input id="name" type="text" name="a_email" placeholder="Email kiriting..."
                                 class="form-control mt-2" required> 
-                            <div class="mb-2">
-                                <label for="formFile" class="form-label mt-2">Rasm yuklang</label>
-                                <input class="form-control" name="photo" type="file" id="file" required>
-                            </div>
-                            <div class="mt-3">
-                                <textarea id="textarea" name="comment_owner_description" class="form-control"
-                                    style="height: 70px; resize: none;"
-                                    placeholder="Izohning egasi haqida..." required></textarea>
-                                <button type="submit" class="btn w-100 btn-primary mt-3">
-                                    Qo'shish
-                                </button>
-                            </div>
                         </div>
                         <div class="col-lg-6">
-                            <textarea id="textarea" name="comment_text" required class="form-control"
-                                style="height: 250px; resize: none;" placeholder="Izoh"></textarea>
-
+                            <input id="name" type="text" name="a_telegram_link" required
+                                placeholder="Telegram linkini joylashtiring..." class="form-control">
+                            <input id="name" type="text" name="a_youtube_link" placeholder="Youtube linkini joylashtiring..."
+                                class="form-control mt-2" required>
+                            <input id="name" type="text" name="a_facebook_link" placeholder="Facebook linkini yozing..."
+                                class="form-control mt-2" required>
+                            <button type="submit" class="btn w-100 btn-primary mt-2">
+                                    O'zgartirish
+                                </button>
                         </div>
 
                     </div>
 
                 </form>
 
-            </div>
-
-            <div class="w-100">
-                <h3 class="text-center text-primary mt-4">
-                    Izohlar
-                </h3>
-
-                <table class="table w-100 table-striped  mt-3">
-                    <thead>
-                        <tr>
-                            <th>
-                                Izoh egasi
-                            </th>
-                            <th>
-                               Ta'rifi
-                            </th>
-                            <th>
-                               Izoh
-                            </th>
-                            <th>
-                                O'chirish
-                             </th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <% for (let comment of comments) { %>
-                        <tr>
-                            <td>
-                                <%= comment.comment_owner %>
-                            </td>
-                            <td >
-                                <%= comment.comment_owner_description %>
-                            </td>
-                            <td class="w-50">
-                                <%= comment.comment_text %>
-                            </td>
-                            <td>
-                                <a href="comments/<%=comment.comment_id%>" class="btn btn-danger">
-                                    O'chirish
-                                </a>
-                            </td>
-                        </tr>
-                        <% } %>
-                    </tbody>
-                </table>
-            </div>
+            </div> 
         </div>
     </div>
 </section>
