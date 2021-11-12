@@ -5,6 +5,7 @@ const { ApplicantsGetController, ApplicantToCoursePostController } = require("..
 const { CommentsGetController, AddCommentsPostController, CommentDeleteController } = require("../../controllers/CommentsController");
 const { CourseGetController, AddCoursePostController, CourseDeleteController } = require("../../controllers/CourseController");
 const { NewsGetController, AddNewsPostController, NewsDeleteController } = require("../../controllers/NewsController");
+const { ScenesGetController, AddScenesPostController, SceneDeleteController } = require("../../controllers/ScenesController");
 const { UserSessionGetController, SessionDeleteController } = require("../../controllers/UsersController");
 const AuthMiddleware = require("../../middlewares/AuthMiddleware");
 
@@ -32,6 +33,13 @@ AdminPanelRoute.get("/courses/:course_id", CourseDeleteController);
 AdminPanelRoute.get("/comments", CommentsGetController );
 AdminPanelRoute.post("/comments", expressFileUpload(), AddCommentsPostController);
 AdminPanelRoute.get("/comments/:comment_id", CommentDeleteController)
+
+// Scenes page routers
+
+AdminPanelRoute.get("/scenes", ScenesGetController );
+AdminPanelRoute.post("/scenes", expressFileUpload(), AddScenesPostController);
+AdminPanelRoute.get("/scenes/:scene_id", SceneDeleteController)
+
 
 
 

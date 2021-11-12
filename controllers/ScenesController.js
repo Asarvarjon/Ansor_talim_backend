@@ -1,26 +1,23 @@
 const fs = require("fs");
-const path = require("path");
-const { AddCourseValidation } = require("../modules/Validations");
+const path = require("path"); 
  
 module.exports = class CourseController{
-    static async CourseGetController(req, res, next) {
+    static async ScenesGetController(req, res, next) {
         try {
 
-            const courses = await req.db.courses.findAll()
+            const scenes = await req.db.scenes.findAll()
             
 
-            res.render("courses",{
-                courses
+            res.render("scenes",{
+                scenes
             })
         } catch (error) {
             next(error)
         }
     }
 
-    static async AddCoursePostController(req, res, next){
-        try { 
-            const { course_title, course_desc} = await AddCourseValidation(req.body);
-
+    static async AddScenesPostController(req, res, next){
+        try {   
             const photo = req.files.photo;
 
             let photo_name = photo
@@ -37,32 +34,30 @@ module.exports = class CourseController{
                     );
             }
 
-            const course = await req.db.courses.create({
-                course_title,
-                course_desc,
-                course_photo: photo_name
+            const scene = await req.db.scenes.create({ 
+                scene_photo: photo_name
             }) 
 
-            res.redirect("/admin_panel/courses") 
+            res.redirect("/admin_panel/scenes") 
         } catch (error) {
-            res.render("courses",{
+            res.render("scenes",{
                 error: error.message
             })
         }
     }
 
-    static async CourseDeleteController(req, res, next) {
+    static async SceneDeleteController(req, res, next) {
          try {
-            let course_id = req.params.course_id;
+            let scene_id = req.params.scene_id;
 
-            const course = await req.db.courses.findOne({
+            const scene = await req.db.scenes.findOne({
                 raw: true,
                 where: {
-                    course_id
+                    scene_id: scene_id
                 }
             })
 
-            if(!course) throw new Error("Course is not found");
+            if(!scene) throw new Error("Scene is not found");
 
             fs.unlink(
                 path.join(
@@ -70,18 +65,18 @@ module.exports = class CourseController{
                     "..",
                     "public",
                     "uploads",
-                    course.course_photo
+                    scene.scene_photo
                 ),
                 () => {}
             );
 
-            await req.db.courses.destroy({
+            await req.db.scenes.destroy({
                 where: {
-                    course_id: course_id
+                    scene_id: scene_id
                 }
             });
 
-            res.redirect("/admin_panel/courses/")
+            res.redirect("/admin_panel/scenes/")
          } catch (error) {
              console.log(error);
          }
