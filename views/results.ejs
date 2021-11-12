@@ -1,5 +1,5 @@
 <% var error %>
-<% var comments = comments || [] %>
+<% var results = results || [] %>
 <%- include("./parts//header.ejs") %>
 <section>
     <div class="container-fluid d-flex row">
@@ -118,20 +118,20 @@
 
             <div class="w-100">
                 <h3 class="text-center text-primary mt-4">
-                    Izohlar
+                    Natijalar
                 </h3>
 
                 <table class="table w-100 table-striped  mt-3">
                     <thead>
                         <tr>
                             <th>
-                                Izoh egasi
+                                Natija egasi
                             </th>
                             <th>
-                               Ta'rifi
+                               O'qiyotgan ta'lim muassasi
                             </th>
                             <th>
-                               Izoh
+                               Markazda o'qigan muddati
                             </th>
                             <th>
                                 O'chirish
@@ -140,19 +140,19 @@
                     </thead>
 
                     <tbody>
-                        <% for (let comment of comments) { %>
+                        <% for (let result of results) { %>
                         <tr>
                             <td>
-                                <%= comment.comment_owner %>
+                                <%= result.result_owner %>
                             </td>
                             <td >
-                                <%= comment.comment_owner_description %>
-                            </td>
-                            <td class="w-50">
-                                <%= comment.comment_text %>
+                                <%= result.result_owner_university %>
                             </td>
                             <td>
-                                <a href="comments/<%=comment.comment_id%>" class="btn btn-danger">
+                                <%= result.result_owner_study_duration %>
+                            </td>
+                            <td>
+                                <a href="/admin_panel/results/<%=result.result_id%>" class="btn btn-danger">
                                     O'chirish
                                 </a>
                             </td>
