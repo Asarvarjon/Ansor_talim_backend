@@ -50,7 +50,7 @@ AdminPanelRoute.get("/results/:result_id", ResultsDeleteController);
 
 
 /// Adress page routes
-AdminPanelRoute.get("/adress", AdressGetController );
-AdminPanelRoute.post("/adress", UpdateAdressPostController ); 
+AdminPanelRoute.get("/address", AdressGetController );
+AdminPanelRoute.post("/address", UpdateAdressPostController ); 
 
 module.exports = AdminPanelRoute;

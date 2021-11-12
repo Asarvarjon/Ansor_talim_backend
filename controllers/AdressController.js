@@ -4,13 +4,14 @@ const { UpdateAdressPostValidation } = require("../modules/Validations");
  
 module.exports = class AdressController{
     static async AdressGetController(req, res, next) {
-        try {
-
-            const adress = await req.db.courses.findOne()
-            console.log(adress);
+        try { 
+            const address = await req.db.address.findAll({
+                raw: true
+            })
+            console.log(address);
 
             res.render("adress",{
-                adress
+                address
             })
         } catch (error) {
             next(error)
@@ -18,22 +19,28 @@ module.exports = class AdressController{
     }
 
     static async UpdateAdressPostController(req, res, next){
-        try { 
-            const {  a_location, a_email, a_phone, a_facebook_link, a_telegram_link, a_youtube_link} = await UpdateAdressPostValidation(req.body);
+        try {  
+            const {a_map, a_location, a_email, a_phone, a_facebook_link, a_telegram_link, a_youtube_link} = await UpdateAdressPostValidation(req.body);
 
-            await req.db.adress.destroy();
+            const a = await req.db.address.findOne({
+                raw: true
+            })
 
-            const adress = await req.db.adress.create({
-                a_map: req.body.a_map,
+            const address = await req.db.address.update({
+                a_map,
                 a_location,
                 a_email,
                 a_phone,
                 a_facebook_link,
                 a_telegram_link,
                 a_youtube_link
+            }, {
+                where: {
+                    a_id: a.a_id
+                }
             });
 
-            console.log(adress);
+            console.log(address);
              
 
             res.redirect("/admin_panel/address") 
