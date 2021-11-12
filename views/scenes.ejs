@@ -1,5 +1,5 @@
 <% var error %>
-<% var courses = courses || [] %>
+<% var scenes = scenes || [] %>
 <%- include("./parts//header.ejs") %>
 <section>
   <div class="container-fluid d-flex row">
@@ -79,7 +79,7 @@
 
     <div class="col-9 mt-3 mb-3">
       <div>
-        <h3 class="mt-1 text-center text-info">Yangi kurs qo'shish</h3>
+        <h3 class="mt-1 text-center text-info">Lavhalar qo'sish</h3>
 
         <form id="form" method="POST" enctype="multipart/form-data"
           class="w-100 d-flex flex-column align-items-center mt-4 justify-content-center" autocomplete="off">
@@ -89,44 +89,28 @@
               <%= error  %>
             </div>
             <% } %>
-            <div class="col-lg-6">
-              <input id="name" type="text" required name="course_title" placeholder="Sarlavha" class="form-control">
-              <div class="mb-2">
+            <div class="col-lg-6"> 
                 <label for="formFile" class="form-label">Rasm yuklang</label>
                 <input class="form-control" required name="photo" type="file" id="file">
-              </div>
-              <div class="mt-3">  
-                <button type="submit" class="btn w-100 btn-primary mt-3">
+                <button type="submit" class="btn w-100  btn-primary mt-3">
                   Qo'shish
                 </button>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <textarea id="textarea" required name="course_desc" class="form-control" style="height: 250px; resize: none;"
-                placeholder="Description"></textarea>
-
-            </div>
-
-          </div>
-
-        </form>
-
+            </div>   
+          </div> 
+        </form> 
       </div>
 
       <div class="w-100">
         <h3 class="text-center text-primary mt-4">
-          Kurslar
+          Lavhalar
         </h3>
 
         <table class="table w-100 table-striped  mt-3">
           <thead>
             <tr >
               <th>
-                Sarlavha
-              </th> 
-              <th >
-                Ta'rif
-              </th>
+                Id
+              </th>   
               <th >
                 O'chirish
               </th>
@@ -134,16 +118,13 @@
           </thead>
 
           <tbody>
-            <% for (let course of courses) { %>
+            <% for (let scene of scenes) { %>
             <tr>
               <td>
-                <%= course.course_title %>
-              </td>
-              <td>
-                <%= course.course_desc %>
+                <%= scene.scene_photo %>
               </td> 
               <td>
-                <a href="courses/<%=course.course_id%>" class="btn btn-danger">
+                <a href="scenes/<%=scene.scene_id%>" class="btn btn-danger">
                   O'chirish
                 </a>
               </td>
@@ -152,6 +133,8 @@
           </tbody>
         </table>
       </div>
+
+     
     </div>
   </div>
 </section>

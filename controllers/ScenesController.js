@@ -5,9 +5,12 @@ module.exports = class CourseController{
     static async ScenesGetController(req, res, next) {
         try {
 
-            const scenes = await req.db.scenes.findAll()
+            const scenes = await req.db.scenes.findAll({
+                raw: true,
+                order:[['updatedAt', 'DESC']]
+            })
             
-
+            console.log(scenes);
             res.render("scenes",{
                 scenes
             })
