@@ -42,9 +42,8 @@ module.exports = class Validation {
 
 
 	static async UpdateAdressPostValidation(data){
-		return await joi.object({
-			a_map: joi.string().required().min(5).error(new Error("Iframe xato berilgan")),
-			a_location:  joi.string().required().min(5).error(new Error("Manzilda xatolik bor")),
+		return await joi.object({ 
+			a_location: joi.string().required().min(5).error(new Error("Manzilda xatolik bor")),
 			a_email: joi.string().email().required().min(5).error(new Error("Email xato")),
 			a_phone: joi.string().required().min(5).error(new Error("Telefon raqam noto'g'ri berilgan")) ,
 			a_facebook_link: joi.string().required().min(5).error(new Error("Havola noto'g'ri")),
