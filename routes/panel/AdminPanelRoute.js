@@ -5,6 +5,7 @@ const { ApplicantsGetController, ApplicantToCoursePostController } = require("..
 const { CommentsGetController, AddCommentsPostController, CommentDeleteController } = require("../../controllers/CommentsController");
 const { CourseGetController, AddCoursePostController, CourseDeleteController } = require("../../controllers/CourseController");
 const { NewsGetController, AddNewsPostController, NewsDeleteController } = require("../../controllers/NewsController");
+const { ResultsGetController, AddResultPostController, ResultsDeleteController } = require("../../controllers/ResultsController");
 const { ScenesGetController, AddScenesPostController, SceneDeleteController } = require("../../controllers/ScenesController");
 const { UserSessionGetController, SessionDeleteController } = require("../../controllers/UsersController");
 const AuthMiddleware = require("../../middlewares/AuthMiddleware");
@@ -18,27 +19,33 @@ AdminPanelRoute.get("/sessions/:session_id", SessionDeleteController)
 AdminPanelRoute.get("/applicants", ApplicantsGetController);
 // AdminPanelRoute.post("/applicants", ApplicantToCoursePostController)
 
-// News page routers
+// News page routes
 AdminPanelRoute.get("/news", NewsGetController);
 AdminPanelRoute.post("/news", expressFileUpload(), AddNewsPostController);
 AdminPanelRoute.get("/news/:news_id", NewsDeleteController);
 
-// Courses page routers
+// Courses page routes
 AdminPanelRoute.get("/courses", CourseGetController);
 AdminPanelRoute.post("/courses", expressFileUpload(), AddCoursePostController);
 AdminPanelRoute.get("/courses/:course_id", CourseDeleteController);
 
 
-// Comments page routers
+// Comments page routes
 AdminPanelRoute.get("/comments", CommentsGetController );
 AdminPanelRoute.post("/comments", expressFileUpload(), AddCommentsPostController);
 AdminPanelRoute.get("/comments/:comment_id", CommentDeleteController)
 
-// Scenes page routers
+// Scenes page routes
 
 AdminPanelRoute.get("/scenes", ScenesGetController );
 AdminPanelRoute.post("/scenes", expressFileUpload(), AddScenesPostController);
-AdminPanelRoute.get("/scenes/:scene_id", SceneDeleteController)
+AdminPanelRoute.get("/scenes/:scene_id", SceneDeleteController);
+
+// Results page routes
+
+AdminPanelRoute.get("/results", ResultsGetController );
+AdminPanelRoute.post("/results", expressFileUpload(), AddResultPostController);
+AdminPanelRoute.get("/results/:result_id", ResultsDeleteController);
 
 
 

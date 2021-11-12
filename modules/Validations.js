@@ -31,4 +31,12 @@ module.exports = class Validation {
 			comment_star: joi.number().required().max(5).error(new Error(""))
 		}).validateAsync(data)
 	}
+
+	static async AddResultsValidation(data){
+		return await joi.object({
+			result_owner: joi.string().required().min(5).error(new Error("Ismni to'liqroq yozing")), 
+			result_owner_university: joi.string().required().error(new Error("Ta'rif xato")),
+			result_owner_study_duration: joi.string().required().error(new Error("Izohda xato bor"))
+		}).validateAsync(data)
+	}
 }
