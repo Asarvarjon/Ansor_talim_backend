@@ -39,6 +39,11 @@ module.exports = class  UsersController{
                 raw: true
             })
 
+            const videos = await req.db.videos.findAll({
+                raw: true
+            })
+ 
+
             res.render("index", { 
                 news,
                 courses,
@@ -47,7 +52,8 @@ module.exports = class  UsersController{
                 comments,
                 address,
                 teachers,
-                assets
+                assets,
+                videos
             })
             
         } catch (error) { 

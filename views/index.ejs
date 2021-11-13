@@ -5,6 +5,7 @@
 <% var address %> 
 <% var comments = comments || [] %> 
 <% var teachers = teachers || [] %> 
+<% var videos = videos || [] %> 
 <% var assets %> 
 
 <!DOCTYPE html>
@@ -357,124 +358,22 @@
 
             <!-- Owl-carousel -->
             <div class="owl-carousel owl-theme">
+                <% for(let video of videos) { %> 
+                <div class="item">
+                    <div class="video-item">
+                        <div class="video-main">
+                            <img src="">
+                            <div class="video-cover">
+                                <i class="fab fa-youtube"></i>  
+                            </div>
+                                <!-- Video Youtube link -->
+                            <p class="video-iframe" src="<%=video.youtube_link%>"></p>
+                                <!-- Video Youtube link -->
+                            </div>
+                    </div>
+                </div> 
 
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/DMOQPaLbUvs"></p>
-                                <!-- Video Youtube link -->
-                            </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/yPJAaGuYctE"></p>
-                                <!-- Video Youtube link -->
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/QC8iQqtG0hg"></p>
-                                <!-- Video Youtube link -->
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/DMOQPaLbUvs"></p>
-                                <!-- Video Youtube link -->
-                            </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/yPJAaGuYctE"></p>
-                                <!-- Video Youtube link -->
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/QC8iQqtG0hg"></p>
-                                <!-- Video Youtube link -->
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/DMOQPaLbUvs"></p>
-                                <!-- Video Youtube link -->
-                            </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/yPJAaGuYctE"></p>
-                                <!-- Video Youtube link -->
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-item">
-                        <div class="video-main">
-                            <img src="">
-                            <div class="video-cover">
-                                <i class="fab fa-youtube"></i>  
-                            </div>
-                                <!-- Video Youtube link -->
-                            <p class="video-iframe" src="https://www.youtube.com/embed/QC8iQqtG0hg"></p>
-                                <!-- Video Youtube link -->
-                        </div>
-                    </div>
-                </div>
+                <% } %> 
                 
             </div>
             <!-- !Owl-carousel -->
