@@ -150,7 +150,7 @@
                 <%= scene.scene_photo %>
               </td> 
               <td>
-                <a href="scenes/<%=scene.scene_id%>" class="btn btn-danger">
+                <a href="/admin_panel/scenes/<%=scene.scene_id%>" class="btn btn-danger">
                   O'chirish
                 </a>
               </td>
@@ -181,10 +181,10 @@
             <% for (let video of videos) { %>
             <tr>
               <td>
-                <%= video.video_link %>
+                <%= video.youtube_link %>
               </td> 
               <td>
-                <a href="videos/<%=video.video_id%>" class="btn btn-danger">
+                <a href="/admin_panel/videos/<%=video.video_id%>" class="btn btn-danger">
                   O'chirish
                 </a>
               </td>

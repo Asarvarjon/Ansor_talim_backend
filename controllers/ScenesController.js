@@ -9,10 +9,16 @@ module.exports = class CourseController{
                 raw: true,
                 order:[['updatedAt', 'DESC']]
             })
+
+            const videos = await req.db.videos.findAll({
+                raw: true,
+                order:[['updatedAt', 'DESC']]
+            })
             
-            console.log(scenes);
+             
             res.render("scenes",{
-                scenes
+                scenes,
+                videos
             })
         } catch (error) {
             next(error)
