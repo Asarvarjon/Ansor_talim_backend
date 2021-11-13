@@ -67,4 +67,13 @@ module.exports = class Validation {
 			email: joi.string().email().required().error(new Error("Emailingizni to'g'ri kiriting"))
 		}).validateAsync(data)
 	}
+
+	static async TeacherValidation(data){
+		return await joi.object({  
+			teacher_name: joi.string().min(3).max(32).required().error(new Error("Ismni to'g'ri kiriting")),
+			teacher_subject: joi.string().min(3).max(64).required().error(new Error("Mutaxasislik nomini to'g'ri kiriting")),
+			teacher_experience: joi.number().required().error(new Error("Tajribani to'g'ri kiriting")),
+			teacher_students: joi.number().required().error(new Error("O'quvchilar sonini to'g'ri kiriting"))
+		}).validateAsync(data)
+	}
 }

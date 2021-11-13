@@ -1,5 +1,7 @@
 const fs = require("fs");
-const path = require("path")
+const path = require("path");
+const { TeacherValidation } = require("../modules/Validations");
+
 
 module.exports = class TeachersController{
     static async TeacherGetController(req, res, next) {
@@ -20,9 +22,9 @@ module.exports = class TeachersController{
 
     static async AddTeacherPostController(req, res, next){
         try { 
-            const {teacher_name, teacher_experience, teacher_students, teacher_subject} = await AddNewsValidation(req.body);
+            const {teacher_name, teacher_experience, teacher_students, teacher_subject} = await TeacherValidation(req.body);
 
-            const photo = req.files.news_file;
+            const photo = req.files.photo;
 
             let photo_name = photo
 				? photo.md5 +
@@ -73,7 +75,7 @@ module.exports = class TeachersController{
                     "..",
                     "public",
                     "uploads",
-                    news.news_photo
+                    teacher.teacher_photo
                 ),
                 () => {}
             );
