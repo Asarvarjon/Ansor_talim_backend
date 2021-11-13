@@ -5,7 +5,7 @@
 <%- include("./parts//header.ejs") %>
 <section>
   <div class="container-fluid d-flex row">
-    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark col-3" style=" height: 100vh;">
+    <div class="d-flex flex-column flex-shrink-0 position-sticky p-3 text-white bg-dark col-3" style=" height: 100vh;">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <span class="fs-4 ms-3">Apex</span>
       </a>
@@ -175,21 +175,21 @@
                 O'chirish
               </th>
             </tr>
-          </thead>
-
-          <tbody>
-            <% for (let video of videos) { %>
-            <tr>
-              <td>
-                <%= video.youtube_link %>
-              </td> 
-              <td>
-                <a href="/admin_panel/videos/<%=video.video_id%>" class="btn btn-danger">
-                  O'chirish
-                </a>
-              </td>
-            </tr>
-            <% } %>
+          </thead> 
+          <tbody  > 
+              <% for (let video of videos) { %>
+                <tr>
+                  <td>
+                    <%= video.youtube_link %>
+                  </td> 
+                  <td>
+                    <a href="/admin_panel/videos/<%=video.video_id%>" class="btn btn-danger">
+                      O'chirish
+                    </a>
+                  </td>
+                </tr>
+                <% } %> 
+            
           </tbody>
         </table>
       </div>
