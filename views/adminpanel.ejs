@@ -1,6 +1,8 @@
+<% var error %> 
+
 <%- include("./parts//header.ejs") %> 
 <section >
-    <div class="container-fluid">
+    <div class="container-fluid d-flex row">
          <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
               <span class="fs-4 ms-3">Apex</span>
@@ -75,6 +77,36 @@
               </ul>
             </div>
           </div>
+
+          <div class="col-9 mt-3 mb-3">
+
+            <div class="mt-4 w-75 me-auto ms-auto">
+              <h2 class="text-center mt-5 text-primary">Assalomu alaykum, <b>APEX TA'LIM</b> o'quv markaziga xush kelibsiz!</h2>
+            </div>
+            <div class="mt-5">
+              <h4 class="mt-1 text-center text-info">Bosh sahifa ma'lumotlarini o'zgartirish</h4>
+
+              <form id="form" method="POST" action="/assets"  enctype="application/x-www-form-urlencoded"
+                  class="w-100 d-flex flex-column align-items-center mt-4 justify-content-center" autocomplete="off">
+                  <div class="w-50">
+                      <% if(error) { %>
+                      <div class="alert alert-danger">
+                          <%= error  %>
+                      </div>
+                      <% } %>
+                      <input id="name" type="text" name="main_title" required
+                      placeholder="Sarlavhanini kiriting" class="form-control">
+                  <input  type="text" name="main_motto" placeholder="Asosiy shiorni kiriting ..."
+                      class="form-control mt-2" required> 
+                      <button type="submit" class="btn w-100 btn-primary mt-2">
+                        O'zgartirish
+                    </button>
+                    </div>  
+              </form>
+
+          </div> 
+             
+        </div>
     </div>
 </section>
 

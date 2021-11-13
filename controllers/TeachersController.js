@@ -48,6 +48,8 @@ module.exports = class TeachersController{
                 teacher_photo: photo_name
             }) 
 
+            console.log(teacher);
+
             res.redirect("/admin_panel/teachers") 
         } catch (error) {
             res.render("teachers",{
@@ -80,7 +82,7 @@ module.exports = class TeachersController{
                 () => {}
             );
 
-            await req.db.teacher.destroy({
+            await req.db.teachers.destroy({
                 where: {
                     teacher_id: teacher_id
                 }

@@ -39,8 +39,7 @@ module.exports = class AdressController{
                     a_id: a.a_id
                 }
             });
-
-            console.log(address);
+ 
              
 
             res.redirect("/admin_panel/address") 

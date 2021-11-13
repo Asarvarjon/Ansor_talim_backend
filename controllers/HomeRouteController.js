@@ -1,8 +1,7 @@
 
 module.exports = class  UsersController{
     static async HomeGetController(req, res, next) {
-        try { 
-
+        try {  
             const news = await req.db.news.findAll({
                 raw: true,
                 order:[['updatedAt', 'DESC']]
@@ -31,10 +30,14 @@ module.exports = class  UsersController{
             const address = await req.db.address.findOne({
                 raw: true, 
             }); 
-            // const teachers = await req.db.teachers.findAll({
-            //     raw: true,
-            //     order:[['updatedAt', 'DESC']]
-            // }) 
+            const teachers = await req.db.teachers.findAll({
+                raw: true,
+                order:[['updatedAt', 'DESC']]
+            }) 
+
+            const assets = await req.db.assets.findOne({
+                raw: true
+            })
 
             res.render("index", { 
                 news,
@@ -42,11 +45,13 @@ module.exports = class  UsersController{
                 scenes,
                 results,
                 comments,
-                address
-                // teachers
+                address,
+                teachers,
+                assets
             })
             
         } catch (error) { 
+            console.log(error);
             next(error)
         }
     } 

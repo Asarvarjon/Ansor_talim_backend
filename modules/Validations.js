@@ -76,4 +76,11 @@ module.exports = class Validation {
 			teacher_students: joi.number().required().error(new Error("O'quvchilar sonini to'g'ri kiriting"))
 		}).validateAsync(data)
 	}
+
+	static async AssetsValidation(data){
+		return await joi.object({  
+			main_title: joi.string().required().error(new Error("Sarlavhani to'g'ri kiriting")),
+			main_motto: joi.string().required().error(new Error("Shiorni to'g'ri kiriting")), 
+		}).validateAsync(data)
+	}
 }

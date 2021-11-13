@@ -4,6 +4,8 @@
 <% var results = results || [] %> 
 <% var address %> 
 <% var comments = comments || [] %> 
+<% var teachers = teachers || [] %> 
+<% var assets %> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -79,8 +81,8 @@
         <div class="header-content">
             <div class="row">
                 <div class="header-content-in">
-                    <h1 class="font-h2">Talaba bo‘lishingizga albatta ishonamiz</h1>
-                    <p class="font-head-h-normal">Shaxmatda yo’lga chiqqan piyoda, bir kun kelib albatta vazir bo’ladi.</p>
+                    <h1 class="font-h2"><%= assets.main_title %> </h1>
+                    <p class="font-head-h-normal"><%= assets.main_motto %></p>
                     <a class="font-header-btn">KURSGA YOZILISH</a>
                 </div>
             </div>
@@ -301,20 +303,21 @@
 
             <!-- Owl-carousel -->
             <div class="owl-carousel owl-theme"> 
+                <% for(let teacher of teachers) {%> 
                     <div class="item">
                         <div class="teacher-item">
                             <div class="teacher-main">
-                                <img src="assets/images/teachers/img-1.png"> 
+                                <img src="uploads/<%=teacher.teacher_photo%>"> 
                                 <div class="teacher-content">
-                                    <h3>Asadov Qodir</h3> 
-                                    <p><span>Matematika</span> fani o'qituvchisi</p>
-                                    <p>Ish tajribasi: <span>8 </span>yil </p>
-                                    <p>O'qitgan talabalar soni: <span>500</span>+</p>
+                                    <h3><%=teacher.teacher_name%></h3> 
+                                    <p><span><%=teacher.teacher_subject%></span> fani o'qituvchisi</p>
+                                    <p>Ish tajribasi: <span><%=teacher.teacher_experience%></span>yil </p>
+                                    <p>O'qitgan talabalar soni: <span><%= teacher.teacher_students %> </span>+</p>
                                 </div>
                             </div>
                         </div>
                     </div>  
-
+                <% } %> 
             </div>
         <!-- !Owl-carousel -->
 
