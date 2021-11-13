@@ -6,7 +6,9 @@ module.exports = class NewsController{
     static async NewsGetController(req, res, next) {
         try {
 
-            const news = await req.db.news.findAll()
+            const news = await req.db.news.findAll({
+                order:[['updatedAt', 'DESC']]
+            })
             
 
             res.render("news",{
