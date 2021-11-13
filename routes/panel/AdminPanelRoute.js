@@ -1,6 +1,6 @@
 const expressFileUpload = require("express-fileupload")
 
-const { PanelGetController } = require("../../controllers/AdminPanelController");
+const { PanelGetController, UpdateAssetsPostController } = require("../../controllers/AdminPanelController");
 const { AdressGetController, UpdateAdressPostController } = require("../../controllers/AdressController");
 const { ApplicantsGetController, ApplicantToCoursePostController } = require("../../controllers/ApplicantsController");
 const { CommentsGetController, AddCommentsPostController, CommentDeleteController } = require("../../controllers/CommentsController");
@@ -65,6 +65,9 @@ AdminPanelRoute.post("/address", UpdateAdressPostController );
 /// CONTACTS
 
 AdminPanelRoute.get("/contacts", ContactsGetController)
+
+
+AdminPanelRoute.post("/assets", UpdateAssetsPostController)
 
 
 module.exports = AdminPanelRoute;

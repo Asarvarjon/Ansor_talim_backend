@@ -11,7 +11,7 @@ module.exports = class ProfileController{
     }
 
 
-    static async UpdateAdressPostController(req, res, next){
+    static async UpdateAssetsPostController(req, res, next){
         try {  
             const {main_motto, main_title} = await AssetsValidation(req.body);
 
