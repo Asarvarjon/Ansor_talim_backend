@@ -1,4 +1,9 @@
 <% var news = news || [] %> 
+<% var scenes = scenes ||[] %> 
+<% var courses = courses || [] %> 
+<% var results = results || [] %> 
+<% var address %> 
+<% var comments = comments || [] %> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -215,11 +220,12 @@
             <!-- Owl-carousel -->
             <div class="owl-carousel owl-theme">
 
+            <% for(let course of courses){ %> 
                 <div class="item">
                     <div class="course-item">
                         <div class="course-main">
                             <div class="course-img-container">
-                                <img src="assets/images/courses/img-1.png">
+                                <img src="uploads/<%= course.course_photo%> ">
                                 <div class="more-course-box">
                                     <p>Batafsil</p>
                                     <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -238,298 +244,22 @@
                                 </div>
                             </div> 
                             <div class="course-content">
-                                <h3>Matematika</h3> 
-                                <p>Matematika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
+                                <h3><%= course.course_title %> </h3> 
+                                <p><%= course.course_desc %> .</p>
                                 <button class="course-btn">KURSGA YOZILISH</button>
                             </div>
                             <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
+                                <h1><% course.course_title %> </h1>
+                                 
+                                <span>
+                                    <%= course.course_desc  %> 
+                                </span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-2.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Fizika</h3> 
-                                <p>Fizika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-3.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Ingliz tili</h3> 
-                                <p>Ingliz tili fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-1.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Matematika</h3> 
-                                <p>Matematika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-2.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Fizika</h3> 
-                                <p>Fizika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-3.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Ingliz tili</h3> 
-                                <p>Ingliz tili fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-1.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Matematika</h3> 
-                                <p>Matematika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-2.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Fizika</h3> 
-                                <p>Fizika fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="course-item">
-                        <div class="course-main">
-                            <div class="course-img-container">
-                                <img src="assets/images/courses/img-3.png">
-                                <div class="more-course-box">
-                                    <p>Batafsil</p>
-                                    <svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <!-- Generator: Sketch 3.8.1 (29687) - http://www.bohemiancoding.com/sketch -->
-                                        <title>plus [#1513]</title>
-                                        <desc>Created with Sketch.</desc>
-                                        <defs></defs>
-                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g id="Dribbble-Light-Preview" transform="translate(-339.000000, -240.000000)" fill="#000000">
-                                                <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                    <path d="M285.1,98 L301.9,98 L301.9,82 L285.1,82 L285.1,98 Z M283,100 L304,100 L304,80 L283,80 L283,100 Z M292.45,91 L289.3,91 L289.3,89 L292.45,89 L292.45,86 L294.55,86 L294.55,89 L297.7,89 L297.7,91 L294.55,91 L294.55,94 L292.45,94 L292.45,91 Z" id="plus-[#1513]"></path>
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div> 
-                            <div class="course-content">
-                                <h3>Ingliz tili</h3> 
-                                <p>Ingliz tili fanini mukammal o‘rganish yangi metodikasi bilan o‘rganamiz.</p>
-                                <button class="course-btn">KURSGA YOZILISH</button>
-                            </div>
-                            <div class="hidden">
-                                <h1>Lorem, ipsum dolor.</h1>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae doloribus sequi enim quas, facilis sit voluptate ab, eos voluptatum ipsum iste in quo id, non tenetur. Alias eveniet modi saepe vel excepturi harum deserunt sed voluptate voluptatum? Beatae, soluta! Aspernatur deserunt omnis eaque temporibus reiciendis facilis voluptatum magnam, provident corporis.</p>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aut ratione earum ea incidunt deleniti, quisquam quidem corporis itaque optio explicabo vero repellat corrupti? A voluptatem neque dolore magnam molestiae laboriosam maxime natus, cum reiciendis!</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> 
+
+            <% } %> 
 
             </div>
         <!-- !Owl-carousel -->
@@ -570,127 +300,20 @@
             <h1>Ustozlar</h1>
 
             <!-- Owl-carousel -->
-            <div class="owl-carousel owl-theme">
-
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-1.png"> 
-                            <div class="teacher-content">
-                                <h3>Asadov Qodir</h3> 
-                                <p><span>Matematika</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>8 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>500</span>+</p>
+            <div class="owl-carousel owl-theme"> 
+                    <div class="item">
+                        <div class="teacher-item">
+                            <div class="teacher-main">
+                                <img src="assets/images/teachers/img-1.png"> 
+                                <div class="teacher-content">
+                                    <h3>Asadov Qodir</h3> 
+                                    <p><span>Matematika</span> fani o'qituvchisi</p>
+                                    <p>Ish tajribasi: <span>8 </span>yil </p>
+                                    <p>O'qitgan talabalar soni: <span>500</span>+</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-2.png"> 
-                            <div class="teacher-content">
-                                <h3>Ergashev Jasur</h3> 
-                                <p><span>Fizika</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>5 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>400</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-3.png"> 
-                            <div class="teacher-content">
-                                <h3>Murodov Alibek</h3> 
-                                <p><span>Ingliz tili</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>4 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>300</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-1.png"> 
-                            <div class="teacher-content">
-                                <h3>Asadov Qodir</h3> 
-                                <p><span>Matematika</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>8 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>500</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-2.png"> 
-                            <div class="teacher-content">
-                                <h3>Ergashev Jasur</h3> 
-                                <p><span>Fizika</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>5 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>400</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-3.png"> 
-                            <div class="teacher-content">
-                                <h3>Murodov Alibek</h3> 
-                                <p><span>Ingliz tili</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>4 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>300</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-1.png"> 
-                            <div class="teacher-content">
-                                <h3>Asadov Qodir</h3> 
-                                <p><span>Matematika</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>8 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>500</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-2.png"> 
-                            <div class="teacher-content">
-                                <h3>Ergashev Jasur</h3> 
-                                <p><span>Fizika</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>5 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>400</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="teacher-item">
-                        <div class="teacher-main">
-                            <img src="assets/images/teachers/img-3.png"> 
-                            <div class="teacher-content">
-                                <h3>Murodov Alibek</h3> 
-                                <p><span>Ingliz tili</span> fani o'qituvchisi</p>
-                                <p>Ish tajribasi: <span>4 </span>yil </p>
-                                <p>O'qitgan talabalar soni: <span>300</span>+</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div>  
 
             </div>
         <!-- !Owl-carousel -->
@@ -703,36 +326,13 @@
             <h1>Darslardan fotolavhalar</h1>
 
             <div class="photos">
-                <div class="photo-item">
-                    <div class="item">
-                        <img src="assets/images/lesson_photo/img-1.png">
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <div class="item">
-                        <img src="assets/images/lesson_photo/img-2.png">
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <div class="item">
-                        <img src="assets/images/lesson_photo/img-3.png">
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <div class="item">
-                        <img src="assets/images/lesson_photo/img-4.png">
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <div class="item">
-                        <img src="assets/images/lesson_photo/img-5.png">
-                    </div>
-                </div>
-                <div class="photo-item">
-                    <div class="item">
-                        <img src="assets/images/lesson_photo/img-6.png">
-                    </div>
-                </div>
+                <% for(let scene of scenes) {%> 
+                    <div class="photo-item">
+                        <div class="item">
+                            <img src="/uploads/<%= scene.scene_photo %>">
+                        </div>
+                    </div>  
+                <% } %> 
             </div>
 
         </section>
@@ -905,98 +505,18 @@
 
             <!-- Owl-carousel -->
             <div class="owl-carousel owl-theme">
-
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-1.png">
-                            <h3>Norboyeva Nodira</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Milliy Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">6</span> oylik tayyorlov kursi</p>
+                <% for(let result of results) {%> 
+                    <div class="item">
+                        <div class="result-item">
+                            <div class="result-main">
+                                <img src="/uploads/<%=result.result_owner_photo%>">
+                                <h3><%= result.result_owner %> </h3>
+                                <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi"> <%= result.result_owner_university %> </span></p>
+                                <p>Abiturientlik davri: <span class="kurs-muddat"><%= result.result_owner_study_duration%> </span> oylik tayyorlov kursi</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-2.svg">
-                            <h3>Mavlonov Abdulla</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Yuridik Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">8</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-3.svg">
-                            <h3>Yo‘lchiyeva Madina</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Nizomiy Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">5</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-1.png">
-                            <h3>Norboyeva Nodira</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Milliy Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">6</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-2.svg">
-                            <h3>Mavlonov Abdulla</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Yuridik Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">8</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-3.svg">
-                            <h3>Yo‘lchiyeva Madina</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Nizomiy Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">5</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-1.png">
-                            <h3>Norboyeva Nodira</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Milliy Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">6</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-2.svg">
-                            <h3>Mavlonov Abdulla</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Yuridik Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">8</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="result-item">
-                        <div class="result-main">
-                            <img src="assets/images/pupils_result/img-3.svg">
-                            <h3>Yo‘lchiyeva Madina</h3>
-                            <p>O‘qishga kirgan oliygoh nomi: <span class="oliygoh-nomi">Toshkent Davlat Nizomiy Universiteti</span></p>
-                            <p>Abiturientlik davri: <span class="kurs-muddat">5</span> oylik tayyorlov kursi</p>
-                        </div>
-                    </div>
-                </div>
-
+                    </div> 
+                <% } %> 
             </div>
             <!-- !Owl-carousel -->
         </section>
@@ -1008,179 +528,25 @@
 
             <!-- Owl-carousel -->
             <div class="owl-carousel owl-theme">
-
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-1.png">
-                            <div class="commit-content">
-                                <h3>Karimova Odina</h3>
-                                <h5>TDMI 1-kurs talabasi</h5>
-                                <p>Men talaba bo’lishimga sababchi bo‘lgan eng zo‘r o‘quv markaz.</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
+                <%for(let comment of comments) {%> 
+                    <div class="item">
+                        <div class="commit-item">
+                            <div class="commit-main">
+                                <img src="/uploads/<%=comment.comment_owner_photo%>">
+                                <div class="commit-content">
+                                    <h3><%= comment.comment_owner%> a</h3>
+                                    <h5><%= comment.comment_owner_description %> </h5>
+                                    <p><%= comment.comment_text %> </p>
+                                    <span> 
+                                      <% for(let item in comment.comment_star) {%> 
+                                        <i class="fas fa-star"></i> 
+                                      <% } %> 
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-2.png">
-                            <div class="commit-content">
-                                <h3>Azizova Durdona</h3>
-                                <h5>TATU 1-kurs talasi</h5>
-                                <p>Zamonaviy kasblarni o’rganish uchun qulay o’quv markaz deya tavsiya qilaman</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-3.png">
-                            <div class="commit-content">
-                                <h3>Madrahimov Olimjon</h3>
-                                <h5>TDYU 1-kurs talabasi</h5>
-                                <p>Eng tajribali ustozlar jamosiga ega o‘quv markaz sifatiad tavsiya qilaman.</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-1.png">
-                            <div class="commit-content">
-                                <h3>Karimova Odina</h3>
-                                <h5>TDMI 1-kurs talabasi</h5>
-                                <p>Men talaba bo’lishimga sababchi bo‘lgan eng zo‘r o‘quv markaz.</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-2.png">
-                            <div class="commit-content">
-                                <h3>Azizova Durdona</h3>
-                                <h5>TATU 1-kurs talasi</h5>
-                                <p>Zamonaviy kasblarni o’rganish uchun qulay o’quv markaz deya tavsiya qilaman</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-3.png">
-                            <div class="commit-content">
-                                <h3>Madrahimov Olimjon</h3>
-                                <h5>TDYU 1-kurs talabasi</h5>
-                                <p>Eng tajribali ustozlar jamosiga ega o‘quv markaz sifatiad tavsiya qilaman.</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-1.png">
-                            <div class="commit-content">
-                                <h3>Karimova Odina</h3>
-                                <h5>TDMI 1-kurs talabasi</h5>
-                                <p>Men talaba bo’lishimga sababchi bo‘lgan eng zo‘r o‘quv markaz.</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-2.png">
-                            <div class="commit-content">
-                                <h3>Azizova Durdona</h3>
-                                <h5>TATU 1-kurs talasi</h5>
-                                <p>Zamonaviy kasblarni o’rganish uchun qulay o’quv markaz deya tavsiya qilaman</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="commit-item">
-                        <div class="commit-main">
-                            <img src="assets/images/user_comment/img-3.png">
-                            <div class="commit-content">
-                                <h3>Madrahimov Olimjon</h3>
-                                <h5>TDYU 1-kurs talabasi</h5>
-                                <p>Eng tajribali ustozlar jamosiga ega o‘quv markaz sifatiad tavsiya qilaman.</p>
-                                <span>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                    </div> 
+                <% } %> 
             </div>
             <!-- !Owl-carousel -->
         </section>
@@ -1190,8 +556,8 @@
         <section id="address-div">
             <h1>Biz bilan bog’lanish</h1>
             <div class="map-container">
-                <div class="map-in">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48271.64865105821!2d69.0349640524582!3d40.872356108637575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae0cffaa77dbbb%3A0x74bfadbb12b99dcc!2z0JDQutC60YPRgNCz0LDQvSwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1633431104574!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="map-in"> 
+                      <iframe src="<%=address.a_map%>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
                 </div>
             </div>
             <div class="map-contact-icons">
@@ -1202,7 +568,7 @@
                             <path d="M11.9997 3.85791C8.08294 3.85791 4.89648 6.43869 4.89648 9.61095C4.89648 12.7832 8.08302 15.364 11.9997 15.364C15.9164 15.364 19.1029 12.7832 19.1029 9.61095C19.1029 6.43875 15.9165 3.85791 11.9997 3.85791ZM11.9997 14.062C8.96933 14.062 6.50402 12.0652 6.50402 9.61095C6.50402 7.1566 8.96941 5.15989 11.9997 5.15989C15.03 5.15989 17.4953 7.15666 17.4954 9.61095C17.4954 12.0653 15.0301 14.062 11.9997 14.062Z" fill="#00445B"/>
                         </svg>
                     </a>
-                    <p>Toshkent shahri, Chilonzor tumani, Ustozlar ko’chasi, 13-uy</p>
+                    <p><%= address.a_location %> </p>
                 </div>
                 <div class="box-2">
                     <a href="#">
@@ -1210,7 +576,7 @@
                             <path d="M15.5754 16.8165L12.5731 14.9867C12.4467 14.9043 12.2962 14.8575 12.137 14.8512C11.9779 14.8448 11.816 14.8791 11.6679 14.9505L10.4524 15.5754C10.3 15.6516 10.1315 15.6858 9.9675 15.6739C9.80353 15.662 9.65123 15.6044 9.52927 15.5083C7.38988 13.8647 6.0183 11.489 5.66458 8.81443C5.64231 8.66075 5.66862 8.50008 5.74028 8.35212C5.81194 8.20416 5.92585 8.07534 6.06802 7.98146L7.18541 7.18667C7.32351 7.09688 7.43713 6.97584 7.51456 6.83603C7.59199 6.69623 7.63042 6.54273 7.62587 6.39137L7.54239 2.87638L7.52796 1.97572C7.52379 1.8462 7.4886 1.72195 7.42502 1.61224C7.32317 1.43413 7.15101 1.30484 6.9423 1.2497C6.36706 1.09161 5.74749 1.07 5.13506 1.18668C4.52262 1.30337 3.93502 1.55497 3.42105 1.92058L3.16969 2.1069L3.03945 2.20407C2.97894 2.24679 2.92062 2.29237 2.86475 2.34063L2.70295 2.48897C0.565905 4.47799 0.725289 9.23026 3.13929 13.848L3.87953 15.1301C6.668 19.5233 10.7039 22.0375 13.5054 21.2206L13.7148 21.1546C13.7841 21.1305 13.8524 21.103 13.9192 21.0723L14.0691 21.0091L14.3562 20.8845C14.9295 20.622 15.4409 20.2388 15.8478 19.7667C16.2548 19.2946 16.5456 18.7473 16.696 18.1701C16.7526 17.9618 16.7267 17.7481 16.6234 17.5708C16.5602 17.4609 16.4702 17.3683 16.3601 17.2999L15.5754 16.8165Z" stroke="#00445B" stroke-width="1.06794" stroke-miterlimit="10"/>
                         </svg>
                     </a>
-                    <p><a href="#">+998 90 350 55 55</a></p>
+                    <p><a href="tel:<%=address.a_phone%> "><%= address.a_phone %> </a></p>
                 </div>
                 <div class="box-3">
                     <a href="#">
@@ -1218,22 +584,22 @@
                             <path d="M22.1519 0.00244141H1.8481C0.83038 0.00244141 0 0.832821 0 1.85054V16.1493C0 17.167 0.83038 17.9974 1.8481 17.9974H22.1519C23.1696 17.9974 24 17.167 24 16.1493V1.85054C24 0.832821 23.1696 0.00244141 22.1519 0.00244141ZM21.8835 1.36953L12.1266 9.71383L2.36962 1.36953H21.8835ZM22.6329 16.1493C22.6329 16.4126 22.4152 16.6303 22.1519 16.6303H1.8481C1.58481 16.6303 1.36709 16.4126 1.36709 16.1493V2.3113L11.681 11.1316C11.6861 11.1366 11.6962 11.1417 11.7013 11.1467C11.7063 11.1518 11.7165 11.1569 11.7215 11.1619C11.7367 11.1721 11.7468 11.1822 11.762 11.1873C11.7671 11.1923 11.7722 11.1923 11.7772 11.1974C11.7975 11.2075 11.8177 11.2176 11.838 11.2278C11.843 11.2278 11.8481 11.2328 11.8532 11.2328C11.8684 11.2379 11.8835 11.248 11.9038 11.2531C11.9089 11.2531 11.919 11.2581 11.9241 11.2581C11.9392 11.2632 11.9544 11.2683 11.9696 11.2683C11.9747 11.2683 11.9848 11.2733 11.9899 11.2733C12.0051 11.2784 12.0253 11.2784 12.0405 11.2835C12.0456 11.2835 12.0506 11.2835 12.0557 11.2835C12.0759 11.2835 12.1013 11.2885 12.1215 11.2885C12.1418 11.2885 12.1671 11.2885 12.1873 11.2835C12.1924 11.2835 12.1975 11.2835 12.2025 11.2835C12.2177 11.2835 12.238 11.2784 12.2532 11.2733C12.2582 11.2733 12.2684 11.2683 12.2734 11.2683C12.2886 11.2632 12.3038 11.2581 12.319 11.2581C12.3241 11.2581 12.3342 11.2531 12.3392 11.2531C12.3544 11.248 12.3696 11.2429 12.3899 11.2328C12.3949 11.2328 12.4 11.2278 12.4051 11.2278C12.4253 11.2176 12.4456 11.2075 12.4658 11.1974C12.4709 11.1923 12.4759 11.1923 12.481 11.1873C12.4962 11.1771 12.5063 11.1721 12.5215 11.1619C12.5266 11.1569 12.5367 11.1518 12.5418 11.1467C12.5468 11.1417 12.557 11.1366 12.562 11.1316L22.6329 2.52902V16.1493Z" fill="#00445B"/>
                         </svg>
                     </a>
-                    <p><a href="#">apexedu@gmail.com</a></p>
+                    <p><a href="#"><%= address.a_email %> </a></p>
                 </div>
                 <div class="box-4">
                     <p>Ijtimoiy tarmoqdagi sahifalarimiz:</p>
-                    <a href="#">
+                    <a href="<%=address.a_youtube_link%>">
                         <svg class="first-map-icon" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.84454 5.39409C7.87023 5.39409 6.27686 7.00416 6.27686 8.99918C6.27686 10.9942 7.87023 12.6043 9.84454 12.6043C11.8189 12.6043 13.4122 10.9942 13.4122 8.99918C13.4122 7.00416 11.8189 5.39409 9.84454 5.39409ZM9.84454 11.3422C8.56776 11.3422 7.52581 10.2893 7.52581 8.99918C7.52581 7.70901 8.56776 6.65614 9.84454 6.65614C11.1213 6.65614 12.1633 7.70901 12.1633 8.99918C12.1633 10.2893 11.1213 11.3422 9.84454 11.3422ZM13.5583 4.40625C13.0974 4.40625 12.7251 4.7824 12.7251 5.2482C12.7251 5.714 13.0974 6.09015 13.5583 6.09015C14.0193 6.09015 14.3916 5.71575 14.3916 5.2482C14.3898 4.78065 14.0193 4.40625 13.5583 4.40625Z" fill="#00445B" stroke="#00445B" stroke-width="0.284783"/>
                             <path d="M16.7995 8.99977C16.7995 8.02951 16.8082 7.06804 16.7543 6.09953C16.7003 4.97459 16.4464 3.9762 15.6323 3.15359C14.8165 2.32922 13.8302 2.07435 12.7169 2.01986C11.7567 1.96537 10.8052 1.97416 9.84678 1.97416C8.88659 1.97416 7.93509 1.96537 6.97664 2.01986C5.86337 2.07435 4.87534 2.33097 4.06126 3.15359C3.24545 3.97796 2.99322 4.97459 2.9393 6.09953C2.88537 7.06979 2.89407 8.03127 2.89407 8.99977C2.89407 9.96828 2.88537 10.9315 2.9393 11.9C2.99322 13.025 3.24719 14.0233 4.06126 14.846C4.87708 15.6703 5.86337 15.9252 6.97664 15.9797C7.93683 16.0342 8.88833 16.0254 9.84678 16.0254C10.807 16.0254 11.7585 16.0342 12.7169 15.9797C13.8302 15.9252 14.8182 15.6686 15.6323 14.846C16.4481 14.0216 16.7003 13.025 16.7543 11.9C16.8099 10.9315 16.7995 9.97004 16.7995 8.99977ZM15.2687 13.1445C15.1418 13.4644 14.9887 13.7034 14.7434 13.9495C14.4982 14.1974 14.2633 14.352 13.9467 14.4804C13.0318 14.8477 10.8592 14.7651 9.84504 14.7651C8.83092 14.7651 6.65657 14.8477 5.7416 14.4821C5.42502 14.3538 5.18845 14.1991 4.94492 13.9513C4.69965 13.7034 4.54658 13.4661 4.4196 13.1462C4.05779 12.2199 4.13954 10.0245 4.13954 8.99977C4.13954 7.97502 4.05779 5.77787 4.4196 4.85331C4.54658 4.5334 4.69965 4.29435 4.94492 4.04827C5.19019 3.80219 5.42502 3.64575 5.7416 3.51744C6.65657 3.15183 8.83092 3.23444 9.84504 3.23444C10.8592 3.23444 13.0335 3.15183 13.9485 3.51744C14.2651 3.64575 14.5016 3.80043 14.7452 4.04827C14.9904 4.29611 15.1435 4.5334 15.2705 4.85331C15.6323 5.77787 15.5505 7.97502 15.5505 8.99977C15.5505 10.0245 15.6323 12.2199 15.2687 13.1445Z" fill="#00445B" stroke="#00445B" stroke-width="0.284783"/>
                         </svg>
                     </a>
-                    <a href="#">
+                    <a href="<%=address.a_telegram_link%>">
                         <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.9207 0.929934C13.7337 0.938723 13.5576 0.993652 13.401 1.05517H13.3989C13.2401 1.11889 12.4856 1.43967 11.3397 1.92524C10.1939 2.41301 8.7066 3.04579 7.23021 3.67418C4.28179 4.92875 1.38338 6.16355 1.38338 6.16355L1.41817 6.15037C1.41817 6.15037 1.21813 6.21628 1.00939 6.3613C0.902846 6.43161 0.785431 6.52828 0.683236 6.67988C0.581042 6.83149 0.498416 7.06439 0.528857 7.30388C0.578868 7.71035 0.83979 7.95423 1.02678 8.08826C1.21595 8.22448 1.39642 8.2882 1.39642 8.2882H1.40077L4.11871 9.2132C4.24048 9.60869 4.94714 11.9552 5.11674 12.4957C5.21676 12.8187 5.31461 13.0209 5.43637 13.1747C5.49508 13.2538 5.56466 13.3197 5.64728 13.3724C5.6799 13.3922 5.71469 13.4076 5.74948 13.4207C5.76035 13.4273 5.77122 13.4295 5.78427 13.4317L5.756 13.4251C5.7647 13.4273 5.77122 13.4339 5.77774 13.4361C5.79949 13.4427 5.81471 13.4449 5.84298 13.4493C6.2735 13.5811 6.61922 13.3109 6.61922 13.3109L6.63879 13.2955L8.24346 11.819L10.9331 13.9041L10.994 13.9305C11.555 14.1788 12.1225 14.0403 12.4226 13.7965C12.7248 13.5504 12.8422 13.2362 12.8422 13.2362L12.8618 13.1857L14.9405 2.4262C14.9992 2.16034 15.0144 1.91206 14.9492 1.67037C14.8839 1.42869 14.7165 1.20238 14.5143 1.08154C14.3099 0.958497 14.1077 0.921146 13.9207 0.929934ZM13.8642 2.08344C13.862 2.11859 13.8685 2.1142 13.8533 2.18231V2.1889L11.7942 12.8363C11.7855 12.8517 11.7703 12.8846 11.7289 12.9176C11.6855 12.9528 11.6507 12.9747 11.4702 12.9022L8.1804 10.3535L6.19305 12.1838L6.61052 9.49004C6.61052 9.49004 11.7637 4.63653 11.9855 4.4278C12.2073 4.21907 12.1334 4.17513 12.1334 4.17513C12.1486 3.92026 11.7985 4.10043 11.7985 4.10043L5.02107 8.34313L5.0189 8.33214L1.77041 7.22698V7.22478C1.76824 7.22478 1.76389 7.22258 1.76172 7.22258C1.76389 7.22258 1.77911 7.21599 1.77911 7.21599L1.79651 7.2072L1.8139 7.20061C1.8139 7.20061 4.71449 5.96581 7.66291 4.71123C9.13929 4.08285 10.6266 3.45007 11.7703 2.9623C12.914 2.47673 13.7598 2.12079 13.8076 2.10102C13.8533 2.08344 13.8315 2.08344 13.8642 2.08344Z" fill="#00445B" stroke="#00445B" stroke-width="0.284783"/>
                         </svg>
                     </a>
-                    <a href="#">
+                    <a href="<%=address.a_facebook_link%>">
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.83538 16.4994H6.86667C6.66983 16.4994 6.48105 16.4204 6.34187 16.2798C6.20268 16.1391 6.12449 15.9484 6.12449 15.7495V11.0997H4.64013C4.44329 11.0997 4.25451 11.0207 4.11533 10.8801C3.97614 10.7394 3.89795 10.5487 3.89795 10.3498V7.6499C3.89795 7.45099 3.97614 7.26024 4.11533 7.11959C4.25451 6.97895 4.44329 6.89993 4.64013 6.89993H6.12449V5.625C6.17651 4.48232 6.67416 3.40694 7.50863 2.63399C8.3431 1.86104 9.44649 1.4534 10.5776 1.50021H12.8041C13.0009 1.50021 13.1897 1.57922 13.3289 1.71987C13.4681 1.86051 13.5463 2.05127 13.5463 2.25017V4.95003C13.5463 5.14894 13.4681 5.33969 13.3289 5.48034C13.1897 5.62098 13.0009 5.7 12.8041 5.7H10.5776V6.89993H12.8041C12.9187 6.89906 13.0319 6.92501 13.1349 6.97575C13.238 7.0265 13.3279 7.10066 13.3978 7.19242C13.467 7.28556 13.5137 7.39369 13.5343 7.50824C13.5549 7.62279 13.5489 7.74061 13.5166 7.85239L12.7744 10.5522C12.7295 10.7145 12.6319 10.8567 12.4973 10.956C12.3626 11.0553 12.1988 11.1059 12.0322 11.0997H10.5776V15.7495C10.5776 15.9484 10.4994 16.1391 10.3602 16.2798C10.221 16.4204 10.0322 16.4994 9.83538 16.4994ZM7.60884 14.9995H9.0932V10.3498C9.0932 10.2513 9.1124 10.1537 9.1497 10.0628C9.187 9.97177 9.24166 9.8891 9.31058 9.81946C9.3795 9.74981 9.46132 9.69457 9.55136 9.65688C9.64141 9.61919 9.73792 9.5998 9.83538 9.5998H11.4979L11.8244 8.39986H9.83538C9.73792 8.39986 9.64141 8.38046 9.55136 8.34277C9.46132 8.30508 9.3795 8.24984 9.31058 8.1802C9.24166 8.11056 9.187 8.02788 9.1497 7.93689C9.1124 7.8459 9.0932 7.74838 9.0932 7.6499V5.625C9.11226 5.24034 9.27702 4.87782 9.55335 4.61255C9.82969 4.34728 10.1964 4.19959 10.5776 4.20007H12.0619V3.00013H10.5776C9.84044 2.95475 9.11533 3.2049 8.55956 3.6963C8.00379 4.18769 7.66218 4.88071 7.60884 5.625V7.6499C7.60884 7.8488 7.53065 8.03955 7.39147 8.1802C7.25228 8.32084 7.0635 8.39986 6.86667 8.39986H5.38231V9.5998H6.86667C7.0635 9.5998 7.25228 9.67881 7.39147 9.81946C7.53065 9.9601 7.60884 10.1509 7.60884 10.3498V14.9995Z" fill="#00445B"/>
                         </svg>
