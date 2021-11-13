@@ -11,6 +11,7 @@ const ScenesModel = require("../../models/ScenesModel");
 const ResultsModel = require("../../models/ResultsModel"); 
 const AddressModel = require("../../models/AddressModel");
 const StudentsModel = require("../../models/StudentsModel");
+const ContactModel = require("../../models/ContactModel");
 
 
 const sequelize = new Sequelize(process.env.POSTGRES_URL, {
@@ -35,7 +36,8 @@ module.exports = async function(){
         db.scenes = await ScenesModel(sequelize, Sequelize);
         db.results = await ResultsModel(sequelize, Sequelize);
         db.address = await AddressModel(sequelize, Sequelize);
-        db.students = await StudentsModel(sequelize, Sequelize)
+        db.students = await StudentsModel(sequelize, Sequelize);
+        db.contacts = await ContactModel(sequelize, Sequelize);
 
 
  

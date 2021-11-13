@@ -192,7 +192,7 @@ showModalCourse.addEventListener('click', function(e){
         let nameInput = document.querySelector('.header-name');
         let phoneInput = document.querySelector('.header-tel');
 
-        let response=await fetch("/contact",{
+        let response=await fetch("/course",{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -204,8 +204,7 @@ showModalCourse.addEventListener('click', function(e){
         })
 
         response=await response.json();
-
-        console.log(response);
+ 
         return response;
 
     }
@@ -350,6 +349,8 @@ let ftrBtn = document.querySelector('#footer-submit');
 let ftrForm = document.getElementById('footer-form');
 
 ftrBtn.addEventListener('click',  function(e){
+    contact_fetch()
+    
     let inputs = ftrForm.querySelectorAll('input');
     let count = 0; 
      
@@ -392,6 +393,29 @@ ftrBtn.addEventListener('click',  function(e){
         e.preventDefault(); 
     }
 })
+
+async function contact_fetch(){
+    let nameInput = document.querySelector('.footer-name');
+    let phoneInput = document.querySelector('.footer-tel');
+    let emailInput = document.querySelector('.footer-email')
+
+    let response=await fetch("/contact",{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            name: nameInput.value,
+            phone: phoneInput.value,
+            email: emailInput.value
+        })
+    })
+
+    response=await response.json();
+ 
+    return response;
+
+}
 
 
 // let ftrBtn = document.querySelector('#footer-submit');
