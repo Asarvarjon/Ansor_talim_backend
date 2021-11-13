@@ -11,8 +11,7 @@ module.exports = async function init(db) {
             user_username: username.toLowerCase(), 
             user_password: generateHash(password), 
         })  
-
-        console.log(admin);
+ 
     };
 
      

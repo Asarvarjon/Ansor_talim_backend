@@ -52,4 +52,11 @@ module.exports = class Validation {
 		    a_youtube_link: joi.string().required().min(5).error(new Error("Havola noto'g'ri"))
 		}).validateAsync(data)
 	}
+
+	static async StudentValidation(data){
+		return await joi.object({  
+			name: joi.string().min(3).max(32).required().error(new Error("Ismingizni to'g'ri kiriting")),
+			phone: joi.string().min(3).required().error(new Error("Telefon raqamingizni to'g'ri kiriting"))
+		}).validateAsync(data)
+	}
 }

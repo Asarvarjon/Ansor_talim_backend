@@ -102,9 +102,9 @@ var hdrErrorMsgName = document.querySelector('.header-name-error');
 hdrName.addEventListener('keyup', function(){
     var success = document.querySelector('.name-success');
     var error = document.querySelector('.name-error');
-    let res = /^[a-zA-Z]+$/;
+    let res = /^[a-zA-Z ]*$/;
 
-    if( res.test(hdrName.value) && hdrName.value.length >= 3 && hdrName.value.length < 30 && hdrName.value.match(/[-!$%^&*()_+|~=`{}\[\]:";<> \\?,.\/0-9]/) == null ){
+    if( res.test(hdrName.value) && hdrName.value.length >= 3 && hdrName.value.length < 30 && hdrName.value.match(/[-!$%^&*()_+|~=`{}\[\]:";<> ]\\?,.\/0-9]/) == null ){
 
         error.style.display = 'none';
         success.style.display = 'block';
@@ -139,8 +139,10 @@ hdrTel.addEventListener('keyup', function(){
 })
 
 showModalCourse.addEventListener('click', function(e){
+    fetch_course()
+   
     let inputs = modalCourse.querySelectorAll('input');
-    let count = 0;
+    let count = 0; 
     for(const npt of inputs){
         if(npt.value == '') {
             count += 1;
@@ -148,12 +150,15 @@ showModalCourse.addEventListener('click', function(e){
             npt.style.outline = '1px solid red';
             npt.parentElement.querySelector('p').style.display = 'block';
         }
-    }
+    } 
 
     for( const err of modalCourse.querySelectorAll('.fa-exclamation-circle') ){
         if(err.style.display == 'block') count += 1
     }
+
+   
     if(count != 0){
+        
         e.preventDefault();
     }
 
@@ -178,7 +183,31 @@ showModalCourse.addEventListener('click', function(e){
 
         hdrErrorMsgName.style.display = 'none';
         hdrErrorMsgTel.style.display = 'none';
-        e.preventDefault();
+        // e.preventDefault();
+
+        // prevented
+    }
+
+    async function fetch_course(){
+        let nameInput = document.querySelector('.header-name');
+        let phoneInput = document.querySelector('.header-tel');
+
+        let response=await fetch("/contact",{
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name: nameInput.value,
+                phone: phoneInput.value,
+            })
+        })
+
+        response=await response.json();
+
+        console.log(response);
+        return response;
+
     }
 
     // let count = 0;
@@ -253,16 +282,15 @@ window.addEventListener('click', function(evt){
 
 
 /* Modal-courses end */
-
 // Footer form
 let ftrName = document.querySelector('.footer-name');
 var errorMsgName = document.querySelector('.ftr-name-error');
 ftrName.addEventListener('keyup', function(){
     var success = ftrForm.querySelector('.name-success');
     var error = ftrForm.querySelector('.name-error');
-    let res = /^[a-zA-Z]+$/;
+    let res = /^[a-zA-Z ]*$/;
 
-    if( res.test(ftrName.value) && ftrName.value.length >= 3 && ftrName.value.length < 30 && ftrName.value.match(/[-!$%^&*()_+|~=`{}\[\]:";<> \\?,.\/0-9]/) == null ){
+    if( res.test(ftrName.value) && ftrName.value.length >= 3 && ftrName.value.length < 30 && ftrName.value.match(/[-!$%^&*()_+|~={}\[\]:;<> ]\\?,.\/0-9]/) == null ){
 
         error.style.display = 'none';
         success.style.display = 'block';
@@ -321,9 +349,10 @@ ftrEmail.addEventListener('keyup', function(){
 let ftrBtn = document.querySelector('#footer-submit');
 let ftrForm = document.getElementById('footer-form');
 
-ftrBtn.addEventListener('click', function(e){
+ftrBtn.addEventListener('click',  function(e){
     let inputs = ftrForm.querySelectorAll('input');
-    let count = 0;
+    let count = 0; 
+     
     for(const npt of inputs){
         if(npt.value == '') {
             count += 1;
@@ -336,15 +365,18 @@ ftrBtn.addEventListener('click', function(e){
         if(err.style.display == 'block') count += 1
     }
     if(count != 0){
-        e.preventDefault();
-    }
-    if(count == 0){
+        e.preventDefault(); 
+    } 
+
+    
+ 
+    if(count == 0){ 
         let coverModalBg = document.createElement('div');
         coverModalBg.classList.add('cover-body-modal');
         document.querySelector('.modal-in-submit').append(coverModalBg);
 
         modalCourse.classList.remove('modal-course-active');
-        modalSubmit.classList.add('modal-submit-active');
+        modalSubmit.classList.add('modal-submit-active'); 
         
         for(const npt of inputs){
             npt.value = '';
@@ -357,7 +389,7 @@ ftrBtn.addEventListener('click', function(e){
         errorMsgName.style.display = 'none';
         errorMsgEmail.style.display = 'none';
         errorMsgTel.style.display = 'none';
-        e.preventDefault();
+        e.preventDefault(); 
     }
 })
 

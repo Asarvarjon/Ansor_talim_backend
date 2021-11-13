@@ -96,7 +96,7 @@
                 </div>
                 <div class="modal-c-body">
                     <h1>Kursga yozilish</h1>
-                    <form  method="POST" id="course_id" class="course-form">
+                    <form  id="course_id" class="course-form">
                         <div>
                             <input class="header-name" type="text" required name="name" placeholder="Ism va familiyangizni yozing">
                             <i class="fas fa-exclamation-circle name-error"></i>
@@ -104,7 +104,7 @@
                             <p class="header-name-error">3 tadan kam bo'lmagan va 30 tadan ko'p bo'lmagan, lotin harflaridan iborat bo'lishi kerak</p>
                         </div>
                         <div>
-                            <input class="header-tel" id="header-phone" type="tel" required name="phone-number" placeholder="Telefon raqamingizni yozing">
+                            <input class="header-tel" id="header-phone" type="tel" required name="phone_number" placeholder="Telefon raqamingizni yozing">
                             <i class="fas fa-exclamation-circle tel-error"></i>
                             <i class="fas fa-check tel-success"></i>
                             <p class="header-tel-error">Telefon raqamni to'g'ri formatda kiritish kerak</p>
@@ -1485,7 +1485,7 @@
     <footer id="footer">
         <div class="footer-in">
             <h1>Aloqa</h1>
-            <form id="footer-form" action="#" method="GET" class="footer-form row">
+            <form id="footer-form" method="post" class="footer-form row">
                 <div>
                     <input class="footer-name" type="text" required name="name" placeholder="Ism va familiyangizni yozing">
                     <i class="fas fa-exclamation-circle name-error"></i>
