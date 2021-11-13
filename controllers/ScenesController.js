@@ -84,4 +84,47 @@ module.exports = class CourseController{
              console.log(error);
          }
     }
+
+
+    static async VideoAddController(req, res, next){
+        try {
+            const {youtube_link} = req.body;
+
+            const video = await req.db.videos.create({
+                youtube_link: youtube_link
+            })
+
+            res.redirect("/admin_panel/scenes/")
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+
+    static async VideoDeleteController(req, res, next) {
+        try {
+           let video_id = req.params.video_id;
+
+           const video = await req.db.videos.findOne({
+               raw: true,
+               where: {
+                   video_id: video_id
+               }
+           })
+
+           if(!video) throw new Error("Scene is not found"); 
+
+           await req.db.videos.destroy({
+               where: {
+                   video_id: video_id
+               }
+           });
+
+           res.redirect("/admin_panel/scenes/")
+        } catch (error) {
+            res.render("scenes", {
+                error: error.message
+            })
+        }
+   }
 }

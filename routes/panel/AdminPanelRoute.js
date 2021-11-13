@@ -8,7 +8,7 @@ const {  ContactsGetController } = require("../../controllers/ContactController"
 const { CourseGetController, AddCoursePostController, CourseDeleteController } = require("../../controllers/CourseController");
 const { NewsGetController, AddNewsPostController, NewsDeleteController } = require("../../controllers/NewsController");
 const { ResultsGetController, AddResultPostController, ResultsDeleteController } = require("../../controllers/ResultsController");
-const { ScenesGetController, AddScenesPostController, SceneDeleteController } = require("../../controllers/ScenesController");
+const { ScenesGetController, AddScenesPostController, SceneDeleteController, VideoAddController, VideoDeleteController } = require("../../controllers/ScenesController");
 const { TeacherGetController, AddTeacherPostController, TeacherDeleteController } = require("../../controllers/TeachersController");
 const { UserSessionGetController, SessionDeleteController } = require("../../controllers/UsersController");
 const AuthMiddleware = require("../../middlewares/AuthMiddleware");
@@ -66,8 +66,13 @@ AdminPanelRoute.post("/address", UpdateAdressPostController );
 
 AdminPanelRoute.get("/contacts", ContactsGetController)
 
-
+/// assets 
 AdminPanelRoute.post("/assets", UpdateAssetsPostController)
+
+//// video
+
+AdminPanelRoute.post("/videos", VideoAddController);
+AdminPanelRoute.get("/videos/:video_id", VideoDeleteController)
 
 
 module.exports = AdminPanelRoute;

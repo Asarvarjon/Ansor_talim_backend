@@ -1,5 +1,7 @@
 <% var error %>
 <% var scenes = scenes || [] %>
+<% var videos = videos || [] %>
+
 <%- include("./parts//header.ejs") %>
 <section>
   <div class="container-fluid d-flex row">
@@ -83,31 +85,50 @@
     </div>
 
     <div class="col-9 mt-3 mb-3">
-      <div>
-        <h3 class="mt-1 text-center text-info">Lavhalar qo'sish</h3>
+      <div class="row ">
+          <div class="col-6">
+            <h3 class="mt-1 text-center text-info">Lavhalar qo'sish</h3> 
+            <form id="form" method="POST" enctype="multipart/form-data"
+              class="w-100 d-flex flex-column align-items-center mt-4 justify-content-center" autocomplete="off">
+              <div class="row w-100">
+                <% if(error) { %>
+                <div class="alert alert-danger">
+                  <%= error  %>
+                </div>
+                <% } %> 
+                  <label for="formFile" class="form-label">Rasm yuklang</label>
+                  <input class="form-control" required name="photo" type="file" id="file">
+                  <button type="submit" class="btn w-100  btn-primary mt-3">
+                    Qo'shish
+                  </button> 
+              </div> 
+            </form> 
+          </div>
 
-        <form id="form" method="POST" enctype="multipart/form-data"
-          class="w-100 d-flex flex-column align-items-center mt-4 justify-content-center" autocomplete="off">
-          <div class="row w-100">
-            <% if(error) { %>
-            <div class="alert alert-danger">
-              <%= error  %>
-            </div>
-            <% } %>
-            <div class="col-lg-6"> 
-                <label for="formFile" class="form-label">Rasm yuklang</label>
-                <input class="form-control" required name="photo" type="file" id="file">
-                <button type="submit" class="btn w-100  btn-primary mt-3">
-                  Qo'shish
-                </button>
-            </div>   
-          </div> 
-        </form> 
+
+          <div class="col-6">
+            <h3 class="mt-1 text-center text-info">Video lavhalar qo'sish</h3> 
+            <form id="form" action="/admin_panel/videos/" method="POST" enctype="application/x-www-form-urlencoded"
+              class="w-100 d-flex flex-column align-items-center mt-4 justify-content-center" autocomplete="off">
+              <div class="row w-100">
+                <% if(error) { %>
+                <div class="alert alert-danger">
+                  <%= error  %>
+                </div>
+                <% } %> 
+                  <label for="formFile" class="form-label">Video yuklash</label>
+                  <input class="form-control" placeholder="Youtube linkini kiriting..." required name="youtube_link" type="text"  >
+                  <button type="submit" class="btn w-100  btn-danger mt-3">
+                    Yuklash
+                  </button> 
+              </div> 
+            </form> 
+          </div>
       </div>
 
       <div class="w-100">
         <h3 class="text-center text-primary mt-4">
-          Lavhalar
+           Lavhalar
         </h3>
 
         <table class="table w-100 table-striped  mt-3">
@@ -130,6 +151,40 @@
               </td> 
               <td>
                 <a href="scenes/<%=scene.scene_id%>" class="btn btn-danger">
+                  O'chirish
+                </a>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="w-100">
+        <h3 class="text-center text-danger mt-4">
+           Video lavhalar
+        </h3>
+
+        <table class="table w-100 table-striped  mt-3">
+          <thead>
+            <tr >
+              <th>
+                Id
+              </th>   
+              <th >
+                O'chirish
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% for (let video of videos) { %>
+            <tr>
+              <td>
+                <%= video.video_link %>
+              </td> 
+              <td>
+                <a href="videos/<%=video.video_id%>" class="btn btn-danger">
                   O'chirish
                 </a>
               </td>
