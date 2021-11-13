@@ -84,4 +84,13 @@ module.exports = class  UsersController{
             console.log(error);
         }
     }
+
+
+    static async SignOutController(req, res, next) {
+        try {
+            res.clearCookie("token").redirect("/");
+        } catch (error) {
+            next(error)
+        }
+    }
 }

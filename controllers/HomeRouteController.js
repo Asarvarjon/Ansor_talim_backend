@@ -4,9 +4,8 @@ module.exports = class  UsersController{
         try { 
             res.render("index", { })
             
-        } catch (error) {
-            console.log(error);
+        } catch (error) { 
             next(error)
         }
-    }
+    } 
 }
