@@ -11,7 +11,7 @@ module.exports = async (sequelize, Sequelize) => {
             allowNull: false, 
         }, 
         applicant_phone: {
-            type: Sequelize.STRING(13),
+            type: Sequelize.STRING(20),
             allowNull: false, 
         }
     })

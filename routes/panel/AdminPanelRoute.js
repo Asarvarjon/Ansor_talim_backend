@@ -4,7 +4,7 @@ const { PanelGetController } = require("../../controllers/AdminPanelController")
 const { AdressGetController, UpdateAdressPostController } = require("../../controllers/AdressController");
 const { ApplicantsGetController, ApplicantToCoursePostController } = require("../../controllers/ApplicantsController");
 const { CommentsGetController, AddCommentsPostController, CommentDeleteController } = require("../../controllers/CommentsController");
-const { ContactPostController } = require("../../controllers/ContactController");
+const {  ContactsGetController } = require("../../controllers/ContactController");
 const { CourseGetController, AddCoursePostController, CourseDeleteController } = require("../../controllers/CourseController");
 const { NewsGetController, AddNewsPostController, NewsDeleteController } = require("../../controllers/NewsController");
 const { ResultsGetController, AddResultPostController, ResultsDeleteController } = require("../../controllers/ResultsController");
@@ -53,6 +53,12 @@ AdminPanelRoute.get("/results/:result_id", ResultsDeleteController);
 /// Adress page routes
 AdminPanelRoute.get("/address", AdressGetController );
 AdminPanelRoute.post("/address", UpdateAdressPostController ); 
+
+
+
+/// CONTACTS
+
+AdminPanelRoute.get("/contacts", ContactsGetController)
 
 
 module.exports = AdminPanelRoute;

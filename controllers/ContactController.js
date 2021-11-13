@@ -4,12 +4,12 @@ module.exports = class ContactController{
     static async StudentPostController(req, res, next){
         try { 
            const {name, phone} = await StudentValidation(req.body) 
-           const student = await req.db.students.create({
-               student_name: name,
-               student_phone: phone
+           const applicant = await req.db.applicants.create({
+                applicant_name: name,
+                applicant_phone: phone
            }); 
-
-           console.log(student);
+ 
+ 
            res.status(201).json({
                ok: true,
                message: "Contact was sent succesfully"
@@ -28,8 +28,7 @@ module.exports = class ContactController{
                student_contact_phone: phone,
                student_contact_email: email
            });  
-
-           console.log(contact);
+  
            res.status(201).json({
                ok: true,
                message: "Information was sent succesfully"
@@ -38,5 +37,18 @@ module.exports = class ContactController{
             console.log(error);
         }
     };
+
+
+    static async ContactsGetController(req, res, next) {
+
+        const contacts = await req.db.contacts.findAll({
+            order:[['updatedAt', 'DESC']],
+            raw: true
+        })
+
+        res.render("contact", {
+            contacts
+        })
+    }
 
 }

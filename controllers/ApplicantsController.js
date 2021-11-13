@@ -6,6 +6,8 @@ module.exports = class ApplicantsController{
                 order:[['updatedAt', 'DESC']]
         })
 
+        
+
         console.log(applicants);
 
         res.render("applicant", {

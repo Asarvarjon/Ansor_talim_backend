@@ -9,8 +9,7 @@ const CourseModel = require("../../models/CourseModel");
 const CommentsModel = require("../../models/CommentsModel");
 const ScenesModel = require("../../models/ScenesModel");
 const ResultsModel = require("../../models/ResultsModel"); 
-const AddressModel = require("../../models/AddressModel");
-const StudentsModel = require("../../models/StudentsModel");
+const AddressModel = require("../../models/AddressModel"); 
 const ContactModel = require("../../models/ContactModel");
 
 
@@ -35,8 +34,7 @@ module.exports = async function(){
         db.comments = await CommentsModel(sequelize, Sequelize);
         db.scenes = await ScenesModel(sequelize, Sequelize);
         db.results = await ResultsModel(sequelize, Sequelize);
-        db.address = await AddressModel(sequelize, Sequelize);
-        db.students = await StudentsModel(sequelize, Sequelize);
+        db.address = await AddressModel(sequelize, Sequelize); 
         db.contacts = await ContactModel(sequelize, Sequelize);
 
 
