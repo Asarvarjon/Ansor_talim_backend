@@ -9,6 +9,7 @@ const { CourseGetController, AddCoursePostController, CourseDeleteController } =
 const { NewsGetController, AddNewsPostController, NewsDeleteController } = require("../../controllers/NewsController");
 const { ResultsGetController, AddResultPostController, ResultsDeleteController } = require("../../controllers/ResultsController");
 const { ScenesGetController, AddScenesPostController, SceneDeleteController } = require("../../controllers/ScenesController");
+const { TeacherGetController, AddTeacherPostController, TeacherDeleteController } = require("../../controllers/TeachersController");
 const { UserSessionGetController, SessionDeleteController } = require("../../controllers/UsersController");
 const AuthMiddleware = require("../../middlewares/AuthMiddleware");
 
@@ -48,6 +49,11 @@ AdminPanelRoute.get("/scenes/:scene_id", SceneDeleteController);
 AdminPanelRoute.get("/results", ResultsGetController );
 AdminPanelRoute.post("/results", expressFileUpload(), AddResultPostController);
 AdminPanelRoute.get("/results/:result_id", ResultsDeleteController);
+
+/// Teachers 
+AdminPanelRoute.get("/teachers", TeacherGetController );
+AdminPanelRoute.post("/teachers", expressFileUpload(), AddTeacherPostController);
+AdminPanelRoute.get("/teachers/:teacher_id", TeacherDeleteController);
 
 
 /// Adress page routes

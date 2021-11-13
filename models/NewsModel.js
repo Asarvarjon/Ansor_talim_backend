@@ -7,7 +7,7 @@ module.exports = async (sequelize, Sequelize) => {
             primaryKey: true, 
         },
         news_title: {
-            type: Sequelize.STRING(64),
+            type: Sequelize.STRING(),
             allowNull: false, 
         }, 
         news_short_desc: {
