@@ -21,6 +21,8 @@ module.exports = class  UsersController{
                 }
             }); 
 
+            console.log(admin);
+
             if(!admin) {
                 throw new Error("Emailingiz noto'g'ri")
             };
@@ -49,6 +51,7 @@ module.exports = class  UsersController{
 
             res.cookie("token", token).redirect("/admin_panel/")
         } catch (error) {  
+            console.log(error);
             res.render("login", {
                 error: error.message
             })

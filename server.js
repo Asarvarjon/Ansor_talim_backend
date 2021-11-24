@@ -10,7 +10,7 @@ const postgres = require("./modules/pg/postgres");
 const routes = require("./routes");
 
 
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 5000;
 
 async function server(mode){
     try {
@@ -47,7 +47,7 @@ async function server(mode){
         }
     } catch (error) {
         console.log("Server Error", error);
-    }finally {
+    }finally {  
         routes(app)
     }
 }
