@@ -16,7 +16,7 @@ const AssetsModel = require("../../models/AssetsModel");
 const VideosModel = require("../../models/VideosModel");
 
 
-const sequelize = new Sequelize(process.env.POSTGRES_URL, {
+const sequelize = new Sequelize("postgres://kocpufyr:Wx6eIPHYCOiXJQmD43nvnB4LXyIG3AyC@castor.db.elephantsql.com/kocpufyr", {
     logging: false
 });
 
