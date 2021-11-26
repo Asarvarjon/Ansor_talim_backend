@@ -16,7 +16,7 @@ const AssetsModel = require("../../models/AssetsModel");
 const VideosModel = require("../../models/VideosModel");
 
 
-const sequelize = new Sequelize(process.env.POSTGRES_URL, {
+const sequelize = new Sequelize("postgres://postgres:sarvar@localhost:5432/ansor_talim", {
     logging: false
 });
 
