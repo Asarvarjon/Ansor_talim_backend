@@ -16,7 +16,7 @@ const AssetsModel = require("../../models/AssetsModel");
 const VideosModel = require("../../models/VideosModel");
 
 
-const sequelize = new Sequelize("postgres://postgres:sarvar@localhost:5432/ansor_talim", {
+const sequelize = new Sequelize(process.env.POSTGRES_URL, {
     logging: false
 });
 
@@ -45,6 +45,7 @@ module.exports = async function(){
  
         await init(db);
         await relations(db);
+        
         await sequelize.sync({force: false})
 
         return db;

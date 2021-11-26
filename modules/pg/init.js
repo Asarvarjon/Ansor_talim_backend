@@ -3,8 +3,8 @@ const { generateHash } = require("../bcrypt");
 module.exports = async function init(db) {
     const count = await db.users.count();
 
-    const password = "admin";
-    const username = "admin"
+    const password = process.env.password;
+    const username = process.env.username
 
     if(count === 0){
         const admin = await db.users.create({
