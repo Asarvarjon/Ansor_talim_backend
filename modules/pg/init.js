@@ -5,12 +5,14 @@ module.exports = async function init(db) {
 
     const password = process.env.password;
     const username = process.env.username
-
+    console.log(password);
+    console.log('user_count', count);
     if(count === 0){
         const admin = await db.users.create({
             user_username: username.toLowerCase(), 
             user_password: generateHash(password), 
         })   
+        console.log(admin);
     };
 
      
